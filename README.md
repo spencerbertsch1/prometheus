@@ -6,4 +6,3 @@ This repository contains an easy-to-use library for writing AI bots used to cont
 
 ### Part II: Reinforcement Learning Solutions 
 As part of a research initiative at Dartmouth College, this repository also contains model-based and model-free RL models needed for tactical, real time wildfire containment. 
-
