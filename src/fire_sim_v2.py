@@ -66,14 +66,23 @@ fire_speed = 0.8
 grid_size = 200
 nx, ny = grid_size, grid_size
 
+ignition_points = 2
+
 # Initialize the forest grid.
 X  = np.zeros((ny, nx))
 X[1:ny-1, 1:nx-1] = np.random.randint(0, 2, size=(ny-2, nx-2))
 X[1:ny-1, 1:nx-1] = np.random.random(size=(ny-2, nx-2)) < forest_fraction
 
-# set initial fire ignition location
-ignition_index = int(grid_size/2)
-X[ignition_index, ignition_index] = FIRE
+if ignition_points == 1:
+    # we only have one ignition point at the center of the environment
+    ignition_index = int(grid_size/2)
+    X[ignition_index, ignition_index] = FIRE
+elif ignition_points == 2:
+    # randomly select some ignition points
+    point_list = [int(grid_size - grid_size/5), int(grid_size/2), int(grid_size/3), int(grid_size - grid_size/7), int(grid_size/9), int(grid_size/4)]
+    X[np.random.choice(point_list), np.random.choice(point_list)] = FIRE
+    X[np.random.choice(point_list), np.random.choice(point_list)] = FIRE
+
 
 frames = []
 
@@ -131,4 +140,9 @@ print(toc-tic)
 TODOs
 
 - Only iterate over currently burning nodes (FIRE nodes)
+- Add wind 
+- Add multiple ignition points 
+
+
+
 """
