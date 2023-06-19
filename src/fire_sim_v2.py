@@ -11,6 +11,7 @@ np.random.seed(0)
 # Displacements from a cell to its eight nearest neighbours
 neighbourhood = ((-1,-1), (-1,0), (-1,1), (0,-1), (0, 1), (1,-1), (1,0), (1,1))
 EMPTY, TREE, FIRE, PLANE = 0, 1, 2, 3
+wind_dict = {'N':4, 'NE':2, 'E':1, 'SE':0, 'S':3, 'SW':5, 'W':6, 'NW':7}
 # Colours for visualization: brown for EMPTY, dark green for TREE and orange
 # for FIRE. Note that for the colormap to work, this list and the bounds list
 # must be one larger than the number of different values in the array.
@@ -29,7 +30,7 @@ def numpy_element_counter(arr: np.array) -> dict:
     return counts_dict
 
 
-def iterate(X, nx, ny, fire_spread_prob: float):
+def iterate(X, nx, ny, fire_spread_prob: float, up_wind_spread_prob: float, wind: str):
     """Iterate the forest according to the forest-fire rules."""
 
     # The boundary of the forest is always empty, so only consider cells
@@ -41,17 +42,33 @@ def iterate(X, nx, ny, fire_spread_prob: float):
         for iy in range(1,ny-1):
             if X[iy,ix] == TREE:
                 X1[iy,ix] = TREE
-                for dx,dy in neighbourhood:
+                for i, (dx,dy) in enumerate(neighbourhood):
                     cnt += 1
                     # The diagonally-adjacent trees are further away, so
                     # only catch fire with a reduced probability:
-                    if abs(dx) == abs(dy) and np.random.random() < 0.573:
+                    if abs(dx) == abs(dy) and wind == 'none' and np.random.random() < 0.573:
                         continue
+                    
                     if X[iy+dy,ix+dx] == FIRE:
-                        # add additional condition to slow fire spread based on probability of spreading
-                        if np.random.random() < fire_spread_prob:
-                            X1[iy,ix] = FIRE
-                            break
+                        # in this case there is no wind so the fire spreads radially outwards
+                        if wind == 'none': 
+                            if np.random.random() < fire_spread_prob:
+                                X1[iy,ix] = FIRE
+                                break
+                        else:
+                            # account for wind
+                            if i==wind_dict[wind]: 
+                                if np.random.random() < (fire_spread_prob + 1):
+                                    X1[iy,ix] = FIRE
+                                    break
+                            
+                            # add additional condition to slow fire spread based on probability of spreading
+                            else:
+                                if np.random.random() < up_wind_spread_prob:
+                                    X1[iy,ix] = FIRE
+                                    break
+                        
+
     print(f'Nodes Processed: {cnt}')
     return X1
 
@@ -60,13 +77,16 @@ forest_fraction = 0.9
 
 # define fire spread probability
 fire_spread_prob = 0.65
+up_wind_spread_prob = 0.15
 fire_speed = 0.8
 
 # Forest size (number of cells in x and y directions).
-grid_size = 200
+grid_size = 150
 nx, ny = grid_size, grid_size
 
-ignition_points = 2
+# fire start parameters
+ignition_points = 10
+wind = 'E'  # <-- ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
 
 # Initialize the forest grid.
 X  = np.zeros((ny, nx))
@@ -77,11 +97,11 @@ if ignition_points == 1:
     # we only have one ignition point at the center of the environment
     ignition_index = int(grid_size/2)
     X[ignition_index, ignition_index] = FIRE
-elif ignition_points == 2:
+else:
     # randomly select some ignition points
     point_list = [int(grid_size - grid_size/5), int(grid_size/2), int(grid_size/3), int(grid_size - grid_size/7), int(grid_size/9), int(grid_size/4)]
-    X[np.random.choice(point_list), np.random.choice(point_list)] = FIRE
-    X[np.random.choice(point_list), np.random.choice(point_list)] = FIRE
+    for i in range(ignition_points):
+        X[np.random.choice(point_list), np.random.choice(point_list)] = FIRE
 
 
 frames = []
@@ -89,7 +109,8 @@ frames = []
 # run the RL algorithm and get the frames of the environment state 
 done = False
 for step in range(10_000):
-    X = iterate(X, nx=nx, ny=ny, fire_spread_prob=fire_spread_prob)
+    X = iterate(X, nx=nx, ny=ny, fire_spread_prob=fire_spread_prob, 
+                up_wind_spread_prob=up_wind_spread_prob, wind=wind)
     frames.append(X)
 
     # test to see if there are any fire nodes remaining in the environment 
@@ -106,7 +127,7 @@ def update_scene(num, frames, patch):
     patch.set_data(frames[num])
     return patch,
 
-def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_anim: bool):
+def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_anim: bool, wind: str):
     """
     Function to plot the series of environment frames generated during training 
     """
@@ -129,9 +150,8 @@ def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_an
 repeat = False  # repeat the animation
 interval = 100  # millisecond interval for each frame in the animation
 save_anim = True  # save the animation to disk 
-show_anim = False
-
-plot_animation(frames, repeat=repeat, interval=interval, save_anim=True, show_anim=show_anim)
+show_anim = True
+plot_animation(frames, repeat=repeat, interval=interval, save_anim=True, show_anim=show_anim, wind=wind)
 toc = time.time()
 print(toc-tic)
 
@@ -140,9 +160,6 @@ print(toc-tic)
 TODOs
 
 - Only iterate over currently burning nodes (FIRE nodes)
-- Add wind 
-- Add multiple ignition points 
-
-
+- Clean up variables and add a main function 
 
 """
