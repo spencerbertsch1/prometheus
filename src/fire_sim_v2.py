@@ -12,6 +12,7 @@ np.random.seed(0)
 neighbourhood = ((-1,-1), (-1,0), (-1,1), (0,-1), (0, 1), (1,-1), (1,0), (1,1))
 EMPTY, TREE, FIRE, PLANE = 0, 1, 2, 3
 wind_dict = {'N':4, 'NE':2, 'E':1, 'SE':0, 'S':3, 'SW':5, 'W':6, 'NW':7}
+wind_dict_v2 = {'N':3, 'NE':5, 'E':6, 'SE':7, 'S':4, 'SW':2, 'W':1, 'NW':0}
 # Colours for visualization: brown for EMPTY, dark green for TREE and orange
 # for FIRE. Note that for the colormap to work, this list and the bounds list
 # must be one larger than the number of different values in the array.
@@ -30,7 +31,58 @@ def numpy_element_counter(arr: np.array) -> dict:
     return counts_dict
 
 
+def iterate_v2(X, nx, ny, fire_spread_prob: float, up_wind_spread_prob: float, wind: str):
+    """Iterate the forest according to the forest-fire rules."""
+
+    # The boundary of the forest is always empty, so only consider cells
+    # indexed from 1 to nx-2, 1 to ny-2
+    X1 = np.zeros((ny, nx))
+    cnt = 0
+    
+    # fill in all the trees 
+    for ix in range(1,nx-1):
+        for iy in range(1,ny-1):
+            if X[iy,ix] == TREE:
+                X1[iy,ix] = TREE
+                cnt += 1
+
+    # iterate over the currently burning nodes 
+    for ix in range(1,nx-1):
+        for iy in range(1,ny-1):
+            if X[iy,ix] == FIRE:
+                X1[iy,ix] = EMPTY
+                for i, (dx,dy) in enumerate(neighbourhood):
+                    cnt += 1
+                    # The diagonally-adjacent trees are further away, so
+                    # only catch fire with a reduced probability:
+                    if abs(dx) == abs(dy) and wind == 'none' and np.random.random() < 0.573:
+                        continue
+                    
+                    if X[iy+dy,ix+dx] == TREE:
+                        # in this case there is no wind so the fire spreads radially outwards
+                        if wind == 'none': 
+                            if np.random.random() < fire_spread_prob:
+                                X1[iy+dy,ix+dx] = FIRE
+                                # break
+                        else:
+                            # account for wind
+                            if i==wind_dict_v2[wind]: 
+                                X1[iy+dy,ix+dx] = FIRE
+                            
+                            # add additional condition to slow fire spread based on probability of spreading
+                            else:
+                                if np.random.random() < up_wind_spread_prob:
+                                    X1[iy+dy,ix+dx] = FIRE
+                        
+
+    print(f'Nodes Processed: {cnt}')
+    return X1
+
+
 def iterate(X, nx, ny, fire_spread_prob: float, up_wind_spread_prob: float, wind: str):
+    """
+    THIS FUNCTION IS NOW DEPRICATED - the iterate_v2() function runs in 20% the time for envs of size 250
+    """
     """Iterate the forest according to the forest-fire rules."""
 
     # The boundary of the forest is always empty, so only consider cells
@@ -58,9 +110,8 @@ def iterate(X, nx, ny, fire_spread_prob: float, up_wind_spread_prob: float, wind
                         else:
                             # account for wind
                             if i==wind_dict[wind]: 
-                                if np.random.random() < (fire_spread_prob + 1):
-                                    X1[iy,ix] = FIRE
-                                    break
+                                X1[iy,ix] = FIRE
+                                break
                             
                             # add additional condition to slow fire spread based on probability of spreading
                             else:
@@ -81,12 +132,12 @@ up_wind_spread_prob = 0.15
 fire_speed = 0.8
 
 # Forest size (number of cells in x and y directions).
-grid_size = 150
+grid_size = 100
 nx, ny = grid_size, grid_size
 
 # fire start parameters
 ignition_points = 10
-wind = 'E'  # <-- ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+wind = 'S'  # <-- ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
 
 # Initialize the forest grid.
 X  = np.zeros((ny, nx))
@@ -109,7 +160,7 @@ frames = []
 # run the RL algorithm and get the frames of the environment state 
 done = False
 for step in range(10_000):
-    X = iterate(X, nx=nx, ny=ny, fire_spread_prob=fire_spread_prob, 
+    X = iterate_v2(X, nx=nx, ny=ny, fire_spread_prob=fire_spread_prob, 
                 up_wind_spread_prob=up_wind_spread_prob, wind=wind)
     frames.append(X)
 
@@ -147,13 +198,13 @@ def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_an
 
     return anim
 
+toc = time.time()
+print(toc-tic)
 repeat = False  # repeat the animation
 interval = 100  # millisecond interval for each frame in the animation
 save_anim = True  # save the animation to disk 
 show_anim = True
 plot_animation(frames, repeat=repeat, interval=interval, save_anim=True, show_anim=show_anim, wind=wind)
-toc = time.time()
-print(toc-tic)
 
 
 """
