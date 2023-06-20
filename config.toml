@@ -1,6 +1,6 @@
 [env]
 # Wind options: ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
-wind = 'E'  
+wind = 'none'  
 # The initial fraction of the forest occupied by trees.
 forest_fraction = 0.90
 # Define fire spread probability (ignored when wind is not 'none')
@@ -12,7 +12,7 @@ fire_speed = 0.8
 # Forest size (number of cells in x and y directions).
 grid_size = 200
 # Define the number of ignition points (1 will set a central ignition)
-ignition_points = 1
+ignition_points = 9
 
 [agent]
 
