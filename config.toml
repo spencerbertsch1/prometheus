@@ -10,9 +10,9 @@ up_wind_spread_prob = 0.15
 # Define the overall relative fire speed
 fire_speed = 0.8
 # Forest size (number of cells in x and y directions).
-grid_size = 200
+grid_size = 100
 # Define the number of ignition points (1 will set a central ignition)
-ignition_points = 9
+ignition_points = 1
 
 [agent]
 
@@ -23,6 +23,6 @@ repeat = false
 # set the time interval between frames in the animation
 interval = 30  #ms
 # true in order to show the animation after the episode ends 
-save_anim = true
+save_anim = false
 # true in order to save the animation to disk
 show_anim = true
