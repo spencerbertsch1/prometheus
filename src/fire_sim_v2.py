@@ -22,10 +22,9 @@ import sys
 # local imports
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
-print(f'Working directory: {PATH_TO_WORKING_DIR}')
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS
-from utils import numpy_element_counter
+from utils import numpy_element_counter, plot_animation
 
 # import environment, agent, and animation parameters 
 WIND = EnvParams.wind
@@ -41,7 +40,7 @@ np.random.seed(0)
 
 # Displacements from a cell to its eight nearest neighbours
 neighbourhood = ((-1,-1), (-1,0), (-1,1), (0,-1), (0, 1), (1,-1), (1,0), (1,1))
-EMPTY, TREE, FIRE, PLANE = 0, 1, 2, 3
+EMPTY, TREE, FIRE, PLANE, AIRPORT = 0, 1, 2, 3, 5
 wind_dict_v2 = {'N':3, 'NE':5, 'E':6, 'SE':7, 'S':4, 'SW':2, 'W':1, 'NW':0}
 # Colours for visualization: brown for EMPTY, dark green for TREE and orange
 # for FIRE. Note that for the colormap to work, this list and the bounds list
@@ -52,11 +51,18 @@ bounds = [0,1,2,3]
 norm = colors.BoundaryNorm(bounds, cmap.N)
 
 
-def iterate_v2(X, nx, ny, fire_spread_prob: float, up_wind_spread_prob: float, wind: str):
+def iterate_fire_v2(X):
     """Iterate the forest according to the forest-fire rules."""
 
+    # define environment parameters based on the current configuration
+    ny, nx = EnvParams.grid_size, EnvParams.grid_size
+    wind = EnvParams.wind
+    fire_spread_prob = EnvParams.fire_spread_prob
+    up_wind_spread_prob = EnvParams.up_wind_spread_prob
+    
     # The boundary of the forest is always empty, so only consider cells
     # indexed from 1 to nx-2, 1 to ny-2
+
     X1 = np.zeros((ny, nx))
     cnt = 0
     
@@ -65,6 +71,10 @@ def iterate_v2(X, nx, ny, fire_spread_prob: float, up_wind_spread_prob: float, w
         for iy in range(1,ny-1):
             if X[iy,ix] == TREE:
                 X1[iy,ix] = TREE
+                cnt += 1
+
+            if X[iy,ix] == AIRPORT:
+                X1[iy,ix] = AIRPORT
                 cnt += 1
 
     # iterate over the currently burning nodes 
@@ -102,34 +112,6 @@ def iterate_v2(X, nx, ny, fire_spread_prob: float, up_wind_spread_prob: float, w
     return {"X": X1, "nodes_processed": cnt}
 
 
-# define helper function
-def update_scene(num, frames, patch):
-    patch.set_data(frames[num])
-    return patch,
-
-
-def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_anim: bool) -> animation.FuncAnimation:
-    """
-    Function to plot the series of environment frames generated during training 
-    """
-    fig = plt.figure()
-    patch = plt.imshow(frames[0])
-    plt.axis('off')
-    anim = animation.FuncAnimation(
-        fig, update_scene, fargs=(frames, patch),
-        frames=len(frames), repeat=repeat, interval=interval)
-    
-    if save_anim: 
-        fps = int(round(1000/interval))
-        anim_path: Path = ABSPATH_TO_ANIMATIONS / 'wildfire_episode.mp4'
-        anim.save(anim_path, writer='ffmpeg', fps=fps)
-
-    if show_anim: 
-        plt.show()
-
-    return anim
-
-
 def initialize_env() -> np.array:
     """
     Helper function that initializes the np array representing the starting environment state. 
@@ -151,6 +133,12 @@ def initialize_env() -> np.array:
         for i in range(IGNITION_POINTS):
             X[np.random.choice(point_list), np.random.choice(point_list)] = FIRE
 
+    # airport #1 
+    X[GRID_SIZE-3, GRID_SIZE-3] = AIRPORT
+
+    # airport #2 
+    X[3, GRID_SIZE-3] = AIRPORT
+
     return X
 
 
@@ -165,8 +153,7 @@ def main():
     # run the RL algorithm and get the frames of the environment state 
     done = False
     for i, step in enumerate(range(10_000)):
-        X_dict = iterate_v2(X, nx=GRID_SIZE, ny=GRID_SIZE, fire_spread_prob=FIRE_SPREAD_PROB, 
-                    up_wind_spread_prob=UP_WIND_SPREAD_PROB, wind=WIND)
+        X_dict = iterate_fire_v2(X)
         X = X_dict['X']
         frames.append(X_dict['X'])
 
