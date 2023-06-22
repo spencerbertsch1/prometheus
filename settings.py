@@ -27,9 +27,14 @@ ABSPATH_TO_TOML: Path = PATH_TO_THIS_FILE.parent / "config.toml"
 ABSPATH_TO_ANIMATIONS: Path = PATH_TO_THIS_FILE.parent / "src" / "animations"
 PATH_TO_DATA: Path = PATH_TO_THIS_FILE.parent / "src" / "simulation" / "simulation_results"
 
+EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT = 0, 1, 2, 3, 4, 5
+
+# Displacements from a cell to its eight nearest neighbours
+neighbourhood = ((0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1,-1))
+direction_dict = {'N':0, 'NE':1, 'E':2, 'SE':3, 'S':4, 'SW':5, 'W':6, 'NW':7}
+
 # use toml.load to read `config.toml` file in as a dictionary
 CONFIG_DICT: Dict[Any, Any] = toml.load(str(ABSPATH_TO_TOML))
-
 
 class EnvParams:
     wind: bool = CONFIG_DICT['env']['wind']
@@ -40,14 +45,12 @@ class EnvParams:
     grid_size: bool = CONFIG_DICT['env']['grid_size']
     ignition_points: bool = CONFIG_DICT['env']['ignition_points']
 
-
 class AgentParams:
-    wind: bool = CONFIG_DICT['env']['wind']
-
+    phoscheck_drop_rate: bool = CONFIG_DICT['agent']['phoscheck_drop_rate']
 
 class AnimationParams:
     repeat: bool = CONFIG_DICT['animation']['repeat']  # repeat the animation
-    interval: bool = CONFIG_DICT['animation']['interval']  # millisecond interval for each frame in the animation
+    interval: bool = CONFIG_DICT['animation']['interval'] # millisecond interval for each frame in the animation
     save_anim: bool = CONFIG_DICT['animation']['save_anim']  # save the animation to disk 
     show_anim: bool = CONFIG_DICT['animation']['show_anim']  # show animation after each episode
 
