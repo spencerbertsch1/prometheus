@@ -23,7 +23,8 @@ import sys
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 sys.path.append(str(PATH_TO_WORKING_DIR))
-from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS
+from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS, \
+    EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, neighbourhood, direction_dict
 from utils import numpy_element_counter, plot_animation
 
 # import environment, agent, and animation parameters 
@@ -38,78 +39,83 @@ IGNITION_POINTS = EnvParams.ignition_points
 # set the random seed for predictable runs 
 np.random.seed(0)
 
-# Displacements from a cell to its eight nearest neighbours
-neighbourhood = ((-1,-1), (-1,0), (-1,1), (0,-1), (0, 1), (1,-1), (1,0), (1,1))
-EMPTY, TREE, FIRE, PLANE, AIRPORT = 0, 1, 2, 3, 5
-wind_dict_v2 = {'N':3, 'NE':5, 'E':6, 'SE':7, 'S':4, 'SW':2, 'W':1, 'NW':0}
 # Colours for visualization: brown for EMPTY, dark green for TREE and orange
 # for FIRE. Note that for the colormap to work, this list and the bounds list
 # must be one larger than the number of different values in the array.
-colors_list = ['black', 'green', 'darkorange', 'grey']
+colors_list = ['black', 'green', 'darkorange', 'grey', 1]
 cmap = colors.ListedColormap(colors_list)
 bounds = [0,1,2,3]
 norm = colors.BoundaryNorm(bounds, cmap.N)
 
 
-def iterate_fire_v2(X):
-    """Iterate the forest according to the forest-fire rules."""
-
-    # define environment parameters based on the current configuration
-    ny, nx = EnvParams.grid_size, EnvParams.grid_size
-    wind = EnvParams.wind
-    fire_spread_prob = EnvParams.fire_spread_prob
-    up_wind_spread_prob = EnvParams.up_wind_spread_prob
+def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
+    """
+    Iterate the forest according to the forest-fire rules.
     
-    # The boundary of the forest is always empty, so only consider cells
-    # indexed from 1 to nx-2, 1 to ny-2
+    https://stackoverflow.com/questions/63661231/replacing-numpy-array-elements-that-are-non-zero
+    ^ This greatly accelerated the run time of this function
+    """
+   
+    if i % EnvParams.fire_speed == 0:
 
-    X1 = np.zeros((ny, nx))
-    cnt = 0
-    
-    # fill in all the trees 
-    for ix in range(1,nx-1):
-        for iy in range(1,ny-1):
-            if X[iy,ix] == TREE:
-                X1[iy,ix] = TREE
-                cnt += 1
+        # define environment parameters based on the current configuration
+        ny, nx = EnvParams.grid_size, EnvParams.grid_size
+        wind = EnvParams.wind
+        fire_spread_prob = EnvParams.fire_spread_prob
+        up_wind_spread_prob = EnvParams.up_wind_spread_prob
+        
+        # The boundary of the forest is always empty, so only consider cells
+        # indexed from 1 to nx-2, 1 to ny-2
 
-            if X[iy,ix] == AIRPORT:
-                X1[iy,ix] = AIRPORT
-                cnt += 1
+        X1 = np.zeros((ny, nx))
+        nodes_searched = 0
+        curr_burning_nodes = 0
+        
+        np.copyto(X1, X, where=X != EMPTY)
 
-    # iterate over the currently burning nodes 
-    for ix in range(1,nx-1):
-        for iy in range(1,ny-1):
-            if X[iy,ix] == FIRE:
-                X1[iy,ix] = EMPTY
-                for i, (dx,dy) in enumerate(neighbourhood):
-                    cnt += 1
-                    # The diagonally-adjacent trees are further away, so
-                    # only catch fire with a reduced probability:
-                    if abs(dx) == abs(dy) and wind == 'none' and np.random.random() < 0.573:
-                        continue
+        # iterate over the currently burning nodes 
+        for ix in range(1,nx-1):
+            for iy in range(1,ny-1):
+                if X[iy,ix] == FIRE:
+                    curr_burning_nodes += 1
+                    X1[iy,ix] = EMPTY
+                    for i, (dx,dy) in enumerate(neighbourhood):
+                        nodes_searched += 1
+                        # The diagonally-adjacent trees are further away, so
+                        # only catch fire with a reduced probability:
+                        if abs(dx) == abs(dy) and wind == 'none' and np.random.random() < 0.573:
+                            continue
 
-                    # this prevents straight right corners from occuring in the fire frontier
-                    if abs(dx) == abs(dy) and wind != 'none' and np.random.random() < 0.07:
-                        continue
-                    
-                    if X[iy+dy,ix+dx] == TREE:
-                        # in this case there is no wind so the fire spreads radially outwards
-                        if wind == 'none': 
-                            if np.random.random() < fire_spread_prob:
-                                X1[iy+dy,ix+dx] = FIRE
-                                # break
-                        else:
-                            # account for wind
-                            if i==wind_dict_v2[wind]: 
-                                X1[iy+dy,ix+dx] = FIRE
-                            
-                            # add additional condition to slow fire spread based on probability of spreading
-                            else:
-                                if np.random.random() < up_wind_spread_prob:
-                                    X1[iy+dy,ix+dx] = FIRE
+                        # this prevents straight right corners from occuring in the fire frontier
+                        if abs(dx) == abs(dy) and wind != 'none' and np.random.random() < 0.07:
+                            continue
                         
-    return {"X": X1, "nodes_processed": cnt}
+                        if X[iy+dy,ix+dx] == TREE:
+                            # in this case there is no wind so the fire spreads radially outwards
+                            if wind == 'none': 
+                                if np.random.random() < fire_spread_prob:
+                                    if phoschek_array[iy+dy,ix+dx] == 0:
+                                        X1[iy+dy,ix+dx] = FIRE
+                                    # break
+                            else:
+                                # account for wind
+                                if i==direction_dict[wind]: 
+                                    if phoschek_array[iy+dy,ix+dx] == 0 and np.random.random():
+                                        X1[iy+dy,ix+dx] = FIRE
+                                
+                                # add additional condition to slow fire spread based on probability of spreading
+                                else:
+                                    if np.random.random() < up_wind_spread_prob:
+                                        if phoschek_array[iy+dy,ix+dx] == 0:
+                                            X1[iy+dy,ix+dx] = FIRE
+                            
+        np.copyto(X1, phoschek_array, where=phoschek_array != EMPTY)
+
+        return {"X": X1, "nodes_processed": nodes_searched, 'curr_burning_nodes': curr_burning_nodes}
+    
+    # slow fire's progession
+    else:
+        return {"X": X, "nodes_processed": 0, 'curr_burning_nodes': 0}
 
 
 def initialize_env() -> np.array:
@@ -148,12 +154,15 @@ def main():
 
     X = initialize_env()
 
+    phoschek_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+    agent_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+
     frames = []
 
     # run the RL algorithm and get the frames of the environment state 
     done = False
     for i, step in enumerate(range(10_000)):
-        X_dict = iterate_fire_v2(X)
+        X_dict = iterate_fire_v2(X=X, phoschek_array=phoschek_array, i=i)
         X = X_dict['X']
         frames.append(X_dict['X'])
 
@@ -181,13 +190,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-"""
-TODOs
-
-- add the rest of the OpenAI gym notation back into the main() function
-- add 
-
-- add single agent to the system
-- add random action function (starting with moves)
-
-"""
