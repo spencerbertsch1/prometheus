@@ -26,6 +26,16 @@ sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS
 
 
+def Cumulative(lst):
+    """
+    Simple utility function to return the cumulative list given a list of ints or floats
+    """
+    cu_list = []
+    length = len(lst)
+    cu_list = [sum(lst[0:x:1]) for x in range(0, length+1)]
+    return cu_list[1:]
+
+
 def numpy_element_counter(arr: np.array) -> dict:
     """
     Utility function to return a dict containing the counts for elements in np array
