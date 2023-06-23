@@ -190,9 +190,9 @@ def main():
 
     c_burning_lst = Cumulative(lst=curr_burning_nodes_lst)
 
-    df = pd.DataFrame({'x_data':range(len(c_burning_lst)), 'y_data':c_burning_lst})
-    fig = px.line(df, x='x_data', y='y_data', title="Testing")
-    fig.show()
+    # df = pd.DataFrame({'x_data':range(len(c_burning_lst)), 'y_data':c_burning_lst})
+    # fig = px.line(df, x='x_data', y='y_data', title="Testing")
+    # fig.show()
 
 if __name__ == "__main__":
     main()
@@ -200,8 +200,7 @@ if __name__ == "__main__":
 
 """
 TODOs 
-1. fix central ignition starting point with wind bug
-1. fix bug where fire burns through diagonally spread phoschek (just check corners on every diagonal burn)
+1. Fix directions mapper for actions
 2. Implement heuristic where the plane flies perpendicular to the wind and drops phos chek 
 4. write outer loop function that tests different heuristics against one another and plots the cumulative area saved
 3. embed this in a streamlit app
