@@ -1,10 +1,13 @@
 import numpy as np
+import pandas as pd
 import pygame
+
 
 import gymnasium as gym
 from gymnasium import spaces
 
 from matplotlib import pyplot as plt
+import plotly.express as px
 from matplotlib import animation
 from matplotlib import colors
 
@@ -19,7 +22,7 @@ sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO_ANIMATIONS, \
     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict
 from fire_sim_v2 import iterate_fire_v2, initialize_env
-from utils import numpy_element_counter, plot_animation, viewer, Helicopter
+from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative
 
 # set the random seed for predictable runs 
 SEED = 0
@@ -71,7 +74,7 @@ class WildfireEnv(gym.Env):
             direction = self._action_to_direction[action]
             # We use `np.clip` to make sure we don't leave the grid
             self._agent_location = np.clip(
-                self._agent_location + direction, 0, EnvParams.grid_size - 1
+                self._agent_location + direction, 1, EnvParams.grid_size - 2
             )
 
         # initiate phoschek drop
@@ -100,18 +103,24 @@ class WildfireEnv(gym.Env):
         
         self.frames.append(full_frame)
 
-        # test to see if there are any fire nodes remaining in the environment 
-        done = False
+        # get counts from the environment
         node_cnt_dict = numpy_element_counter(arr=self._env_state)
         dict_keys = list(node_cnt_dict.keys())
+
+        # test to see if there are any fire nodes remaining in the environment 
+        done = False
         if FIRE not in dict_keys: 
             done = True
             plot_animation(frames=self.frames, repeat=AnimationParams.repeat, interval=AnimationParams.interval, 
                 save_anim=AnimationParams.save_anim, show_anim=AnimationParams.show_anim)
+            info = {'curr_burning_nodes': 0}
+        
+        else:
+            curr_burning_nodes: int = node_cnt_dict[FIRE]
+            info = {'curr_burning_nodes': curr_burning_nodes}
 
         # TODO get info from the iterate function - how many currently burning nodes, etc
         reward = 1
-        info = {'info': 1}
 
         # log the progress 
         if i%10==0:
@@ -160,6 +169,7 @@ def main():
     obs = env.reset()
 
     i = 0
+    curr_burning_nodes_lst = []
     while True:
         i += 1
         # Take a random action
@@ -168,12 +178,21 @@ def main():
         
         # Render the game
         env.render()
+
+        # store environment info for plotting
+        curr_burning_nodes = info['curr_burning_nodes']
+        curr_burning_nodes_lst.append(curr_burning_nodes)
         
         if done == True:
             break
 
     env.close()
 
+    c_burning_lst = Cumulative(lst=curr_burning_nodes_lst)
+
+    df = pd.DataFrame({'x_data':range(len(c_burning_lst)), 'y_data':c_burning_lst})
+    fig = px.line(df, x='x_data', y='y_data', title="Testing")
+    fig.show()
 
 if __name__ == "__main__":
     main()
@@ -181,9 +200,9 @@ if __name__ == "__main__":
 
 """
 TODOs 
-0. Slow fire progression
-1. fix bug where agent can move into perimiter space 
+1. fix central ignition starting point with wind bug
+1. fix bug where fire burns through diagonally spread phoschek (just check corners on every diagonal burn)
 2. Implement heuristic where the plane flies perpendicular to the wind and drops phos chek 
+4. write outer loop function that tests different heuristics against one another and plots the cumulative area saved
 3. embed this in a streamlit app
-
 """
