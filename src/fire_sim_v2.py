@@ -94,19 +94,19 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                             # in this case there is no wind so the fire spreads radially outwards
                             if wind == 'none': 
                                 if np.random.random() < fire_spread_prob:
-                                    if phoschek_array[iy+dy,ix+dx] == 0:
+                                    if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
                                         X1[iy+dy,ix+dx] = FIRE
                                     # break
                             else:
                                 # account for wind
                                 if i==direction_dict[wind]: 
-                                    if phoschek_array[iy+dy,ix+dx] == 0 and np.random.random():
+                                    if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
                                         X1[iy+dy,ix+dx] = FIRE
                                 
                                 # add additional condition to slow fire spread based on probability of spreading
                                 else:
                                     if np.random.random() < up_wind_spread_prob:
-                                        if phoschek_array[iy+dy,ix+dx] == 0:
+                                        if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
                                             X1[iy+dy,ix+dx] = FIRE
                             
         np.copyto(X1, phoschek_array, where=phoschek_array != EMPTY)
