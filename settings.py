@@ -20,6 +20,7 @@ import toml
 import json
 from typing import Dict, Any
 import logging
+import numpy as np
 
 # define paths to files and outputs
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
@@ -29,9 +30,22 @@ PATH_TO_DATA: Path = PATH_TO_THIS_FILE.parent / "src" / "simulation" / "simulati
 
 EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT = 0, 1, 2, 3, 4, 5
 
-# Displacements from a cell to its eight nearest neighbours
-neighbourhood = ((0, -1), (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1,-1))
 direction_dict = {'N':0, 'NE':1, 'E':2, 'SE':3, 'S':4, 'SW':5, 'W':6, 'NW':7}
+"""
+The following dictionary maps abstract actions from `self.action_space` to
+the direction we will walk in if that action is taken.
+For example 0 is North, 1 is NE, etc. See above dictionary for mapping. 
+"""
+action_to_direction = {
+            0: np.array([-1, 0]),   # N
+            1: np.array([-1, 1]),   # NE
+            2: np.array([0, 1]),    # E 
+            3: np.array([1, 1]),    # SE
+            4: np.array([1, 0]),    # S
+            5: np.array([1, -1]),   # SW
+            6: np.array([0, -1]),   # W
+            7: np.array([-1, -1]),  # NW
+        }
 
 # use toml.load to read `config.toml` file in as a dictionary
 CONFIG_DICT: Dict[Any, Any] = toml.load(str(ABSPATH_TO_TOML))
