@@ -20,7 +20,7 @@ PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 print(f'Working directory: {PATH_TO_WORKING_DIR}')
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO_ANIMATIONS, \
-    EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict
+    EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
 from fire_sim_v2 import iterate_fire_v2, initialize_env
 from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative
 
@@ -43,23 +43,6 @@ class WildfireEnv(gym.Env):
         self.phoschek_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
         self.agent_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
 
-        """
-        The following dictionary maps abstract actions from `self.action_space` to
-        the direction we will walk in if that action is taken.
-        I.e. 0 corresponds to "right", 1 to "up" etc.
-        """
-        # we use the 8 neighbor model 
-        self._action_to_direction = {
-            0: np.array([0,-1]),   # N
-            1: np.array([1,-1]),   # NE
-            2: np.array([1, 0]),   # E 
-            3: np.array([1, 1]),   # SE
-            4: np.array([0, 1]),   # S
-            5: np.array([-1,1]),   # SW
-            6: np.array([-1,0]),   # W
-            7: np.array([-1,-1]),  # NW
-        }
-
         assert render_mode is None or render_mode in self.metadata["render_modes"]
         self.render_mode = render_mode
 
@@ -71,7 +54,7 @@ class WildfireEnv(gym.Env):
         # move the agent 
         if action <= 7:
             # Map the action (element of {0,1,2,3}) to the direction we walk in
-            direction = self._action_to_direction[action]
+            direction = action_to_direction[action]
             # We use `np.clip` to make sure we don't leave the grid
             self._agent_location = np.clip(
                 self._agent_location + direction, 1, EnvParams.grid_size - 2
@@ -82,7 +65,7 @@ class WildfireEnv(gym.Env):
             # start dropping phos chek
             self.helicopter.dropping_phoschek = True
             # Here we move the aircraft forward in the same direction of movement 
-            direction = self._action_to_direction[direction_dict[self.helicopter.curr_direction]]
+            direction = action_to_direction[direction_dict[self.helicopter.curr_direction]]
             # We use `np.clip` to make sure we don't leave the grid
             self._agent_location = np.clip(
                 self._agent_location + direction, 0, EnvParams.grid_size - 1
@@ -97,7 +80,6 @@ class WildfireEnv(gym.Env):
         X_dict = iterate_fire_v2(X=self._env_state, phoschek_array=self.phoschek_array, i=i)
         self._env_state = X_dict['X']
         
-        # self._env_state[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
         full_frame = self._env_state.copy()
         full_frame[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
         
@@ -200,7 +182,6 @@ if __name__ == "__main__":
 
 """
 TODOs 
-1. Fix directions mapper for actions
 2. Implement heuristic where the plane flies perpendicular to the wind and drops phos chek 
 4. write outer loop function that tests different heuristics against one another and plots the cumulative area saved
 3. embed this in a streamlit app
