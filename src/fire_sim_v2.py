@@ -24,7 +24,7 @@ PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS, \
-    EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, neighbourhood, direction_dict
+    EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
 from utils import numpy_element_counter, plot_animation
 
 # import environment, agent, and animation parameters 
@@ -80,7 +80,11 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                 if X[iy,ix] == FIRE:
                     curr_burning_nodes += 1
                     X1[iy,ix] = EMPTY
-                    for i, (dx,dy) in enumerate(neighbourhood):
+                    
+                    # iterate over each of the 8 actions and their respective neighbor nodes
+                    # here we index by dy then dx since that's how Numpy indexing works 
+                    for action, (dy,dx) in action_to_direction.items():
+                        # print(f'action: {action}, direction: {direction_dict[wind]}, dx: {dx}, dy: {dy}')
                         nodes_searched += 1
                         # The diagonally-adjacent trees are further away, so
                         # only catch fire with a reduced probability:
@@ -88,7 +92,8 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                             continue
 
                         # this prevents straight right corners from occuring in the fire frontier
-                        if abs(dx) == abs(dy) and wind != 'none' and np.random.random() < 0.07 and curr_burning_nodes > 1:
+                        # TODO fix fire from going out 9% of the time 
+                        if abs(dx) == abs(dy) and wind != 'none' and np.random.random() < 0.08:
                             continue
                         
                         if X[iy+dy,ix+dx] == TREE:
@@ -100,9 +105,7 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                                     # break
                             else:
                                 # account for wind
-                                if i==direction_dict[wind]: 
-                                    print(f'WIND: {direction_dict[wind]}')
-                                    print(f'DIRECTION: {wind}')
+                                if action==direction_dict[wind]: 
                                     if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
                                         X1[iy+dy,ix+dx] = FIRE
                                 
@@ -136,6 +139,10 @@ def initialize_env() -> np.array:
         # we only have one ignition point at the center of the environment
         ignition_index = int(GRID_SIZE/2)
         X[ignition_index, ignition_index] = FIRE
+        X[ignition_index+1, ignition_index] = FIRE
+        X[ignition_index, ignition_index+1] = FIRE
+        X[ignition_index-1, ignition_index] = FIRE
+        X[ignition_index, ignition_index-1] = FIRE
     else:
         # randomly select some ignition points
         point_list = [int(GRID_SIZE - GRID_SIZE/5), int(GRID_SIZE/2), int(GRID_SIZE/3), int(GRID_SIZE - GRID_SIZE/7), int(GRID_SIZE/9), int(GRID_SIZE/4)]
