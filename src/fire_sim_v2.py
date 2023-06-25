@@ -51,6 +51,7 @@ norm = colors.BoundaryNorm(bounds, cmap.N)
 def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
     """
     Iterate the forest according to the forest-fire rules.
+    https://scipython.com/blog/the-forest-fire-model/
     
     https://stackoverflow.com/questions/63661231/replacing-numpy-array-elements-that-are-non-zero
     ^ This greatly accelerated the run time of this function
@@ -87,7 +88,7 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                             continue
 
                         # this prevents straight right corners from occuring in the fire frontier
-                        if abs(dx) == abs(dy) and wind != 'none' and np.random.random() < 0.07:
+                        if abs(dx) == abs(dy) and wind != 'none' and np.random.random() < 0.07 and curr_burning_nodes > 1:
                             continue
                         
                         if X[iy+dy,ix+dx] == TREE:
@@ -100,6 +101,8 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                             else:
                                 # account for wind
                                 if i==direction_dict[wind]: 
+                                    print(f'WIND: {direction_dict[wind]}')
+                                    print(f'DIRECTION: {wind}')
                                     if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
                                         X1[iy+dy,ix+dx] = FIRE
                                 
