@@ -18,12 +18,11 @@ ignition_points = 1
 # the percentage (0.1 represents 10% dropped) of phoscheck dropped over each node 
 phoscheck_drop_rate = 0.1
 
-
 [animation]
 # true if the animation should repeat before stopping
 repeat = false
 # set the time interval between frames in the animation
-interval = 30  #ms 30
+interval = 10  #ms 30
 # true in order to show the animation after the episode ends 
 save_anim = true
 # true in order to save the animation to disk
