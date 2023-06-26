@@ -1,36 +1,42 @@
-class Aircraft():
-    aircraft_type = 'Aircraft'
-    def __init__(self, fuel_level: float = 1.0, phoschek_level: float = 1.0, curr_direction: str = 'N', 
-                     dropping_phoschek: bool = False, location: list = [1, 1]):
-        self.fuel_level = fuel_level
-        self.phoschek_level = phoschek_level
-        self.curr_direction = curr_direction
-        self.dropping_phoschek = dropping_phoschek
-        self.location = location
-
-    def __repr__(self):
-        print_str = f'''
-                      {self.aircraft_type} fuel level: {round(self.fuel_level * 100, 2)}% 
-                      {self.aircraft_type} phoschek level: {round(self.phoschek_level * 100, 2)}%
-                      {self.aircraft_type} current direction: {self.curr_direction}
-                      {self.aircraft_type} currently dropping phoschek: {self.dropping_phoschek}
-                      {self.aircraft_type} location: {self.location}
-                      '''
-        print(print_str)
-        
-class Helicopter(Aircraft):
-        aircraft_type = 'Helicopter'
-        def __init__(self, fuel_level: float = 1.0, phoschek_level: float = 1.0, curr_direction: str = 'N', 
-                     dropping_phoschek: bool = False, location = [1, 1]):
-            super().__init__(fuel_level, phoschek_level, curr_direction, dropping_phoschek, location)
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from matplotlib.pyplot import imread
 
 
-class Plane(Aircraft):
-        aircraft_type = 'Plane'
-        def __init__(self, fuel_level: float = 1.0, phoschek_level: float = 1.0, curr_direction: str = 'N', 
-                     dropping_phoschek: bool = False, location = [1, 1]):
-            super().__init__(fuel_level, phoschek_level, curr_direction, dropping_phoschek, location)
+img = imread("data/big_map.png")
 
-# some driver code to test the classes 
-x = Helicopter(fuel_level=0.85, phoschek_level=1.0, curr_direction='E', dropping_phoschek=True, location=[1,1])
-x.__repr__()
+fig = plt.figure()
+# fig.set_dpi(100)
+fig.set_size_inches(14, 10)
+
+ax = plt.axes(xlim=(0, 20), ylim=(0, 20))
+patch = plt.Circle((5, -5), 0.75, fc='y')
+
+
+def init():
+    patch.center = (20, 20)
+    ax.add_patch(patch)
+    return patch,
+
+def animate(i):
+    x = 10 + 3 * np.sin(np.radians(i))
+    y = 10 + 3 * np.cos(np.radians(i))
+    patch.center = (x, y)
+    return patch,
+
+anim = animation.FuncAnimation(fig, animate, 
+                               init_func=init, 
+                               frames=360, 
+                               interval=20,
+                               blit=True)
+
+plt.imshow(img, zorder=0,  extent=[0.1, 20.0, 0.1, 20.0])
+anim.save('the_movie.mp4', writer = 'ffmpeg', fps=30)
+# plt.show()
+
+"""
+TODO 
+Update resultution: https://stackoverflow.com/questions/14666439/how-to-set-the-image-resolution-for-animations
+
+"""
