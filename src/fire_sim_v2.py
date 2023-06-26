@@ -149,12 +149,6 @@ def initialize_env() -> np.array:
         for i in range(IGNITION_POINTS):
             X[np.random.choice(point_list), np.random.choice(point_list)] = FIRE
 
-    # TODO SUNSET this old code - we now have a separate array for the airports
-    # airport #1 
-    # X[GRID_SIZE-3, GRID_SIZE-3] = AIRPORT
-    # airport #2 
-    # X[3, GRID_SIZE-3] = AIRPORT
-
     return X
 
 
@@ -166,7 +160,7 @@ def main():
 
     phoschek_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
 
-    frames = []
+    frames = [X]
 
     # run the RL algorithm and get the frames of the environment state 
     done = False
