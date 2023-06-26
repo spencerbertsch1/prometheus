@@ -8,15 +8,15 @@ fire_spread_prob = 0.55
 # Define probability that the fire burns outward against the wind
 up_wind_spread_prob = 0.15
 # Define the speed of the fire (1 is fastest, larger numbers are slower)
-fire_speed = 10
+fire_speed = 5
 # Forest size (number of cells in x and y directions).
-grid_size = 200
+grid_size = 64
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
 
 [agent]
 # the percentage (0.1 represents 10% dropped) of phoscheck dropped over each node 
-phoscheck_drop_rate = 0.005
+phoscheck_drop_rate = 0.1
 
 
 [animation]
@@ -28,3 +28,6 @@ interval = 30  #ms 30
 save_anim = true
 # true in order to save the animation to disk
 show_anim = false
+# true if we want to observe the frame-by-frame animation
+# this can become very long if the fire speed is slower (if fire_speed > 5)
+show_full_anim = true
