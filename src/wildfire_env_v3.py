@@ -169,8 +169,12 @@ class WildfireEnv(gym.Env):
 
 """
 TODOs 
+1. Fix bug: fire_sim_v2 has stopped using colors for the fire. 
 1. remove _agent_location and replace with the helicopter locaiton instance variable 
 2. Refine heuristic where the plane flies perpendicular to the wind and drops phos chek 
 4. write outer loop function that tests different heuristics against one another and plots the cumulative area saved
 3. embed this in a streamlit app
+
+5. Store new geospatial wildfire data in data directory
+6. Create realistic simulations using wildfire data
 """
