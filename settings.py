@@ -67,6 +67,7 @@ class AnimationParams:
     interval: bool = CONFIG_DICT['animation']['interval'] # millisecond interval for each frame in the animation
     save_anim: bool = CONFIG_DICT['animation']['save_anim']  # save the animation to disk 
     show_anim: bool = CONFIG_DICT['animation']['show_anim']  # show animation after each episode
+    show_full_anim: bool = CONFIG_DICT['animation']['show_full_anim']  # show full animation (frame by frame)
 
  
 def create_logger(logger_name: str) -> logging.Logger:
