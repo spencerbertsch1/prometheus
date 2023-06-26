@@ -1,42 +1,26 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from matplotlib.pyplot import imread
+from matplotlib import colors
+import numpy as np
 
+np.random.seed(101)
+zvals = np.random.rand(100, 100) * 5
 
-img = imread("data/big_map.png")
+# make a color map of fixed colors
+# https://stackoverflow.com/questions/9707676/defining-a-discrete-colormap-for-imshow-in-matplotlib
+cmap = colors.ListedColormap(['white', 'red', 'blue', 'green', 'orange'])
+bounds=[0, 1, 2, 3, 4, 5]
+norm = colors.BoundaryNorm(bounds, cmap.N)
 
-fig = plt.figure()
-# fig.set_dpi(100)
-fig.set_size_inches(14, 10)
+# tell imshow about color map so that only set colors are used
+img = plt.imshow(zvals, interpolation='nearest', origin='lower',
+                    cmap=cmap, norm=norm)
 
-ax = plt.axes(xlim=(0, 20), ylim=(0, 20))
-patch = plt.Circle((5, -5), 0.75, fc='y')
+# make a color bar
+plt.colorbar(img, cmap=cmap, norm=norm, boundaries=bounds, ticks=[0, 5, 10])
 
-
-def init():
-    patch.center = (20, 20)
-    ax.add_patch(patch)
-    return patch,
-
-def animate(i):
-    x = 10 + 3 * np.sin(np.radians(i))
-    y = 10 + 3 * np.cos(np.radians(i))
-    patch.center = (x, y)
-    return patch,
-
-anim = animation.FuncAnimation(fig, animate, 
-                               init_func=init, 
-                               frames=360, 
-                               interval=20,
-                               blit=True)
-
-plt.imshow(img, zorder=0,  extent=[0.1, 20.0, 0.1, 20.0])
-anim.save('the_movie.mp4', writer = 'ffmpeg', fps=30)
-# plt.show()
+plt.show()
 
 """
-TODO 
-Update resultution: https://stackoverflow.com/questions/14666439/how-to-set-the-image-resolution-for-animations
+https://stackoverflow.com/questions/9707676/defining-a-discrete-colormap-for-imshow-in-matplotlib
 
 """
