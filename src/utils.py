@@ -59,8 +59,11 @@ def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_an
     # for FIRE. Note that for the colormap to work, this list and the bounds list
     # must be one larger than the number of different values in the array.
     # EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT = 0, 1, 2, 3, 4, 5
-    if EnvParams.fire_speed != 1:
-         frames = frames[0::EnvParams.fire_speed]
+    if AnimationParams.show_full_anim: 
+         pass
+    else: 
+        if EnvParams.fire_speed != 1:
+            frames = frames[0::EnvParams.fire_speed]
     
     colors_list = ['black', 'forestgreen', 'orange', 'white', 'red', 'lightblue']
     cmap = colors.ListedColormap(colors_list)
