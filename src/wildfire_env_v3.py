@@ -41,7 +41,7 @@ class WildfireEnv(gym.Env):
         # define an empty list that will store all of the environmetn states (for episode animations)
         self.frames = []
         self.phoschek_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
-        self.agent_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+        # self.airport_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
 
         assert render_mode is None or render_mode in self.metadata["render_modes"]
         self.render_mode = render_mode
@@ -59,6 +59,9 @@ class WildfireEnv(gym.Env):
             self._agent_location = np.clip(
                 self._agent_location + direction, 1, EnvParams.grid_size - 2
             )
+            self.helicopter.location = list(np.clip(
+                self._agent_location + direction, 1, EnvParams.grid_size - 2
+            ))
 
         # initiate phoschek drop
         if ((action == 8) & (not self.helicopter.dropping_phoschek)):
@@ -109,7 +112,12 @@ class WildfireEnv(gym.Env):
             cnt = X_dict['nodes_processed']
             LOGGER.info(f'Nodes processed on step {i}: {cnt}')
 
-        return self._env_state, reward, done, info
+        observation = {'agent_list': [self.helicopter],
+                       'airport_locations': self._airport_locations, 
+                       'env_state': self._env_state, 
+                       'phoschek_array': self.phoschek_array}
+
+        return observation, reward, done, info
 
     def reset(self):
         # Reset the state of the environment
@@ -118,13 +126,28 @@ class WildfireEnv(gym.Env):
 
         self._env_state = initialize_env()
 
-        self.helicopter = Helicopter(location=[EnvParams.grid_size-10, EnvParams.grid_size-10])
+        # define airport locations
+        self._airport_locations = [[EnvParams.grid_size-3, EnvParams.grid_size-3], 
+                                   [EnvParams.grid_size-3, 3]]
+        
+        # add the airport locations to the environment state
+        for loc in self._airport_locations:
+            self._env_state[loc[0], loc[1]] = AIRPORT
 
-        # Choose the agent's starting location as the airport
+        # set the initial location to the airport 
+        self.helicopter = Helicopter(location=self._airport_locations[1])
         self._agent_location = self.helicopter.location
         # self._env_state[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
 
-        observation = self._env_state
+        full_frame = self._env_state.copy()
+        full_frame[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
+        
+        self.frames.append(full_frame)
+
+        observation = {'agent_list': [self.helicopter],
+                       'airport_locations': self._airport_locations, 
+                       'env_state': self._env_state, 
+                       'phoschek_array': self.phoschek_array}
         info = {'info': 1}
 
         self.render()
@@ -144,45 +167,10 @@ class WildfireEnv(gym.Env):
             pass
             # raise an error, unsupported mode
 
-
-# import environment, agent, and animation parameters 
-def main():
-    env = WildfireEnv(render_mode='rgb_array')
-    obs = env.reset()
-
-    i = 0
-    curr_burning_nodes_lst = []
-    while True:
-        i += 1
-        # Take a random action
-        action = env.action_space.sample()
-        obs, reward, done, info = env.step(action, i=i)
-        
-        # Render the game
-        env.render()
-
-        # store environment info for plotting
-        curr_burning_nodes = info['curr_burning_nodes']
-        curr_burning_nodes_lst.append(curr_burning_nodes)
-        
-        if done == True:
-            break
-
-    env.close()
-
-    c_burning_lst = Cumulative(lst=curr_burning_nodes_lst)
-
-    # df = pd.DataFrame({'x_data':range(len(c_burning_lst)), 'y_data':c_burning_lst})
-    # fig = px.line(df, x='x_data', y='y_data', title="Testing")
-    # fig.show()
-
-if __name__ == "__main__":
-    main()
-
-
 """
 TODOs 
-2. Implement heuristic where the plane flies perpendicular to the wind and drops phos chek 
+1. remove _agent_location and replace with the helicopter locaiton instance variable 
+2. Refine heuristic where the plane flies perpendicular to the wind and drops phos chek 
 4. write outer loop function that tests different heuristics against one another and plots the cumulative area saved
 3. embed this in a streamlit app
 """
