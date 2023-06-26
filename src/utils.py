@@ -65,13 +65,15 @@ def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_an
         if EnvParams.fire_speed != 1:
             frames = frames[0::EnvParams.fire_speed]
     
+    # choose the colors for each element of the image
+    # https://stackoverflow.com/questions/9707676/defining-a-discrete-colormap-for-imshow-in-matplotlib
     colors_list = ['black', 'forestgreen', 'orange', 'white', 'red', 'lightblue']
     cmap = colors.ListedColormap(colors_list)
-    bounds = [0, 1, 2, 3, 4, 5]
+    bounds = [0, 1, 2, 3, 4, 5, 6]
     norm = colors.BoundaryNorm(bounds, cmap.N)
 
     fig = plt.figure()
-    patch = plt.imshow(frames[0], cmap=cmap, interpolation='nearest')
+    patch = plt.imshow(frames[0], cmap=cmap, norm=norm, interpolation='nearest')
     plt.axis('off')
     anim = animation.FuncAnimation(
         fig, update_scene, fargs=(frames, patch),
@@ -86,8 +88,6 @@ def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_an
         plt.show()
 
     return anim
-
-import pygame
 
 
 def viewer(X: np.array):
