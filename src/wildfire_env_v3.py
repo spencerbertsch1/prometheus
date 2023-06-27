@@ -22,7 +22,8 @@ sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO_ANIMATIONS, \
     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
 from fire_sim_v2 import iterate_fire_v2, initialize_env
-from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative
+from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative, \
+    plot_animation_v2
 
 # set the random seed for predictable runs 
 SEED = 0
@@ -41,7 +42,8 @@ class WildfireEnv(gym.Env):
         # define an empty list that will store all of the environmetn states (for episode animations)
         self.frames = []
         self.phoschek_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
-        # self.airport_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+        # store the alphas used for creating the animation later on
+        self.alphas_list = []
 
         assert render_mode is None or render_mode in self.metadata["render_modes"]
         self.render_mode = render_mode
@@ -85,6 +87,9 @@ class WildfireEnv(gym.Env):
         
         full_frame = self._env_state.copy()
         full_frame[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
+
+        alpha_array = self._airport_array + self.phoschek_array
+        self.alphas_list.append(alpha_array)
         
         self.frames.append(full_frame)
 
@@ -96,8 +101,14 @@ class WildfireEnv(gym.Env):
         done = False
         if FIRE not in dict_keys: 
             done = True
-            plot_animation(frames=self.frames, repeat=AnimationParams.repeat, interval=AnimationParams.interval, 
-                save_anim=AnimationParams.save_anim, show_anim=AnimationParams.show_anim)
+            if AnimationParams.show_background_image:
+                plot_animation_v2(frames=self.frames, repeat=AnimationParams.repeat, interval=AnimationParams.interval, 
+                    save_anim=AnimationParams.save_anim, show_anim=AnimationParams.show_anim, 
+                    show_background_image=AnimationParams.show_background_image, alphas=self.alphas_list)
+            else:
+                plot_animation(frames=self.frames, repeat=AnimationParams.repeat, interval=AnimationParams.interval, 
+                    save_anim=AnimationParams.save_anim, show_anim=AnimationParams.show_anim)
+            
             info = {'curr_burning_nodes': 0}
         
         else:
@@ -130,9 +141,13 @@ class WildfireEnv(gym.Env):
         self._airport_locations = [[EnvParams.grid_size-3, EnvParams.grid_size-3], 
                                    [EnvParams.grid_size-3, 3]]
         
+        # generate a numpy array containing airport locations (used for animation)
+        self._airport_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+        
         # add the airport locations to the environment state
         for loc in self._airport_locations:
             self._env_state[loc[0], loc[1]] = AIRPORT
+            self._airport_array[loc[0], loc[1]] = AIRPORT
 
         # set the initial location to the airport 
         self.helicopter = Helicopter(location=self._airport_locations[1])
@@ -176,4 +191,6 @@ TODOs
 
 5. Store new geospatial wildfire data in data directory
 6. Create realistic simulations using wildfire data
+
+FIX IMAGE TRANSPOSING
 """

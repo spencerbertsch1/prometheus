@@ -18,6 +18,10 @@ from matplotlib import colors
 import time 
 from pathlib import Path
 import sys
+import matplotlib.animation as animation
+from matplotlib.pyplot import imread
+from PIL import Image, ImageDraw
+import cv2
 
 # local imports
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
@@ -45,10 +49,86 @@ def numpy_element_counter(arr: np.array) -> dict:
     return counts_dict
 
 
+def plot_animation_v3(frames: list[np.array], repeat: bool, 
+                      interval: int, save_anim: bool, show_anim: bool):
+
+    frameSize = (500, 500)
+
+    out = cv2.VideoWriter('output_video.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
+
+    for frame in range(len(frames)):
+        out.write(frame)
+
+    out.release()
+
+# define helper function
+def animate(i, num, frames, patch, norm_alphas):
+    patch.set_data(frames[num])
+    patch.set_alpha(norm_alphas[i-1]) 
+    return patch,
+
+
 # define helper function
 def update_scene(num, frames, patch):
     patch.set_data(frames[num])
     return patch,
+
+
+def plot_animation_v2(frames, repeat: bool, interval: int, show_background_image: bool, 
+                      save_anim: bool, show_anim: bool, alphas: np.array) -> animation.FuncAnimation:
+    """
+    Function to plot the series of environment frames generated during training 
+    """
+    # Colours for visualization: brown for EMPTY, dark green for TREE and orange
+    # for FIRE. Note that for the colormap to work, this list and the bounds list
+    # must be one larger than the number of different values in the array.
+    # EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT = 0, 1, 2, 3, 4, 5
+
+    if show_background_image: 
+        img = imread("src/data/SF_map_very_small.jpeg")
+        norm_alphas = []
+        for i in range(len(frames)-1):
+            arr = alphas[i].copy()
+            arr[arr != 0] = 1
+            norm_alphas.append(arr)
+
+    if AnimationParams.show_full_anim: 
+         pass
+    else: 
+        if EnvParams.fire_speed != 1:
+            frames = frames[0::EnvParams.fire_speed]
+    
+    # choose the colors for each element of the image
+    # https://stackoverflow.com/questions/9707676/defining-a-discrete-colormap-for-imshow-in-matplotlib
+    colors_list = ['black', 'forestgreen', 'orange', 'white', 'red', 'lightblue']
+    cmap = colors.ListedColormap(colors_list)
+    bounds = [0, 1, 2, 3, 4, 5, 6]
+    norm = colors.BoundaryNorm(bounds, cmap.N)
+
+    fig = plt.figure()
+
+    # set the resolution for the animation
+    fig.set_size_inches(EnvParams.grid_size/40, EnvParams.grid_size/40, True)
+    patch = plt.imshow(frames[0], cmap=cmap, norm=norm, interpolation='nearest', zorder=3, alpha=norm_alphas[0])
+    plt.axis('off')
+    anim = animation.FuncAnimation(
+        fig, animate, fargs=(i, frames, patch, norm_alphas),
+        frames=len(frames), repeat=repeat, interval=interval, blit=False)
+
+    if show_background_image: 
+        arr = frames[0]
+        extent = [0, arr.shape[0]-1, 0, arr.shape[1]-1]
+        plt.imshow(img, zorder=0,  extent=extent, alpha=1)
+    
+    if save_anim: 
+        fps = int(round(1000/interval))
+        anim_path: Path = ABSPATH_TO_ANIMATIONS / 'wildfire_episode.mp4'
+        anim.save(anim_path, writer='ffmpeg', fps=fps)
+
+    if show_anim: 
+        plt.show()
+
+    return anim
 
 
 def plot_animation(frames, repeat: bool, interval: int, save_anim: bool, show_anim: bool) -> animation.FuncAnimation:
