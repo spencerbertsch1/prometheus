@@ -49,22 +49,12 @@ def numpy_element_counter(arr: np.array) -> dict:
     return counts_dict
 
 
-def plot_animation_v3(frames: list[np.array], repeat: bool, 
-                      interval: int, save_anim: bool, show_anim: bool):
-
-    frameSize = (500, 500)
-
-    out = cv2.VideoWriter('output_video.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
-
-    for frame in range(len(frames)):
-        out.write(frame)
-
-    out.release()
-
 # define helper function
 def animate(i, num, frames, patch, norm_alphas):
-    patch.set_data(frames[num])
-    patch.set_alpha(norm_alphas[i-1]) 
+    if i%10==0: 
+        LOGGER.info(f'Currently writing frame {i} of {len(frames)} to animation.')
+    patch.set_data(np.fliplr(np.rot90(frames[i], 2)))
+    patch.set_alpha(np.fliplr(np.rot90(norm_alphas[i], 2)))
     return patch,
 
 
@@ -87,7 +77,7 @@ def plot_animation_v2(frames, repeat: bool, interval: int, show_background_image
     if show_background_image: 
         img = imread("src/data/SF_map_very_small.jpeg")
         norm_alphas = []
-        for i in range(len(frames)-1):
+        for i in range(len(frames)):
             arr = alphas[i].copy()
             arr[arr != 0] = 1
             norm_alphas.append(arr)
@@ -97,6 +87,7 @@ def plot_animation_v2(frames, repeat: bool, interval: int, show_background_image
     else: 
         if EnvParams.fire_speed != 1:
             frames = frames[0::EnvParams.fire_speed]
+            norm_alphas = norm_alphas[0::EnvParams.fire_speed]
     
     # choose the colors for each element of the image
     # https://stackoverflow.com/questions/9707676/defining-a-discrete-colormap-for-imshow-in-matplotlib
