@@ -44,7 +44,7 @@ class Heuristic():
     def get_path_to_drop_site(self, obs: dict):
         # return random list as placeholder
         # return [self.env.action_space.sample() for x in range(20)]
-        return [0 for x in range(10)]
+        return [2 for x in range(45)]
 
     def get_path_to_closest_airport(self, obs: dict):
         # return random list as placeholder
