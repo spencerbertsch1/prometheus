@@ -68,8 +68,9 @@ class AnimationParams:
     save_anim: bool = CONFIG_DICT['animation']['save_anim']  # save the animation to disk 
     show_anim: bool = CONFIG_DICT['animation']['show_anim']  # show animation after each episode
     show_full_anim: bool = CONFIG_DICT['animation']['show_full_anim']  # show full animation (frame by frame)
+    show_background_image: bool = CONFIG_DICT['animation']['show_background_image']  # show landscape image
 
- 
+
 def create_logger(logger_name: str) -> logging.Logger:
     """
     Function to create a generic logger which can be used through out different scripts in the migraine
