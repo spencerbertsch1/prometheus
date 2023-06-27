@@ -88,7 +88,7 @@ class WildfireEnv(gym.Env):
         full_frame = self._env_state.copy()
         full_frame[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
 
-        alpha_array = self._airport_array + self.phoschek_array
+        alpha_array = (self._airport_array + self.phoschek_array + full_frame) - 1
         self.alphas_list.append(alpha_array)
         
         self.frames.append(full_frame)
@@ -159,6 +159,8 @@ class WildfireEnv(gym.Env):
         
         self.frames.append(full_frame)
 
+        self.alphas_list.append(self._airport_array.copy())
+
         observation = {'agent_list': [self.helicopter],
                        'airport_locations': self._airport_locations, 
                        'env_state': self._env_state, 
@@ -189,8 +191,6 @@ TODOs
 4. write outer loop function that tests different heuristics against one another and plots the cumulative area saved
 3. embed this in a streamlit app
 
-5. Store new geospatial wildfire data in data directory
 6. Create realistic simulations using wildfire data
 
-FIX IMAGE TRANSPOSING
 """
