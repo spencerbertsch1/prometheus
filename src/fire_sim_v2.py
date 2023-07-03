@@ -18,6 +18,7 @@ from matplotlib import colors
 import time 
 from pathlib import Path
 import sys
+import math
 
 # local imports
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
