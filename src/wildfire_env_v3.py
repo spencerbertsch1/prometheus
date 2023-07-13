@@ -19,7 +19,7 @@ PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 print(f'Working directory: {PATH_TO_WORKING_DIR}')
 sys.path.append(str(PATH_TO_WORKING_DIR))
-from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO_ANIMATIONS, \
+from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO_ANIMATIONS, ABSPATH_TO_DATA, \
     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
 from fire_sim_v2 import iterate_fire_v2, initialize_env
 from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative, \
@@ -41,7 +41,7 @@ class WildfireEnv(gym.Env):
         self.observation_space = spaces.Box(low=0, high=5, shape=(EnvParams.grid_size, EnvParams.grid_size, 1), dtype=np.uint8)
         # define an empty list that will store all of the environmetn states (for episode animations)
         self.frames = []
-        self.phoschek_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+        self.phoschek_array = self.generate_starting_phoschek_array()
         # store the alphas used for creating the animation later on
         self.alphas_list = []
 
@@ -50,6 +50,22 @@ class WildfireEnv(gym.Env):
 
     def _render_frame(self, X: np.array):
         pygame_viewer = viewer(self._env_state)
+
+    def generate_starting_phoschek_array(self):
+        """
+        Simple utility function to initialize the 2D numpy array of phos chek 
+        """
+        if AnimationParams.show_background_image:
+            # path: Path = ABSPATH_TO_DATA / "starting_phoschek_array.npy"
+            # arr = np.load(str(path))
+            # # replace all non-empty values with PHOSCHEK value
+            # arr[arr > 100] = PHOSCHEK
+            # print(np.amax(arr))
+            arr = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+        else:
+            arr = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
+
+        return arr
 
     def step(self, action, i: int):
 
