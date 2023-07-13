@@ -26,7 +26,7 @@ import numpy as np
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 ABSPATH_TO_TOML: Path = PATH_TO_THIS_FILE.parent / "config.toml"
 ABSPATH_TO_ANIMATIONS: Path = PATH_TO_THIS_FILE.parent / "src" / "animations"
-PATH_TO_DATA: Path = PATH_TO_THIS_FILE.parent / "src" / "simulation" / "simulation_results"
+ABSPATH_TO_DATA: Path = PATH_TO_THIS_FILE.parent / "src" / "data" 
 
 EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT = 0, 1, 2, 3, 4, 5
 
@@ -46,6 +46,7 @@ action_to_direction = {
             6: np.array([0, -1]),   # W
             7: np.array([-1, -1]),  # NW
         }
+direction_to_action = {tuple(v): k for k, v in action_to_direction.items()}
 
 # use toml.load to read `config.toml` file in as a dictionary
 CONFIG_DICT: Dict[Any, Any] = toml.load(str(ABSPATH_TO_TOML))
@@ -68,7 +69,9 @@ class AnimationParams:
     save_anim: bool = CONFIG_DICT['animation']['save_anim']  # save the animation to disk 
     show_anim: bool = CONFIG_DICT['animation']['show_anim']  # show animation after each episode
     show_full_anim: bool = CONFIG_DICT['animation']['show_full_anim']  # show full animation (frame by frame)
+    dev_fast_anim: bool = CONFIG_DICT['animation']['dev_fast_anim']  # greatly speed up animation (for development)
     show_background_image: bool = CONFIG_DICT['animation']['show_background_image']  # show landscape image
+
 
 
 def create_logger(logger_name: str) -> logging.Logger:
