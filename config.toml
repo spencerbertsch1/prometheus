@@ -1,6 +1,6 @@
 [env]
 # Wind options: ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
-wind = 'SE' 
+wind = 'SW' 
 # The initial fraction of the forest occupied by trees.
 forest_fraction = 1
 # Define fire spread probability (ignored when wind is not 'none')
@@ -8,15 +8,15 @@ fire_spread_prob = 0.55
 # Define probability that the fire burns outward against the wind
 up_wind_spread_prob = 0.07
 # Define the speed of the fire (1 is fastest, larger numbers are slower)
-fire_speed = 3
+fire_speed = 10
 # Forest size (number of cells in x and y directions).
-grid_size = 300
+grid_size = 400
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
 
 [agent]
 # the percentage (0.1 represents 10% dropped) of phoscheck dropped over each node 
-phoscheck_drop_rate = 0.005
+phoscheck_drop_rate = 0.05
 
 [animation]
 # true if the animation should repeat before stopping
@@ -30,5 +30,7 @@ show_anim = false
 # true if we want to observe the frame-by-frame animation
 # this can become very long if the fire speed is slower (if fire_speed > 5)
 show_full_anim = false
+# option to greatly speed up the animation in order to iterate quickly indevelopment 
+dev_fast_anim = true
 # show the image of the landscape behind the animation
 show_background_image = true
