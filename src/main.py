@@ -35,7 +35,7 @@ def main():
     env = WildfireEnv(render_mode='rgb_array')
     obs, info = env.reset()
 
-    heuristic = Heuristic(name='basic_heuristic', env=env, verbose=True)
+    heuristic = Heuristic(name='basic_heuristic', env=env, verbose=True, obs=obs)
 
     i = 0
     curr_burning_nodes_lst = []
@@ -43,7 +43,7 @@ def main():
         i += 1
         # Take a random action
         # action = env.action_space.sample()
-        action = heuristic.predict(obs=obs)
+        action = heuristic.get_action(obs=obs)
         obs, reward, done, info = env.step(action, i=i)
         
         # Render the game
