@@ -15,6 +15,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 from matplotlib import animation
 from matplotlib import colors
+import seaborn as sns
 import time 
 from pathlib import Path
 import sys
@@ -177,6 +178,23 @@ def viewer(X: np.array):
         display.blit(surf, (0, 0))
         pygame.display.update()
     pygame.quit()
+
+
+def get_fire_centroid(env_state: np.array, verbose = False):
+    """
+    Simple utility function to get the centroid of the currently burning nodes.     
+    """
+
+    if verbose: 
+        ax = sns.heatmap(env_state, linewidth=0)
+        plt.show()
+
+    # calculate the centroid of the currently burning nodes 
+    count = (env_state == 1).sum()
+    y_center, x_center = np.argwhere(env_state==1).sum(0)/count
+    centroid = {'x_center': x_center, 'y_center': y_center}
+
+    return centroid
 
 
 class Aircraft():
