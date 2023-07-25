@@ -26,16 +26,16 @@ PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS
 from wildfire_env_v3 import WildfireEnv
-from utils import Cumulative
+from utils import Cumulative, Helicopter
 from heuristic import Heuristic
-
+from heuristic2 import heuristic2 as heuristic_policy
 
 # import environment, agent, and animation parameters 
 def main():
     env = WildfireEnv(render_mode='rgb_array')
     obs, info = env.reset()
 
-    heuristic = Heuristic(name='basic_heuristic', env=env, verbose=True, obs=obs)
+    # heuristic = Heuristic(name='H1', env=env, verbose=True, obs=obs)
 
     i = 0
     curr_burning_nodes_lst = []
@@ -43,15 +43,16 @@ def main():
         i += 1
         # Take a random action
         # action = env.action_space.sample()
-        action = heuristic.get_action(obs=obs)
+        action = env.heuristic2(obs=obs)
+        # action = heuristic.get_action(obs=obs)
         obs, reward, done, info = env.step(action, i=i)
         
         # Render the game
-        env.render()
+        # env.render()
 
         # store environment info for plotting
-        curr_burning_nodes = info['curr_burning_nodes']
-        curr_burning_nodes_lst.append(curr_burning_nodes)
+        # curr_burning_nodes = info['curr_burning_nodes']
+        # curr_burning_nodes_lst.append(curr_burning_nodes)
         
         if done == True:
             break
