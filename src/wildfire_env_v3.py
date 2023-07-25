@@ -23,7 +23,7 @@ from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO
     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
 from fire_sim_v2 import iterate_fire_v2, initialize_env
 from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative, \
-    plot_animation_v2, get_path_to_point, get_fire_centroid
+    plot_animation_v2, get_path_to_point, get_fire_centroid, get_closest_airport
 
 # set the random seed for predictable runs 
 SEED = 0
@@ -140,7 +140,7 @@ class WildfireEnv(gym.Env):
         # log the progress 
         if i%10==0:
             cnt = X_dict['nodes_processed']
-            LOGGER.info(f'Nodes processed on step {i}: {cnt}')
+            LOGGER.info(f'Nodes processed on step {i}: {cnt}, Phoschek Level: {round(self.helicopter.phoschek_level, 2)}')
 
         observation = {'agent_list': [self.helicopter],
                        'airport_locations': self._airport_locations, 
@@ -206,6 +206,7 @@ class WildfireEnv(gym.Env):
             pass
             # raise an error, unsupported mode
 
+
     def heuristic2(self, obs: dict):
 
         # if the agent is at an airport 
@@ -219,12 +220,46 @@ class WildfireEnv(gym.Env):
             self._action_list = get_path_to_point(start=self._agent_location, goal=target)
 
         if len(self._action_list) == 0:
-            action = self.action_space.sample()
-        else:
-            action = self._action_list[0]
-            self._action_list = self._action_list[1:]
+            # action = self.action_space.sample()
+            # get the position of the closest airport 
+            closest_airport_location: list = get_closest_airport(agent_location=self._agent_location, airport_locations=self._airport_locations)
+            # get the action path that leads to that airport 
+            self._action_list = get_path_to_point(start=self._agent_location, goal=closest_airport_location)
+        # else:
+        action = self._action_list[0]
+        self._action_list = self._action_list[1:]
 
         return action
+
+        # get_action_from_list = True
+
+        # # if the agent is at an airport 
+        # if list(self._agent_location) in self._airport_locations:
+        #     c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
+        #     x_center, y_center = round(c_dict['x_center'], 1), round(c_dict['y_center'], 1)
+        #     target = [x_center+75, y_center+75]
+
+        #     print(f'X Center: {x_center}, Y Center: {y_center}')
+
+        #     self._action_list = get_path_to_point(start=self._agent_location, goal=target)
+
+        # # drop phos chek 
+        # if self.helicopter.phoschek_level > 0:
+        #     get_action_from_list = False
+        #     action = self.action_space.sample()
+        
+        # # agent is done dropping phos chek and needs to return to airport
+        # else:
+        #     # get the position of the closest airport 
+        #     closest_airport_location: list = get_closest_airport(agent_location=self._agent_location, airport_locations=self._airport_locations)
+        #     # get the action path that leads to that airport 
+        #     self._action_list = get_path_to_point(start=self._agent_location, goal=closest_airport_location)
+
+        # if get_action_from_list: 
+        #     action = self._action_list[0]
+        # self._action_list = self._action_list[1:]
+
+        # return action
 
 """
 TODOs 
