@@ -14994,3 +14994,587 @@ Wildfire Dev - 2023-07-25 18:16:40,458 - PyFire-Dev - INFO - Currently writing f
 Wildfire Dev - 2023-07-25 18:16:41,814 - PyFire-Dev - INFO - Currently writing frame 200 of 220 to animation.
 Wildfire Dev - 2023-07-25 18:16:43,172 - PyFire-Dev - INFO - Currently writing frame 210 of 220 to animation.
 Wildfire Dev - 2023-07-25 18:16:44,731 - PyFire-Dev - INFO - Nodes processed on step 2190: 8, Phoschek Level: 0.3
+Wildfire Dev - 2023-07-25 18:20:31,725 - PyFire-Dev - INFO - ---------- Environment Reset Complete ----------
+Wildfire Dev - 2023-07-25 18:20:31,725 - PyFire-Dev - INFO - Airport Locations: [[297, 297], [297, 3]]
+Wildfire Dev - 2023-07-25 18:20:31,725 - PyFire-Dev - INFO - Starting Agent Locations: [297, 3]
+Wildfire Dev - 2023-07-25 18:20:31,760 - PyFire-Dev - INFO - Nodes processed on step 10: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:31,792 - PyFire-Dev - INFO - Nodes processed on step 20: 32, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:31,824 - PyFire-Dev - INFO - Nodes processed on step 30: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:31,856 - PyFire-Dev - INFO - Nodes processed on step 40: 48, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:31,888 - PyFire-Dev - INFO - Nodes processed on step 50: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:31,920 - PyFire-Dev - INFO - Nodes processed on step 60: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:31,952 - PyFire-Dev - INFO - Nodes processed on step 70: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:31,984 - PyFire-Dev - INFO - Nodes processed on step 80: 80, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,016 - PyFire-Dev - INFO - Nodes processed on step 90: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,048 - PyFire-Dev - INFO - Nodes processed on step 100: 56, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,080 - PyFire-Dev - INFO - Nodes processed on step 110: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,112 - PyFire-Dev - INFO - Nodes processed on step 120: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,144 - PyFire-Dev - INFO - Nodes processed on step 130: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,176 - PyFire-Dev - INFO - Nodes processed on step 140: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,208 - PyFire-Dev - INFO - Nodes processed on step 150: 80, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,239 - PyFire-Dev - INFO - Nodes processed on step 160: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,271 - PyFire-Dev - INFO - Nodes processed on step 170: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,303 - PyFire-Dev - INFO - Nodes processed on step 180: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:32,335 - PyFire-Dev - INFO - Nodes processed on step 190: 96, Phoschek Level: 0.92
+Wildfire Dev - 2023-07-25 18:20:32,367 - PyFire-Dev - INFO - Nodes processed on step 200: 152, Phoschek Level: 0.82
+Wildfire Dev - 2023-07-25 18:20:32,399 - PyFire-Dev - INFO - Nodes processed on step 210: 136, Phoschek Level: 0.72
+Wildfire Dev - 2023-07-25 18:20:32,431 - PyFire-Dev - INFO - Nodes processed on step 220: 152, Phoschek Level: 0.62
+Wildfire Dev - 2023-07-25 18:20:32,464 - PyFire-Dev - INFO - Nodes processed on step 230: 144, Phoschek Level: 0.52
+Wildfire Dev - 2023-07-25 18:20:32,496 - PyFire-Dev - INFO - Nodes processed on step 240: 160, Phoschek Level: 0.42
+Wildfire Dev - 2023-07-25 18:20:32,528 - PyFire-Dev - INFO - Nodes processed on step 250: 136, Phoschek Level: 0.32
+Wildfire Dev - 2023-07-25 18:20:32,560 - PyFire-Dev - INFO - Nodes processed on step 260: 144, Phoschek Level: 0.22
+Wildfire Dev - 2023-07-25 18:20:32,592 - PyFire-Dev - INFO - Nodes processed on step 270: 144, Phoschek Level: 0.12
+Wildfire Dev - 2023-07-25 18:20:32,624 - PyFire-Dev - INFO - Nodes processed on step 280: 160, Phoschek Level: 0.02
+Wildfire Dev - 2023-07-25 18:20:32,656 - PyFire-Dev - INFO - Nodes processed on step 290: 168, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,688 - PyFire-Dev - INFO - Nodes processed on step 300: 160, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,720 - PyFire-Dev - INFO - Nodes processed on step 310: 160, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,752 - PyFire-Dev - INFO - Nodes processed on step 320: 176, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,784 - PyFire-Dev - INFO - Nodes processed on step 330: 176, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,816 - PyFire-Dev - INFO - Nodes processed on step 340: 168, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,848 - PyFire-Dev - INFO - Nodes processed on step 350: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,880 - PyFire-Dev - INFO - Nodes processed on step 360: 128, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,912 - PyFire-Dev - INFO - Nodes processed on step 370: 128, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,944 - PyFire-Dev - INFO - Nodes processed on step 380: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:32,976 - PyFire-Dev - INFO - Nodes processed on step 390: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,012 - PyFire-Dev - INFO - Nodes processed on step 400: 144, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,051 - PyFire-Dev - INFO - Nodes processed on step 410: 152, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,083 - PyFire-Dev - INFO - Nodes processed on step 420: 128, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,116 - PyFire-Dev - INFO - Nodes processed on step 430: 128, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,148 - PyFire-Dev - INFO - Nodes processed on step 440: 160, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,180 - PyFire-Dev - INFO - Nodes processed on step 450: 168, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,212 - PyFire-Dev - INFO - Nodes processed on step 460: 152, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,243 - PyFire-Dev - INFO - Nodes processed on step 470: 120, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,276 - PyFire-Dev - INFO - Nodes processed on step 480: 128, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,308 - PyFire-Dev - INFO - Nodes processed on step 490: 120, Phoschek Level: 0.96
+Wildfire Dev - 2023-07-25 18:20:33,340 - PyFire-Dev - INFO - Nodes processed on step 500: 128, Phoschek Level: 0.86
+Wildfire Dev - 2023-07-25 18:20:33,372 - PyFire-Dev - INFO - Nodes processed on step 510: 144, Phoschek Level: 0.76
+Wildfire Dev - 2023-07-25 18:20:33,404 - PyFire-Dev - INFO - Nodes processed on step 520: 136, Phoschek Level: 0.66
+Wildfire Dev - 2023-07-25 18:20:33,436 - PyFire-Dev - INFO - Nodes processed on step 530: 120, Phoschek Level: 0.56
+Wildfire Dev - 2023-07-25 18:20:33,468 - PyFire-Dev - INFO - Nodes processed on step 540: 120, Phoschek Level: 0.46
+Wildfire Dev - 2023-07-25 18:20:33,500 - PyFire-Dev - INFO - Nodes processed on step 550: 152, Phoschek Level: 0.36
+Wildfire Dev - 2023-07-25 18:20:33,532 - PyFire-Dev - INFO - Nodes processed on step 560: 136, Phoschek Level: 0.26
+Wildfire Dev - 2023-07-25 18:20:33,564 - PyFire-Dev - INFO - Nodes processed on step 570: 136, Phoschek Level: 0.16
+Wildfire Dev - 2023-07-25 18:20:33,597 - PyFire-Dev - INFO - Nodes processed on step 580: 160, Phoschek Level: 0.06
+Wildfire Dev - 2023-07-25 18:20:33,629 - PyFire-Dev - INFO - Nodes processed on step 590: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,661 - PyFire-Dev - INFO - Nodes processed on step 600: 144, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,693 - PyFire-Dev - INFO - Nodes processed on step 610: 168, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,726 - PyFire-Dev - INFO - Nodes processed on step 620: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,758 - PyFire-Dev - INFO - Nodes processed on step 630: 160, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,789 - PyFire-Dev - INFO - Nodes processed on step 640: 136, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,821 - PyFire-Dev - INFO - Nodes processed on step 650: 104, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,853 - PyFire-Dev - INFO - Nodes processed on step 660: 96, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:33,886 - PyFire-Dev - INFO - Nodes processed on step 670: 104, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,917 - PyFire-Dev - INFO - Nodes processed on step 680: 104, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,949 - PyFire-Dev - INFO - Nodes processed on step 690: 112, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:33,981 - PyFire-Dev - INFO - Nodes processed on step 700: 128, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,013 - PyFire-Dev - INFO - Nodes processed on step 710: 160, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,045 - PyFire-Dev - INFO - Nodes processed on step 720: 136, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,077 - PyFire-Dev - INFO - Nodes processed on step 730: 176, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,109 - PyFire-Dev - INFO - Nodes processed on step 740: 168, Phoschek Level: 0.91
+Wildfire Dev - 2023-07-25 18:20:34,142 - PyFire-Dev - INFO - Nodes processed on step 750: 192, Phoschek Level: 0.81
+Wildfire Dev - 2023-07-25 18:20:34,174 - PyFire-Dev - INFO - Nodes processed on step 760: 176, Phoschek Level: 0.71
+Wildfire Dev - 2023-07-25 18:20:34,206 - PyFire-Dev - INFO - Nodes processed on step 770: 192, Phoschek Level: 0.61
+Wildfire Dev - 2023-07-25 18:20:34,239 - PyFire-Dev - INFO - Nodes processed on step 780: 176, Phoschek Level: 0.51
+Wildfire Dev - 2023-07-25 18:20:34,271 - PyFire-Dev - INFO - Nodes processed on step 790: 176, Phoschek Level: 0.41
+Wildfire Dev - 2023-07-25 18:20:34,303 - PyFire-Dev - INFO - Nodes processed on step 800: 192, Phoschek Level: 0.31
+Wildfire Dev - 2023-07-25 18:20:34,335 - PyFire-Dev - INFO - Nodes processed on step 810: 208, Phoschek Level: 0.21
+Wildfire Dev - 2023-07-25 18:20:34,367 - PyFire-Dev - INFO - Nodes processed on step 820: 224, Phoschek Level: 0.11
+Wildfire Dev - 2023-07-25 18:20:34,400 - PyFire-Dev - INFO - Nodes processed on step 830: 216, Phoschek Level: 0.01
+Wildfire Dev - 2023-07-25 18:20:34,432 - PyFire-Dev - INFO - Nodes processed on step 840: 248, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:34,464 - PyFire-Dev - INFO - Nodes processed on step 850: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:34,497 - PyFire-Dev - INFO - Nodes processed on step 860: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:34,529 - PyFire-Dev - INFO - Nodes processed on step 870: 256, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:34,561 - PyFire-Dev - INFO - Nodes processed on step 880: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:34,593 - PyFire-Dev - INFO - Nodes processed on step 890: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:34,626 - PyFire-Dev - INFO - Nodes processed on step 900: 240, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,658 - PyFire-Dev - INFO - Nodes processed on step 910: 256, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,690 - PyFire-Dev - INFO - Nodes processed on step 920: 288, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,722 - PyFire-Dev - INFO - Nodes processed on step 930: 296, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:34,755 - PyFire-Dev - INFO - Nodes processed on step 940: 280, Phoschek Level: 0.98
+Wildfire Dev - 2023-07-25 18:20:34,787 - PyFire-Dev - INFO - Nodes processed on step 950: 240, Phoschek Level: 0.88
+Wildfire Dev - 2023-07-25 18:20:34,820 - PyFire-Dev - INFO - Nodes processed on step 960: 240, Phoschek Level: 0.78
+Wildfire Dev - 2023-07-25 18:20:34,852 - PyFire-Dev - INFO - Nodes processed on step 970: 248, Phoschek Level: 0.68
+Wildfire Dev - 2023-07-25 18:20:34,884 - PyFire-Dev - INFO - Nodes processed on step 980: 272, Phoschek Level: 0.58
+Wildfire Dev - 2023-07-25 18:20:34,916 - PyFire-Dev - INFO - Nodes processed on step 990: 264, Phoschek Level: 0.48
+Wildfire Dev - 2023-07-25 18:20:34,948 - PyFire-Dev - INFO - Nodes processed on step 1000: 256, Phoschek Level: 0.38
+Wildfire Dev - 2023-07-25 18:20:34,981 - PyFire-Dev - INFO - Nodes processed on step 1010: 240, Phoschek Level: 0.28
+Wildfire Dev - 2023-07-25 18:20:35,013 - PyFire-Dev - INFO - Nodes processed on step 1020: 232, Phoschek Level: 0.18
+Wildfire Dev - 2023-07-25 18:20:35,045 - PyFire-Dev - INFO - Nodes processed on step 1030: 272, Phoschek Level: 0.08
+Wildfire Dev - 2023-07-25 18:20:35,077 - PyFire-Dev - INFO - Nodes processed on step 1040: 288, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,109 - PyFire-Dev - INFO - Nodes processed on step 1050: 320, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,141 - PyFire-Dev - INFO - Nodes processed on step 1060: 288, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,173 - PyFire-Dev - INFO - Nodes processed on step 1070: 312, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,204 - PyFire-Dev - INFO - Nodes processed on step 1080: 272, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,237 - PyFire-Dev - INFO - Nodes processed on step 1090: 296, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:35,269 - PyFire-Dev - INFO - Nodes processed on step 1100: 264, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:35,301 - PyFire-Dev - INFO - Nodes processed on step 1110: 288, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:35,332 - PyFire-Dev - INFO - Nodes processed on step 1120: 304, Phoschek Level: 0.94
+Wildfire Dev - 2023-07-25 18:20:35,364 - PyFire-Dev - INFO - Nodes processed on step 1130: 288, Phoschek Level: 0.84
+Wildfire Dev - 2023-07-25 18:20:35,396 - PyFire-Dev - INFO - Nodes processed on step 1140: 280, Phoschek Level: 0.74
+Wildfire Dev - 2023-07-25 18:20:35,428 - PyFire-Dev - INFO - Nodes processed on step 1150: 320, Phoschek Level: 0.64
+Wildfire Dev - 2023-07-25 18:20:35,460 - PyFire-Dev - INFO - Nodes processed on step 1160: 296, Phoschek Level: 0.54
+Wildfire Dev - 2023-07-25 18:20:35,492 - PyFire-Dev - INFO - Nodes processed on step 1170: 296, Phoschek Level: 0.44
+Wildfire Dev - 2023-07-25 18:20:35,524 - PyFire-Dev - INFO - Nodes processed on step 1180: 344, Phoschek Level: 0.34
+Wildfire Dev - 2023-07-25 18:20:35,556 - PyFire-Dev - INFO - Nodes processed on step 1190: 352, Phoschek Level: 0.24
+Wildfire Dev - 2023-07-25 18:20:35,588 - PyFire-Dev - INFO - Nodes processed on step 1200: 352, Phoschek Level: 0.14
+Wildfire Dev - 2023-07-25 18:20:35,620 - PyFire-Dev - INFO - Nodes processed on step 1210: 336, Phoschek Level: 0.04
+Wildfire Dev - 2023-07-25 18:20:35,652 - PyFire-Dev - INFO - Nodes processed on step 1220: 336, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,684 - PyFire-Dev - INFO - Nodes processed on step 1230: 320, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,716 - PyFire-Dev - INFO - Nodes processed on step 1240: 312, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:35,749 - PyFire-Dev - INFO - Nodes processed on step 1250: 360, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:35,781 - PyFire-Dev - INFO - Nodes processed on step 1260: 368, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:35,813 - PyFire-Dev - INFO - Nodes processed on step 1270: 368, Phoschek Level: 0.94
+Wildfire Dev - 2023-07-25 18:20:35,845 - PyFire-Dev - INFO - Nodes processed on step 1280: 304, Phoschek Level: 0.84
+Wildfire Dev - 2023-07-25 18:20:35,877 - PyFire-Dev - INFO - Nodes processed on step 1290: 288, Phoschek Level: 0.74
+Wildfire Dev - 2023-07-25 18:20:35,909 - PyFire-Dev - INFO - Nodes processed on step 1300: 344, Phoschek Level: 0.64
+Wildfire Dev - 2023-07-25 18:20:35,941 - PyFire-Dev - INFO - Nodes processed on step 1310: 336, Phoschek Level: 0.54
+Wildfire Dev - 2023-07-25 18:20:35,974 - PyFire-Dev - INFO - Nodes processed on step 1320: 352, Phoschek Level: 0.44
+Wildfire Dev - 2023-07-25 18:20:36,006 - PyFire-Dev - INFO - Nodes processed on step 1330: 384, Phoschek Level: 0.34
+Wildfire Dev - 2023-07-25 18:20:36,038 - PyFire-Dev - INFO - Nodes processed on step 1340: 392, Phoschek Level: 0.24
+Wildfire Dev - 2023-07-25 18:20:36,070 - PyFire-Dev - INFO - Nodes processed on step 1350: 344, Phoschek Level: 0.14
+Wildfire Dev - 2023-07-25 18:20:36,102 - PyFire-Dev - INFO - Nodes processed on step 1360: 368, Phoschek Level: 0.04
+Wildfire Dev - 2023-07-25 18:20:36,134 - PyFire-Dev - INFO - Nodes processed on step 1370: 424, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:36,166 - PyFire-Dev - INFO - Nodes processed on step 1380: 440, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:20:36,199 - PyFire-Dev - INFO - Nodes processed on step 1390: 400, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,231 - PyFire-Dev - INFO - Nodes processed on step 1400: 416, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,263 - PyFire-Dev - INFO - Nodes processed on step 1410: 384, Phoschek Level: 0.9
+Wildfire Dev - 2023-07-25 18:20:36,296 - PyFire-Dev - INFO - Nodes processed on step 1420: 392, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,329 - PyFire-Dev - INFO - Nodes processed on step 1430: 416, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,361 - PyFire-Dev - INFO - Nodes processed on step 1440: 392, Phoschek Level: 0.93
+Wildfire Dev - 2023-07-25 18:20:36,393 - PyFire-Dev - INFO - Nodes processed on step 1450: 392, Phoschek Level: 0.83
+Wildfire Dev - 2023-07-25 18:20:36,425 - PyFire-Dev - INFO - Nodes processed on step 1460: 368, Phoschek Level: 0.73
+Wildfire Dev - 2023-07-25 18:20:36,457 - PyFire-Dev - INFO - Nodes processed on step 1470: 352, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,489 - PyFire-Dev - INFO - Nodes processed on step 1480: 368, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,522 - PyFire-Dev - INFO - Nodes processed on step 1490: 368, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,555 - PyFire-Dev - INFO - Nodes processed on step 1500: 392, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,587 - PyFire-Dev - INFO - Nodes processed on step 1510: 448, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,619 - PyFire-Dev - INFO - Nodes processed on step 1520: 440, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,651 - PyFire-Dev - INFO - Nodes processed on step 1530: 352, Phoschek Level: 0.96
+Wildfire Dev - 2023-07-25 18:20:36,684 - PyFire-Dev - INFO - Nodes processed on step 1540: 344, Phoschek Level: 0.86
+Wildfire Dev - 2023-07-25 18:20:36,718 - PyFire-Dev - INFO - Nodes processed on step 1550: 312, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,750 - PyFire-Dev - INFO - Nodes processed on step 1560: 312, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,782 - PyFire-Dev - INFO - Nodes processed on step 1570: 256, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,813 - PyFire-Dev - INFO - Nodes processed on step 1580: 160, Phoschek Level: 0.93
+Wildfire Dev - 2023-07-25 18:20:36,846 - PyFire-Dev - INFO - Nodes processed on step 1590: 136, Phoschek Level: 0.83
+Wildfire Dev - 2023-07-25 18:20:36,879 - PyFire-Dev - INFO - Nodes processed on step 1600: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:36,910 - PyFire-Dev - INFO - Nodes processed on step 1610: 24, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:20:37,491 - PyFire-Dev - INFO - Currently writing frame 0 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:37,493 - PyFire-Dev - INFO - Currently writing frame 0 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:38,877 - PyFire-Dev - INFO - Currently writing frame 10 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:40,240 - PyFire-Dev - INFO - Currently writing frame 20 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:41,591 - PyFire-Dev - INFO - Currently writing frame 30 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:42,950 - PyFire-Dev - INFO - Currently writing frame 40 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:44,309 - PyFire-Dev - INFO - Currently writing frame 50 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:45,666 - PyFire-Dev - INFO - Currently writing frame 60 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:47,023 - PyFire-Dev - INFO - Currently writing frame 70 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:48,377 - PyFire-Dev - INFO - Currently writing frame 80 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:49,732 - PyFire-Dev - INFO - Currently writing frame 90 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:51,087 - PyFire-Dev - INFO - Currently writing frame 100 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:52,444 - PyFire-Dev - INFO - Currently writing frame 110 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:53,802 - PyFire-Dev - INFO - Currently writing frame 120 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:55,157 - PyFire-Dev - INFO - Currently writing frame 130 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:56,512 - PyFire-Dev - INFO - Currently writing frame 140 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:57,871 - PyFire-Dev - INFO - Currently writing frame 150 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:59,227 - PyFire-Dev - INFO - Currently writing frame 160 of 163 to animation.
+Wildfire Dev - 2023-07-25 18:20:59,808 - PyFire-Dev - INFO - Nodes processed on step 1620: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,675 - PyFire-Dev - INFO - ---------- Environment Reset Complete ----------
+Wildfire Dev - 2023-07-25 18:21:57,675 - PyFire-Dev - INFO - Airport Locations: [[297, 297], [297, 3]]
+Wildfire Dev - 2023-07-25 18:21:57,675 - PyFire-Dev - INFO - Starting Agent Locations: [297, 3]
+Wildfire Dev - 2023-07-25 18:21:57,709 - PyFire-Dev - INFO - Nodes processed on step 10: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,742 - PyFire-Dev - INFO - Nodes processed on step 20: 24, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,775 - PyFire-Dev - INFO - Nodes processed on step 30: 32, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,808 - PyFire-Dev - INFO - Nodes processed on step 40: 56, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,840 - PyFire-Dev - INFO - Nodes processed on step 50: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,873 - PyFire-Dev - INFO - Nodes processed on step 60: 48, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,906 - PyFire-Dev - INFO - Nodes processed on step 70: 32, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,939 - PyFire-Dev - INFO - Nodes processed on step 80: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:57,971 - PyFire-Dev - INFO - Nodes processed on step 90: 56, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,003 - PyFire-Dev - INFO - Nodes processed on step 100: 72, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,035 - PyFire-Dev - INFO - Nodes processed on step 110: 32, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,068 - PyFire-Dev - INFO - Nodes processed on step 120: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,100 - PyFire-Dev - INFO - Nodes processed on step 130: 80, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,133 - PyFire-Dev - INFO - Nodes processed on step 140: 104, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,165 - PyFire-Dev - INFO - Nodes processed on step 150: 120, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,197 - PyFire-Dev - INFO - Nodes processed on step 160: 120, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,229 - PyFire-Dev - INFO - Nodes processed on step 170: 120, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,261 - PyFire-Dev - INFO - Nodes processed on step 180: 152, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:58,294 - PyFire-Dev - INFO - Nodes processed on step 190: 192, Phoschek Level: 0.92
+Wildfire Dev - 2023-07-25 18:21:58,326 - PyFire-Dev - INFO - Nodes processed on step 200: 160, Phoschek Level: 0.82
+Wildfire Dev - 2023-07-25 18:21:58,358 - PyFire-Dev - INFO - Nodes processed on step 210: 176, Phoschek Level: 0.72
+Wildfire Dev - 2023-07-25 18:21:58,390 - PyFire-Dev - INFO - Nodes processed on step 220: 160, Phoschek Level: 0.62
+Wildfire Dev - 2023-07-25 18:21:58,422 - PyFire-Dev - INFO - Nodes processed on step 230: 176, Phoschek Level: 0.52
+Wildfire Dev - 2023-07-25 18:21:58,455 - PyFire-Dev - INFO - Nodes processed on step 240: 200, Phoschek Level: 0.42
+Wildfire Dev - 2023-07-25 18:21:58,487 - PyFire-Dev - INFO - Nodes processed on step 250: 200, Phoschek Level: 0.32
+Wildfire Dev - 2023-07-25 18:21:58,519 - PyFire-Dev - INFO - Nodes processed on step 260: 208, Phoschek Level: 0.22
+Wildfire Dev - 2023-07-25 18:21:58,551 - PyFire-Dev - INFO - Nodes processed on step 270: 216, Phoschek Level: 0.12
+Wildfire Dev - 2023-07-25 18:21:58,584 - PyFire-Dev - INFO - Nodes processed on step 280: 264, Phoschek Level: 0.02
+Wildfire Dev - 2023-07-25 18:21:58,617 - PyFire-Dev - INFO - Nodes processed on step 290: 192, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,649 - PyFire-Dev - INFO - Nodes processed on step 300: 192, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,681 - PyFire-Dev - INFO - Nodes processed on step 310: 200, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,713 - PyFire-Dev - INFO - Nodes processed on step 320: 200, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,746 - PyFire-Dev - INFO - Nodes processed on step 330: 200, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,778 - PyFire-Dev - INFO - Nodes processed on step 340: 232, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,810 - PyFire-Dev - INFO - Nodes processed on step 350: 224, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,842 - PyFire-Dev - INFO - Nodes processed on step 360: 248, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,874 - PyFire-Dev - INFO - Nodes processed on step 370: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,907 - PyFire-Dev - INFO - Nodes processed on step 380: 248, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,939 - PyFire-Dev - INFO - Nodes processed on step 390: 224, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:58,973 - PyFire-Dev - INFO - Nodes processed on step 400: 200, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,005 - PyFire-Dev - INFO - Nodes processed on step 410: 216, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,037 - PyFire-Dev - INFO - Nodes processed on step 420: 224, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,069 - PyFire-Dev - INFO - Nodes processed on step 430: 240, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,101 - PyFire-Dev - INFO - Nodes processed on step 440: 200, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,133 - PyFire-Dev - INFO - Nodes processed on step 450: 200, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,165 - PyFire-Dev - INFO - Nodes processed on step 460: 160, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,197 - PyFire-Dev - INFO - Nodes processed on step 470: 184, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,229 - PyFire-Dev - INFO - Nodes processed on step 480: 168, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,261 - PyFire-Dev - INFO - Nodes processed on step 490: 184, Phoschek Level: 0.95
+Wildfire Dev - 2023-07-25 18:21:59,294 - PyFire-Dev - INFO - Nodes processed on step 500: 200, Phoschek Level: 0.85
+Wildfire Dev - 2023-07-25 18:21:59,326 - PyFire-Dev - INFO - Nodes processed on step 510: 296, Phoschek Level: 0.75
+Wildfire Dev - 2023-07-25 18:21:59,359 - PyFire-Dev - INFO - Nodes processed on step 520: 256, Phoschek Level: 0.65
+Wildfire Dev - 2023-07-25 18:21:59,391 - PyFire-Dev - INFO - Nodes processed on step 530: 240, Phoschek Level: 0.55
+Wildfire Dev - 2023-07-25 18:21:59,423 - PyFire-Dev - INFO - Nodes processed on step 540: 200, Phoschek Level: 0.45
+Wildfire Dev - 2023-07-25 18:21:59,455 - PyFire-Dev - INFO - Nodes processed on step 550: 200, Phoschek Level: 0.35
+Wildfire Dev - 2023-07-25 18:21:59,487 - PyFire-Dev - INFO - Nodes processed on step 560: 208, Phoschek Level: 0.25
+Wildfire Dev - 2023-07-25 18:21:59,520 - PyFire-Dev - INFO - Nodes processed on step 570: 200, Phoschek Level: 0.15
+Wildfire Dev - 2023-07-25 18:21:59,552 - PyFire-Dev - INFO - Nodes processed on step 580: 248, Phoschek Level: 0.05
+Wildfire Dev - 2023-07-25 18:21:59,585 - PyFire-Dev - INFO - Nodes processed on step 590: 296, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,617 - PyFire-Dev - INFO - Nodes processed on step 600: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,650 - PyFire-Dev - INFO - Nodes processed on step 610: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,682 - PyFire-Dev - INFO - Nodes processed on step 620: 264, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,715 - PyFire-Dev - INFO - Nodes processed on step 630: 256, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,747 - PyFire-Dev - INFO - Nodes processed on step 640: 224, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,779 - PyFire-Dev - INFO - Nodes processed on step 650: 224, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,812 - PyFire-Dev - INFO - Nodes processed on step 660: 272, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:21:59,845 - PyFire-Dev - INFO - Nodes processed on step 670: 256, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,877 - PyFire-Dev - INFO - Nodes processed on step 680: 328, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,910 - PyFire-Dev - INFO - Nodes processed on step 690: 336, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,942 - PyFire-Dev - INFO - Nodes processed on step 700: 320, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:21:59,975 - PyFire-Dev - INFO - Nodes processed on step 710: 288, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,008 - PyFire-Dev - INFO - Nodes processed on step 720: 288, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,049 - PyFire-Dev - INFO - Nodes processed on step 730: 288, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,083 - PyFire-Dev - INFO - Nodes processed on step 740: 248, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,116 - PyFire-Dev - INFO - Nodes processed on step 750: 256, Phoschek Level: 0.96
+Wildfire Dev - 2023-07-25 18:22:00,149 - PyFire-Dev - INFO - Nodes processed on step 760: 288, Phoschek Level: 0.86
+Wildfire Dev - 2023-07-25 18:22:00,181 - PyFire-Dev - INFO - Nodes processed on step 770: 320, Phoschek Level: 0.76
+Wildfire Dev - 2023-07-25 18:22:00,215 - PyFire-Dev - INFO - Nodes processed on step 780: 280, Phoschek Level: 0.66
+Wildfire Dev - 2023-07-25 18:22:00,247 - PyFire-Dev - INFO - Nodes processed on step 790: 208, Phoschek Level: 0.56
+Wildfire Dev - 2023-07-25 18:22:00,280 - PyFire-Dev - INFO - Nodes processed on step 800: 216, Phoschek Level: 0.46
+Wildfire Dev - 2023-07-25 18:22:00,313 - PyFire-Dev - INFO - Nodes processed on step 810: 296, Phoschek Level: 0.36
+Wildfire Dev - 2023-07-25 18:22:00,345 - PyFire-Dev - INFO - Nodes processed on step 820: 296, Phoschek Level: 0.26
+Wildfire Dev - 2023-07-25 18:22:00,378 - PyFire-Dev - INFO - Nodes processed on step 830: 320, Phoschek Level: 0.16
+Wildfire Dev - 2023-07-25 18:22:00,411 - PyFire-Dev - INFO - Nodes processed on step 840: 304, Phoschek Level: 0.06
+Wildfire Dev - 2023-07-25 18:22:00,444 - PyFire-Dev - INFO - Nodes processed on step 850: 256, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:00,476 - PyFire-Dev - INFO - Nodes processed on step 860: 264, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:00,509 - PyFire-Dev - INFO - Nodes processed on step 870: 280, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:00,542 - PyFire-Dev - INFO - Nodes processed on step 880: 272, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:00,575 - PyFire-Dev - INFO - Nodes processed on step 890: 320, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:00,608 - PyFire-Dev - INFO - Nodes processed on step 900: 344, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:00,640 - PyFire-Dev - INFO - Nodes processed on step 910: 296, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:00,673 - PyFire-Dev - INFO - Nodes processed on step 920: 360, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,706 - PyFire-Dev - INFO - Nodes processed on step 930: 336, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,739 - PyFire-Dev - INFO - Nodes processed on step 940: 336, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,772 - PyFire-Dev - INFO - Nodes processed on step 950: 368, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,805 - PyFire-Dev - INFO - Nodes processed on step 960: 336, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,838 - PyFire-Dev - INFO - Nodes processed on step 970: 312, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:00,871 - PyFire-Dev - INFO - Nodes processed on step 980: 344, Phoschek Level: 0.9
+Wildfire Dev - 2023-07-25 18:22:00,904 - PyFire-Dev - INFO - Nodes processed on step 990: 312, Phoschek Level: 0.8
+Wildfire Dev - 2023-07-25 18:22:00,937 - PyFire-Dev - INFO - Nodes processed on step 1000: 336, Phoschek Level: 0.7
+Wildfire Dev - 2023-07-25 18:22:00,970 - PyFire-Dev - INFO - Nodes processed on step 1010: 296, Phoschek Level: 0.6
+Wildfire Dev - 2023-07-25 18:22:01,003 - PyFire-Dev - INFO - Nodes processed on step 1020: 320, Phoschek Level: 0.5
+Wildfire Dev - 2023-07-25 18:22:01,034 - PyFire-Dev - INFO - Nodes processed on step 1030: 312, Phoschek Level: 0.4
+Wildfire Dev - 2023-07-25 18:22:01,067 - PyFire-Dev - INFO - Nodes processed on step 1040: 312, Phoschek Level: 0.3
+Wildfire Dev - 2023-07-25 18:22:01,099 - PyFire-Dev - INFO - Nodes processed on step 1050: 288, Phoschek Level: 0.2
+Wildfire Dev - 2023-07-25 18:22:01,132 - PyFire-Dev - INFO - Nodes processed on step 1060: 296, Phoschek Level: 0.1
+Wildfire Dev - 2023-07-25 18:22:01,165 - PyFire-Dev - INFO - Nodes processed on step 1070: 336, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,198 - PyFire-Dev - INFO - Nodes processed on step 1080: 360, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,230 - PyFire-Dev - INFO - Nodes processed on step 1090: 336, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,262 - PyFire-Dev - INFO - Nodes processed on step 1100: 360, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,294 - PyFire-Dev - INFO - Nodes processed on step 1110: 408, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,326 - PyFire-Dev - INFO - Nodes processed on step 1120: 360, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,360 - PyFire-Dev - INFO - Nodes processed on step 1130: 424, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:01,392 - PyFire-Dev - INFO - Nodes processed on step 1140: 392, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:01,425 - PyFire-Dev - INFO - Nodes processed on step 1150: 376, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:01,457 - PyFire-Dev - INFO - Nodes processed on step 1160: 400, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:01,490 - PyFire-Dev - INFO - Nodes processed on step 1170: 344, Phoschek Level: 0.95
+Wildfire Dev - 2023-07-25 18:22:01,523 - PyFire-Dev - INFO - Nodes processed on step 1180: 376, Phoschek Level: 0.85
+Wildfire Dev - 2023-07-25 18:22:01,555 - PyFire-Dev - INFO - Nodes processed on step 1190: 360, Phoschek Level: 0.75
+Wildfire Dev - 2023-07-25 18:22:01,587 - PyFire-Dev - INFO - Nodes processed on step 1200: 384, Phoschek Level: 0.65
+Wildfire Dev - 2023-07-25 18:22:01,620 - PyFire-Dev - INFO - Nodes processed on step 1210: 384, Phoschek Level: 0.55
+Wildfire Dev - 2023-07-25 18:22:01,652 - PyFire-Dev - INFO - Nodes processed on step 1220: 368, Phoschek Level: 0.45
+Wildfire Dev - 2023-07-25 18:22:01,684 - PyFire-Dev - INFO - Nodes processed on step 1230: 392, Phoschek Level: 0.35
+Wildfire Dev - 2023-07-25 18:22:01,718 - PyFire-Dev - INFO - Nodes processed on step 1240: 432, Phoschek Level: 0.25
+Wildfire Dev - 2023-07-25 18:22:01,750 - PyFire-Dev - INFO - Nodes processed on step 1250: 424, Phoschek Level: 0.15
+Wildfire Dev - 2023-07-25 18:22:01,783 - PyFire-Dev - INFO - Nodes processed on step 1260: 472, Phoschek Level: 0.05
+Wildfire Dev - 2023-07-25 18:22:01,816 - PyFire-Dev - INFO - Nodes processed on step 1270: 536, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,849 - PyFire-Dev - INFO - Nodes processed on step 1280: 552, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,881 - PyFire-Dev - INFO - Nodes processed on step 1290: 528, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,914 - PyFire-Dev - INFO - Nodes processed on step 1300: 528, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:01,948 - PyFire-Dev - INFO - Nodes processed on step 1310: 576, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:01,981 - PyFire-Dev - INFO - Nodes processed on step 1320: 584, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,013 - PyFire-Dev - INFO - Nodes processed on step 1330: 536, Phoschek Level: 0.96
+Wildfire Dev - 2023-07-25 18:22:02,046 - PyFire-Dev - INFO - Nodes processed on step 1340: 544, Phoschek Level: 0.86
+Wildfire Dev - 2023-07-25 18:22:02,079 - PyFire-Dev - INFO - Nodes processed on step 1350: 672, Phoschek Level: 0.76
+Wildfire Dev - 2023-07-25 18:22:02,112 - PyFire-Dev - INFO - Nodes processed on step 1360: 592, Phoschek Level: 0.66
+Wildfire Dev - 2023-07-25 18:22:02,145 - PyFire-Dev - INFO - Nodes processed on step 1370: 560, Phoschek Level: 0.56
+Wildfire Dev - 2023-07-25 18:22:02,178 - PyFire-Dev - INFO - Nodes processed on step 1380: 600, Phoschek Level: 0.46
+Wildfire Dev - 2023-07-25 18:22:02,211 - PyFire-Dev - INFO - Nodes processed on step 1390: 584, Phoschek Level: 0.36
+Wildfire Dev - 2023-07-25 18:22:02,244 - PyFire-Dev - INFO - Nodes processed on step 1400: 608, Phoschek Level: 0.26
+Wildfire Dev - 2023-07-25 18:22:02,278 - PyFire-Dev - INFO - Nodes processed on step 1410: 616, Phoschek Level: 0.16
+Wildfire Dev - 2023-07-25 18:22:02,311 - PyFire-Dev - INFO - Nodes processed on step 1420: 624, Phoschek Level: 0.06
+Wildfire Dev - 2023-07-25 18:22:02,344 - PyFire-Dev - INFO - Nodes processed on step 1430: 600, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:02,377 - PyFire-Dev - INFO - Nodes processed on step 1440: 640, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:02,411 - PyFire-Dev - INFO - Nodes processed on step 1450: 688, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,443 - PyFire-Dev - INFO - Nodes processed on step 1460: 760, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,477 - PyFire-Dev - INFO - Nodes processed on step 1470: 688, Phoschek Level: 0.93
+Wildfire Dev - 2023-07-25 18:22:02,510 - PyFire-Dev - INFO - Nodes processed on step 1480: 616, Phoschek Level: 0.83
+Wildfire Dev - 2023-07-25 18:22:02,543 - PyFire-Dev - INFO - Nodes processed on step 1490: 672, Phoschek Level: 0.73
+Wildfire Dev - 2023-07-25 18:22:02,577 - PyFire-Dev - INFO - Nodes processed on step 1500: 624, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,611 - PyFire-Dev - INFO - Nodes processed on step 1510: 520, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,645 - PyFire-Dev - INFO - Nodes processed on step 1520: 472, Phoschek Level: 0.96
+Wildfire Dev - 2023-07-25 18:22:02,678 - PyFire-Dev - INFO - Nodes processed on step 1530: 400, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,711 - PyFire-Dev - INFO - Nodes processed on step 1540: 440, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,744 - PyFire-Dev - INFO - Nodes processed on step 1550: 480, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,777 - PyFire-Dev - INFO - Nodes processed on step 1560: 480, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,810 - PyFire-Dev - INFO - Nodes processed on step 1570: 432, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:02,843 - PyFire-Dev - INFO - Nodes processed on step 1580: 424, Phoschek Level: 0.99
+Wildfire Dev - 2023-07-25 18:22:02,875 - PyFire-Dev - INFO - Nodes processed on step 1590: 400, Phoschek Level: 0.89
+Wildfire Dev - 2023-07-25 18:22:02,907 - PyFire-Dev - INFO - Nodes processed on step 1600: 336, Phoschek Level: 0.79
+Wildfire Dev - 2023-07-25 18:22:02,939 - PyFire-Dev - INFO - Nodes processed on step 1610: 304, Phoschek Level: 0.69
+Wildfire Dev - 2023-07-25 18:22:02,972 - PyFire-Dev - INFO - Nodes processed on step 1620: 288, Phoschek Level: 0.59
+Wildfire Dev - 2023-07-25 18:22:03,004 - PyFire-Dev - INFO - Nodes processed on step 1630: 280, Phoschek Level: 0.49
+Wildfire Dev - 2023-07-25 18:22:03,036 - PyFire-Dev - INFO - Nodes processed on step 1640: 160, Phoschek Level: 0.39
+Wildfire Dev - 2023-07-25 18:22:03,069 - PyFire-Dev - INFO - Nodes processed on step 1650: 120, Phoschek Level: 0.29
+Wildfire Dev - 2023-07-25 18:22:03,101 - PyFire-Dev - INFO - Nodes processed on step 1660: 64, Phoschek Level: 0.19
+Wildfire Dev - 2023-07-25 18:22:03,133 - PyFire-Dev - INFO - Nodes processed on step 1670: 80, Phoschek Level: 0.09
+Wildfire Dev - 2023-07-25 18:22:03,164 - PyFire-Dev - INFO - Nodes processed on step 1680: 80, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:03,196 - PyFire-Dev - INFO - Nodes processed on step 1690: 64, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:03,227 - PyFire-Dev - INFO - Nodes processed on step 1700: 40, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:22:03,260 - PyFire-Dev - INFO - Nodes processed on step 1710: 24, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:22:03,890 - PyFire-Dev - INFO - Currently writing frame 0 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:03,892 - PyFire-Dev - INFO - Currently writing frame 0 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:05,315 - PyFire-Dev - INFO - Currently writing frame 10 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:06,674 - PyFire-Dev - INFO - Currently writing frame 20 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:08,026 - PyFire-Dev - INFO - Currently writing frame 30 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:09,378 - PyFire-Dev - INFO - Currently writing frame 40 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:10,736 - PyFire-Dev - INFO - Currently writing frame 50 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:12,093 - PyFire-Dev - INFO - Currently writing frame 60 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:13,453 - PyFire-Dev - INFO - Currently writing frame 70 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:14,809 - PyFire-Dev - INFO - Currently writing frame 80 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:16,164 - PyFire-Dev - INFO - Currently writing frame 90 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:17,519 - PyFire-Dev - INFO - Currently writing frame 100 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:18,874 - PyFire-Dev - INFO - Currently writing frame 110 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:20,231 - PyFire-Dev - INFO - Currently writing frame 120 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:21,587 - PyFire-Dev - INFO - Currently writing frame 130 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:22,945 - PyFire-Dev - INFO - Currently writing frame 140 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:24,304 - PyFire-Dev - INFO - Currently writing frame 150 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:25,661 - PyFire-Dev - INFO - Currently writing frame 160 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:27,017 - PyFire-Dev - INFO - Currently writing frame 170 of 173 to animation.
+Wildfire Dev - 2023-07-25 18:22:27,587 - PyFire-Dev - INFO - Nodes processed on step 1720: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:04,873 - PyFire-Dev - INFO - ---------- Environment Reset Complete ----------
+Wildfire Dev - 2023-07-25 18:23:04,873 - PyFire-Dev - INFO - Airport Locations: [[297, 297], [297, 3]]
+Wildfire Dev - 2023-07-25 18:23:04,873 - PyFire-Dev - INFO - Starting Agent Locations: [297, 3]
+Wildfire Dev - 2023-07-25 18:23:04,907 - PyFire-Dev - INFO - Nodes processed on step 10: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:04,939 - PyFire-Dev - INFO - Nodes processed on step 20: 24, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:04,971 - PyFire-Dev - INFO - Nodes processed on step 30: 32, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,003 - PyFire-Dev - INFO - Nodes processed on step 40: 56, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,034 - PyFire-Dev - INFO - Nodes processed on step 50: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,066 - PyFire-Dev - INFO - Nodes processed on step 60: 48, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,098 - PyFire-Dev - INFO - Nodes processed on step 70: 32, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,130 - PyFire-Dev - INFO - Nodes processed on step 80: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,161 - PyFire-Dev - INFO - Nodes processed on step 90: 56, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,193 - PyFire-Dev - INFO - Nodes processed on step 100: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,225 - PyFire-Dev - INFO - Nodes processed on step 110: 32, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,256 - PyFire-Dev - INFO - Nodes processed on step 120: 48, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,288 - PyFire-Dev - INFO - Nodes processed on step 130: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,320 - PyFire-Dev - INFO - Nodes processed on step 140: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,352 - PyFire-Dev - INFO - Nodes processed on step 150: 88, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,383 - PyFire-Dev - INFO - Nodes processed on step 160: 88, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,415 - PyFire-Dev - INFO - Nodes processed on step 170: 128, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,447 - PyFire-Dev - INFO - Nodes processed on step 180: 88, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:05,478 - PyFire-Dev - INFO - Nodes processed on step 190: 40, Phoschek Level: 0.92
+Wildfire Dev - 2023-07-25 18:23:05,510 - PyFire-Dev - INFO - Nodes processed on step 200: 48, Phoschek Level: 0.82
+Wildfire Dev - 2023-07-25 18:23:05,541 - PyFire-Dev - INFO - Nodes processed on step 210: 64, Phoschek Level: 0.72
+Wildfire Dev - 2023-07-25 18:23:05,573 - PyFire-Dev - INFO - Nodes processed on step 220: 80, Phoschek Level: 0.62
+Wildfire Dev - 2023-07-25 18:23:05,606 - PyFire-Dev - INFO - Nodes processed on step 230: 112, Phoschek Level: 0.52
+Wildfire Dev - 2023-07-25 18:23:05,638 - PyFire-Dev - INFO - Nodes processed on step 240: 112, Phoschek Level: 0.42
+Wildfire Dev - 2023-07-25 18:23:05,670 - PyFire-Dev - INFO - Nodes processed on step 250: 128, Phoschek Level: 0.32
+Wildfire Dev - 2023-07-25 18:23:05,701 - PyFire-Dev - INFO - Nodes processed on step 260: 128, Phoschek Level: 0.22
+Wildfire Dev - 2023-07-25 18:23:05,733 - PyFire-Dev - INFO - Nodes processed on step 270: 120, Phoschek Level: 0.12
+Wildfire Dev - 2023-07-25 18:23:05,764 - PyFire-Dev - INFO - Nodes processed on step 280: 96, Phoschek Level: 0.02
+Wildfire Dev - 2023-07-25 18:23:05,797 - PyFire-Dev - INFO - Nodes processed on step 290: 104, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:05,830 - PyFire-Dev - INFO - Nodes processed on step 300: 128, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:05,861 - PyFire-Dev - INFO - Nodes processed on step 310: 176, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:05,893 - PyFire-Dev - INFO - Nodes processed on step 320: 160, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:05,926 - PyFire-Dev - INFO - Nodes processed on step 330: 192, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:05,958 - PyFire-Dev - INFO - Nodes processed on step 340: 232, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:05,990 - PyFire-Dev - INFO - Nodes processed on step 350: 224, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,022 - PyFire-Dev - INFO - Nodes processed on step 360: 160, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,053 - PyFire-Dev - INFO - Nodes processed on step 370: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,085 - PyFire-Dev - INFO - Nodes processed on step 380: 144, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,116 - PyFire-Dev - INFO - Nodes processed on step 390: 120, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,148 - PyFire-Dev - INFO - Nodes processed on step 400: 120, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,180 - PyFire-Dev - INFO - Nodes processed on step 410: 96, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,212 - PyFire-Dev - INFO - Nodes processed on step 420: 40, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,244 - PyFire-Dev - INFO - Nodes processed on step 430: 56, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,275 - PyFire-Dev - INFO - Nodes processed on step 440: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,307 - PyFire-Dev - INFO - Nodes processed on step 450: 56, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,338 - PyFire-Dev - INFO - Nodes processed on step 460: 64, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,370 - PyFire-Dev - INFO - Nodes processed on step 470: 80, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,400 - PyFire-Dev - INFO - Nodes processed on step 480: 48, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:06,432 - PyFire-Dev - INFO - Nodes processed on step 490: 40, Phoschek Level: 0.92
+Wildfire Dev - 2023-07-25 18:23:06,463 - PyFire-Dev - INFO - Nodes processed on step 500: 40, Phoschek Level: 0.82
+Wildfire Dev - 2023-07-25 18:23:06,495 - PyFire-Dev - INFO - Nodes processed on step 510: 48, Phoschek Level: 0.72
+Wildfire Dev - 2023-07-25 18:23:06,526 - PyFire-Dev - INFO - Nodes processed on step 520: 48, Phoschek Level: 0.62
+Wildfire Dev - 2023-07-25 18:23:06,558 - PyFire-Dev - INFO - Nodes processed on step 530: 64, Phoschek Level: 0.52
+Wildfire Dev - 2023-07-25 18:23:06,589 - PyFire-Dev - INFO - Nodes processed on step 540: 48, Phoschek Level: 0.42
+Wildfire Dev - 2023-07-25 18:23:06,621 - PyFire-Dev - INFO - Nodes processed on step 550: 72, Phoschek Level: 0.32
+Wildfire Dev - 2023-07-25 18:23:06,653 - PyFire-Dev - INFO - Nodes processed on step 560: 104, Phoschek Level: 0.22
+Wildfire Dev - 2023-07-25 18:23:06,685 - PyFire-Dev - INFO - Nodes processed on step 570: 112, Phoschek Level: 0.12
+Wildfire Dev - 2023-07-25 18:23:06,716 - PyFire-Dev - INFO - Nodes processed on step 580: 128, Phoschek Level: 0.02
+Wildfire Dev - 2023-07-25 18:23:06,748 - PyFire-Dev - INFO - Nodes processed on step 590: 112, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,780 - PyFire-Dev - INFO - Nodes processed on step 600: 128, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,812 - PyFire-Dev - INFO - Nodes processed on step 610: 128, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,844 - PyFire-Dev - INFO - Nodes processed on step 620: 96, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,875 - PyFire-Dev - INFO - Nodes processed on step 630: 112, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,907 - PyFire-Dev - INFO - Nodes processed on step 640: 104, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,938 - PyFire-Dev - INFO - Nodes processed on step 650: 96, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:06,970 - PyFire-Dev - INFO - Nodes processed on step 660: 112, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,003 - PyFire-Dev - INFO - Nodes processed on step 670: 112, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,035 - PyFire-Dev - INFO - Nodes processed on step 680: 120, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,066 - PyFire-Dev - INFO - Nodes processed on step 690: 128, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,098 - PyFire-Dev - INFO - Nodes processed on step 700: 144, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,130 - PyFire-Dev - INFO - Nodes processed on step 710: 208, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,162 - PyFire-Dev - INFO - Nodes processed on step 720: 192, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,194 - PyFire-Dev - INFO - Nodes processed on step 730: 144, Phoschek Level: 0.99
+Wildfire Dev - 2023-07-25 18:23:07,225 - PyFire-Dev - INFO - Nodes processed on step 740: 152, Phoschek Level: 0.89
+Wildfire Dev - 2023-07-25 18:23:07,258 - PyFire-Dev - INFO - Nodes processed on step 750: 184, Phoschek Level: 0.79
+Wildfire Dev - 2023-07-25 18:23:07,289 - PyFire-Dev - INFO - Nodes processed on step 760: 200, Phoschek Level: 0.69
+Wildfire Dev - 2023-07-25 18:23:07,321 - PyFire-Dev - INFO - Nodes processed on step 770: 176, Phoschek Level: 0.59
+Wildfire Dev - 2023-07-25 18:23:07,353 - PyFire-Dev - INFO - Nodes processed on step 780: 192, Phoschek Level: 0.49
+Wildfire Dev - 2023-07-25 18:23:07,385 - PyFire-Dev - INFO - Nodes processed on step 790: 128, Phoschek Level: 0.39
+Wildfire Dev - 2023-07-25 18:23:07,417 - PyFire-Dev - INFO - Nodes processed on step 800: 120, Phoschek Level: 0.29
+Wildfire Dev - 2023-07-25 18:23:07,449 - PyFire-Dev - INFO - Nodes processed on step 810: 144, Phoschek Level: 0.19
+Wildfire Dev - 2023-07-25 18:23:07,481 - PyFire-Dev - INFO - Nodes processed on step 820: 144, Phoschek Level: 0.09
+Wildfire Dev - 2023-07-25 18:23:07,513 - PyFire-Dev - INFO - Nodes processed on step 830: 144, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,544 - PyFire-Dev - INFO - Nodes processed on step 840: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,577 - PyFire-Dev - INFO - Nodes processed on step 850: 128, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,609 - PyFire-Dev - INFO - Nodes processed on step 860: 128, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,641 - PyFire-Dev - INFO - Nodes processed on step 870: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,673 - PyFire-Dev - INFO - Nodes processed on step 880: 152, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,704 - PyFire-Dev - INFO - Nodes processed on step 890: 160, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:07,737 - PyFire-Dev - INFO - Nodes processed on step 900: 176, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,769 - PyFire-Dev - INFO - Nodes processed on step 910: 192, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,801 - PyFire-Dev - INFO - Nodes processed on step 920: 240, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,833 - PyFire-Dev - INFO - Nodes processed on step 930: 264, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,865 - PyFire-Dev - INFO - Nodes processed on step 940: 280, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,896 - PyFire-Dev - INFO - Nodes processed on step 950: 248, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:07,928 - PyFire-Dev - INFO - Nodes processed on step 960: 232, Phoschek Level: 0.96
+Wildfire Dev - 2023-07-25 18:23:07,961 - PyFire-Dev - INFO - Nodes processed on step 970: 256, Phoschek Level: 0.86
+Wildfire Dev - 2023-07-25 18:23:07,993 - PyFire-Dev - INFO - Nodes processed on step 980: 320, Phoschek Level: 0.76
+Wildfire Dev - 2023-07-25 18:23:08,026 - PyFire-Dev - INFO - Nodes processed on step 990: 320, Phoschek Level: 0.66
+Wildfire Dev - 2023-07-25 18:23:08,058 - PyFire-Dev - INFO - Nodes processed on step 1000: 296, Phoschek Level: 0.56
+Wildfire Dev - 2023-07-25 18:23:08,090 - PyFire-Dev - INFO - Nodes processed on step 1010: 272, Phoschek Level: 0.46
+Wildfire Dev - 2023-07-25 18:23:08,122 - PyFire-Dev - INFO - Nodes processed on step 1020: 272, Phoschek Level: 0.36
+Wildfire Dev - 2023-07-25 18:23:08,154 - PyFire-Dev - INFO - Nodes processed on step 1030: 280, Phoschek Level: 0.26
+Wildfire Dev - 2023-07-25 18:23:08,187 - PyFire-Dev - INFO - Nodes processed on step 1040: 296, Phoschek Level: 0.16
+Wildfire Dev - 2023-07-25 18:23:08,229 - PyFire-Dev - INFO - Nodes processed on step 1050: 288, Phoschek Level: 0.06
+Wildfire Dev - 2023-07-25 18:23:08,269 - PyFire-Dev - INFO - Nodes processed on step 1060: 304, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,301 - PyFire-Dev - INFO - Nodes processed on step 1070: 240, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,333 - PyFire-Dev - INFO - Nodes processed on step 1080: 216, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,364 - PyFire-Dev - INFO - Nodes processed on step 1090: 216, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,396 - PyFire-Dev - INFO - Nodes processed on step 1100: 248, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,428 - PyFire-Dev - INFO - Nodes processed on step 1110: 208, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,459 - PyFire-Dev - INFO - Nodes processed on step 1120: 224, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,492 - PyFire-Dev - INFO - Nodes processed on step 1130: 240, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:08,524 - PyFire-Dev - INFO - Nodes processed on step 1140: 272, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:08,556 - PyFire-Dev - INFO - Nodes processed on step 1150: 248, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:08,587 - PyFire-Dev - INFO - Nodes processed on step 1160: 224, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:08,619 - PyFire-Dev - INFO - Nodes processed on step 1170: 232, Phoschek Level: 0.99
+Wildfire Dev - 2023-07-25 18:23:08,651 - PyFire-Dev - INFO - Nodes processed on step 1180: 248, Phoschek Level: 0.89
+Wildfire Dev - 2023-07-25 18:23:08,683 - PyFire-Dev - INFO - Nodes processed on step 1190: 312, Phoschek Level: 0.79
+Wildfire Dev - 2023-07-25 18:23:08,714 - PyFire-Dev - INFO - Nodes processed on step 1200: 280, Phoschek Level: 0.69
+Wildfire Dev - 2023-07-25 18:23:08,746 - PyFire-Dev - INFO - Nodes processed on step 1210: 264, Phoschek Level: 0.59
+Wildfire Dev - 2023-07-25 18:23:08,778 - PyFire-Dev - INFO - Nodes processed on step 1220: 224, Phoschek Level: 0.49
+Wildfire Dev - 2023-07-25 18:23:08,809 - PyFire-Dev - INFO - Nodes processed on step 1230: 264, Phoschek Level: 0.39
+Wildfire Dev - 2023-07-25 18:23:08,841 - PyFire-Dev - INFO - Nodes processed on step 1240: 224, Phoschek Level: 0.29
+Wildfire Dev - 2023-07-25 18:23:08,873 - PyFire-Dev - INFO - Nodes processed on step 1250: 192, Phoschek Level: 0.19
+Wildfire Dev - 2023-07-25 18:23:08,905 - PyFire-Dev - INFO - Nodes processed on step 1260: 232, Phoschek Level: 0.09
+Wildfire Dev - 2023-07-25 18:23:08,937 - PyFire-Dev - INFO - Nodes processed on step 1270: 256, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:08,968 - PyFire-Dev - INFO - Nodes processed on step 1280: 216, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:09,000 - PyFire-Dev - INFO - Nodes processed on step 1290: 216, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:09,031 - PyFire-Dev - INFO - Nodes processed on step 1300: 264, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:09,064 - PyFire-Dev - INFO - Nodes processed on step 1310: 304, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:09,095 - PyFire-Dev - INFO - Nodes processed on step 1320: 272, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:09,127 - PyFire-Dev - INFO - Nodes processed on step 1330: 232, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:09,159 - PyFire-Dev - INFO - Nodes processed on step 1340: 224, Phoschek Level: 0.91
+Wildfire Dev - 2023-07-25 18:23:09,191 - PyFire-Dev - INFO - Nodes processed on step 1350: 216, Phoschek Level: 0.81
+Wildfire Dev - 2023-07-25 18:23:09,222 - PyFire-Dev - INFO - Nodes processed on step 1360: 232, Phoschek Level: 0.71
+Wildfire Dev - 2023-07-25 18:23:09,254 - PyFire-Dev - INFO - Nodes processed on step 1370: 264, Phoschek Level: 0.61
+Wildfire Dev - 2023-07-25 18:23:09,286 - PyFire-Dev - INFO - Nodes processed on step 1380: 296, Phoschek Level: 0.51
+Wildfire Dev - 2023-07-25 18:23:09,318 - PyFire-Dev - INFO - Nodes processed on step 1390: 280, Phoschek Level: 0.41
+Wildfire Dev - 2023-07-25 18:23:09,349 - PyFire-Dev - INFO - Nodes processed on step 1400: 288, Phoschek Level: 0.31
+Wildfire Dev - 2023-07-25 18:23:09,381 - PyFire-Dev - INFO - Nodes processed on step 1410: 264, Phoschek Level: 0.21
+Wildfire Dev - 2023-07-25 18:23:09,413 - PyFire-Dev - INFO - Nodes processed on step 1420: 232, Phoschek Level: 0.11
+Wildfire Dev - 2023-07-25 18:23:09,444 - PyFire-Dev - INFO - Nodes processed on step 1430: 280, Phoschek Level: 0.01
+Wildfire Dev - 2023-07-25 18:23:09,476 - PyFire-Dev - INFO - Nodes processed on step 1440: 272, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:09,508 - PyFire-Dev - INFO - Nodes processed on step 1450: 280, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:09,540 - PyFire-Dev - INFO - Nodes processed on step 1460: 288, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:09,572 - PyFire-Dev - INFO - Nodes processed on step 1470: 352, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:09,604 - PyFire-Dev - INFO - Nodes processed on step 1480: 344, Phoschek Level: 0.9
+Wildfire Dev - 2023-07-25 18:23:09,636 - PyFire-Dev - INFO - Nodes processed on step 1490: 360, Phoschek Level: 0.8
+Wildfire Dev - 2023-07-25 18:23:09,668 - PyFire-Dev - INFO - Nodes processed on step 1500: 328, Phoschek Level: 0.7
+Wildfire Dev - 2023-07-25 18:23:09,700 - PyFire-Dev - INFO - Nodes processed on step 1510: 280, Phoschek Level: 0.6
+Wildfire Dev - 2023-07-25 18:23:09,732 - PyFire-Dev - INFO - Nodes processed on step 1520: 328, Phoschek Level: 0.5
+Wildfire Dev - 2023-07-25 18:23:09,764 - PyFire-Dev - INFO - Nodes processed on step 1530: 328, Phoschek Level: 0.4
+Wildfire Dev - 2023-07-25 18:23:09,796 - PyFire-Dev - INFO - Nodes processed on step 1540: 320, Phoschek Level: 0.3
+Wildfire Dev - 2023-07-25 18:23:09,829 - PyFire-Dev - INFO - Nodes processed on step 1550: 376, Phoschek Level: 0.2
+Wildfire Dev - 2023-07-25 18:23:09,862 - PyFire-Dev - INFO - Nodes processed on step 1560: 320, Phoschek Level: 0.1
+Wildfire Dev - 2023-07-25 18:23:09,894 - PyFire-Dev - INFO - Nodes processed on step 1570: 312, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:09,927 - PyFire-Dev - INFO - Nodes processed on step 1580: 328, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:09,959 - PyFire-Dev - INFO - Nodes processed on step 1590: 296, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:09,991 - PyFire-Dev - INFO - Nodes processed on step 1600: 336, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:10,023 - PyFire-Dev - INFO - Nodes processed on step 1610: 328, Phoschek Level: 0.91
+Wildfire Dev - 2023-07-25 18:23:10,055 - PyFire-Dev - INFO - Nodes processed on step 1620: 368, Phoschek Level: 0.81
+Wildfire Dev - 2023-07-25 18:23:10,088 - PyFire-Dev - INFO - Nodes processed on step 1630: 344, Phoschek Level: 0.71
+Wildfire Dev - 2023-07-25 18:23:10,120 - PyFire-Dev - INFO - Nodes processed on step 1640: 368, Phoschek Level: 0.61
+Wildfire Dev - 2023-07-25 18:23:10,152 - PyFire-Dev - INFO - Nodes processed on step 1650: 368, Phoschek Level: 0.51
+Wildfire Dev - 2023-07-25 18:23:10,184 - PyFire-Dev - INFO - Nodes processed on step 1660: 296, Phoschek Level: 0.41
+Wildfire Dev - 2023-07-25 18:23:10,216 - PyFire-Dev - INFO - Nodes processed on step 1670: 320, Phoschek Level: 0.31
+Wildfire Dev - 2023-07-25 18:23:10,248 - PyFire-Dev - INFO - Nodes processed on step 1680: 344, Phoschek Level: 0.21
+Wildfire Dev - 2023-07-25 18:23:10,280 - PyFire-Dev - INFO - Nodes processed on step 1690: 352, Phoschek Level: 0.11
+Wildfire Dev - 2023-07-25 18:23:10,312 - PyFire-Dev - INFO - Nodes processed on step 1700: 336, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:10,345 - PyFire-Dev - INFO - Nodes processed on step 1710: 288, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:10,376 - PyFire-Dev - INFO - Nodes processed on step 1720: 272, Phoschek Level: 1.0
+Wildfire Dev - 2023-07-25 18:23:10,408 - PyFire-Dev - INFO - Nodes processed on step 1730: 256, Phoschek Level: 0.9
+Wildfire Dev - 2023-07-25 18:23:10,439 - PyFire-Dev - INFO - Nodes processed on step 1740: 216, Phoschek Level: 0.8
+Wildfire Dev - 2023-07-25 18:23:10,471 - PyFire-Dev - INFO - Nodes processed on step 1750: 216, Phoschek Level: 0.7
+Wildfire Dev - 2023-07-25 18:23:10,503 - PyFire-Dev - INFO - Nodes processed on step 1760: 184, Phoschek Level: 0.6
+Wildfire Dev - 2023-07-25 18:23:10,534 - PyFire-Dev - INFO - Nodes processed on step 1770: 144, Phoschek Level: 0.5
+Wildfire Dev - 2023-07-25 18:23:10,566 - PyFire-Dev - INFO - Nodes processed on step 1780: 152, Phoschek Level: 0.4
+Wildfire Dev - 2023-07-25 18:23:10,598 - PyFire-Dev - INFO - Nodes processed on step 1790: 120, Phoschek Level: 0.3
+Wildfire Dev - 2023-07-25 18:23:10,629 - PyFire-Dev - INFO - Nodes processed on step 1800: 120, Phoschek Level: 0.2
+Wildfire Dev - 2023-07-25 18:23:10,661 - PyFire-Dev - INFO - Nodes processed on step 1810: 112, Phoschek Level: 0.1
+Wildfire Dev - 2023-07-25 18:23:10,692 - PyFire-Dev - INFO - Nodes processed on step 1820: 64, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:10,724 - PyFire-Dev - INFO - Nodes processed on step 1830: 24, Phoschek Level: -0.0
+Wildfire Dev - 2023-07-25 18:23:11,356 - PyFire-Dev - INFO - Currently writing frame 0 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:11,358 - PyFire-Dev - INFO - Currently writing frame 0 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:12,755 - PyFire-Dev - INFO - Currently writing frame 10 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:14,108 - PyFire-Dev - INFO - Currently writing frame 20 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:15,469 - PyFire-Dev - INFO - Currently writing frame 30 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:16,829 - PyFire-Dev - INFO - Currently writing frame 40 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:18,186 - PyFire-Dev - INFO - Currently writing frame 50 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:19,544 - PyFire-Dev - INFO - Currently writing frame 60 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:20,904 - PyFire-Dev - INFO - Currently writing frame 70 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:22,261 - PyFire-Dev - INFO - Currently writing frame 80 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:23,615 - PyFire-Dev - INFO - Currently writing frame 90 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:24,972 - PyFire-Dev - INFO - Currently writing frame 100 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:26,326 - PyFire-Dev - INFO - Currently writing frame 110 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:27,680 - PyFire-Dev - INFO - Currently writing frame 120 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:29,035 - PyFire-Dev - INFO - Currently writing frame 130 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:30,393 - PyFire-Dev - INFO - Currently writing frame 140 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:31,748 - PyFire-Dev - INFO - Currently writing frame 150 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:33,108 - PyFire-Dev - INFO - Currently writing frame 160 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:34,462 - PyFire-Dev - INFO - Currently writing frame 170 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:35,820 - PyFire-Dev - INFO - Currently writing frame 180 of 185 to animation.
+Wildfire Dev - 2023-07-25 18:23:36,678 - PyFire-Dev - INFO - Nodes processed on step 1840: 16, Phoschek Level: 1.0
