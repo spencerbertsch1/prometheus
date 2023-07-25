@@ -32,7 +32,6 @@ from utils import numpy_element_counter, plot_animation
 WIND = EnvParams.wind
 FOREST_FRACTION = EnvParams.forest_fraction
 FIRE_SPREAD_PROB = EnvParams.fire_spread_prob
-UP_WIND_SPREAD_PROB = EnvParams.up_wind_spread_prob
 FIRE_SPEED = EnvParams.fire_speed
 GRID_SIZE = EnvParams.grid_size
 IGNITION_POINTS = EnvParams.ignition_points
@@ -65,6 +64,7 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
         wind = EnvParams.wind
         fire_spread_prob = EnvParams.fire_spread_prob
         up_wind_spread_prob = EnvParams.up_wind_spread_prob
+        down_wind_spread_prob = EnvParams.down_wind_spread_prob
         
         # The boundary of the forest is always empty, so only consider cells
         # indexed from 1 to nx-2, 1 to ny-2
@@ -92,9 +92,8 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                         if abs(dx) == abs(dy) and wind == 'none' and np.random.random() < 0.573:
                             continue
 
-                        # this prevents straight right corners from occuring in the fire frontier
-                        # TODO fix fire from going out 9% of the time 
-                        if abs(dx) == abs(dy) and wind != 'none' and np.random.random() < 0.08:
+
+                        if wind != 'none' and np.random.random() < 0.03:
                             continue
                         
                         if X[iy+dy,ix+dx] == TREE:
@@ -108,7 +107,10 @@ def iterate_fire_v2(X: np.array, phoschek_array: np.array, i: int):
                                 # account for wind
                                 if action==direction_dict[wind]: 
                                     if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
-                                        X1[iy+dy,ix+dx] = FIRE
+                                        # this prevents straight right corners from occuring in the fire frontier
+                                        # TODO fix fire from going out 9% of the time 
+                                        if np.random.random() < down_wind_spread_prob:
+                                            X1[iy+dy,ix+dx] = FIRE
                                 
                                 # add additional condition to slow fire spread based on probability of spreading
                                 else:
