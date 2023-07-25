@@ -23,17 +23,84 @@ import matplotlib.animation as animation
 from matplotlib.pyplot import imread
 from PIL import Image, ImageDraw
 import cv2
+import random
 
 # local imports
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS, \
-     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT
+     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_to_action, action_to_direction
 
 
-def get_path_to_point(start: list, end: list):
-    return []
+def get_path_to_point(start: list[int, int], goal: list[int, int], verbose: bool = False) -> list:
+    """
+    Very important utility function! This function is used to generate the path of actions to take in order for
+    and agent to reach a goal state given a current state. 
+
+    :param: start - 2-length list describing the x and y coordinates of the starting state
+    :param: goal - 2-length list describing the x and y coordinates of the goal state
+    """
+    print(f'GETTING PATH: Start: {start}, Goal: {goal}')
+    
+    temp = start.copy()
+    path: list = [temp.copy()]
+
+    while temp != goal:
+
+        if temp[0] < goal[0]:
+            temp[0] += 1
+        elif temp[0] > goal[0]:
+            temp[0] -= 1
+
+        if temp[1] < goal[1]:
+            temp[1] += 1
+        elif temp[1] > goal[1]:
+            temp[1] -= 1 
+
+        path.append(temp.copy())
+
+    if verbose: 
+        print(path)
+        # visualize path 
+        A = np.zeros([100, 100])
+        for loc in path: 
+            A[loc[0]][loc[1]] = 1
+        A[start[0]][start[1]] = 2
+        A[goal[0]][goal[1]] = 2
+        ax = sns.heatmap(A, linewidth=0, cmap="YlGnBu")
+        plt.show()
+
+    # get the list of actions that correspond to this path 
+    actions_list = []
+    for i in range(len(path)-1):
+        pos1 = path[i]
+        pos2 = path[i+1]
+
+        dir = [pos2[0]-pos1[0], pos2[1]-pos1[1]]
+
+        action = direction_to_action[tuple(dir)]
+        actions_list.append(action)
+
+    if verbose: 
+        print(actions_list)
+        # visualize path again
+        current_pos = start.copy()
+        B = np.zeros([100, 100])
+        for action in actions_list: 
+            dir = action_to_direction[action]
+            current_pos[0] += dir[0]
+            current_pos[1] += dir[1]
+            B[current_pos[0]][current_pos[1]] = 1
+        B[start[0]][start[1]] = 2
+        B[goal[0]][goal[1]] = 2
+        ax = sns.heatmap(B, linewidth=0)
+        plt.show()
+
+    # we shuffle the actions to prevent slight corners from appearing in the route
+    random.shuffle(actions_list)
+
+    return actions_list
 
 
 def Cumulative(lst):
@@ -235,3 +302,11 @@ class Plane(Aircraft):
         def __init__(self, fuel_level: float = 1.0, phoschek_level: float = 1.0, curr_direction: str = 'N', 
                      dropping_phoschek: bool = False, location = [1, 1]):
             super().__init__(fuel_level, phoschek_level, curr_direction, dropping_phoschek, location)
+
+
+if __name__ == "__main__":
+
+    start = [np.random.choice(list(range(100))), np.random.choice(list(range(100)))]
+    goal = [np.random.choice(list(range(100))), np.random.choice(list(range(100)))]
+
+    get_path_to_point(start=start, goal=goal)
