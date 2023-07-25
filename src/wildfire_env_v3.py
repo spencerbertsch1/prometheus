@@ -47,6 +47,8 @@ class WildfireEnv(gym.Env):
         # define airport locations
         self._airport_locations = [[EnvParams.grid_size-3, EnvParams.grid_size-3], 
                                    [EnvParams.grid_size-3, 3]]
+        # initialize action list to empty
+        self._action_list = []
         # ensure the render mode is in the list of possible values
         assert render_mode is None or render_mode in self.metadata["render_modes"]
         self.render_mode = render_mode
@@ -211,13 +213,23 @@ class WildfireEnv(gym.Env):
 
         # if the agent is at an airport 
         if list(self._agent_location) in self._airport_locations:
+            self.helicopter.phoschek_level = 1.0
+            self.helicopter.fuel_level = 1.0
+            self.helicopter.dropping_phoschek = False
             c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
             x_center, y_center = round(c_dict['x_center'], 1), round(c_dict['y_center'], 1)
-            target = [x_center+75, y_center+75]
+            target = [x_center+35, y_center+35]
 
             print(f'X Center: {x_center}, Y Center: {y_center}')
 
             self._action_list = get_path_to_point(start=self._agent_location, goal=target)
+
+        if ((len(self._action_list) == 0) & (self.helicopter.phoschek_level > 0)):
+            if not self.helicopter.dropping_phoschek:
+                # initiate the phos chek drop if it hasn't happened already
+                return 8
+            else:
+                return self.action_space.sample()
 
         if len(self._action_list) == 0:
             # action = self.action_space.sample()
@@ -231,35 +243,6 @@ class WildfireEnv(gym.Env):
 
         return action
 
-        # get_action_from_list = True
-
-        # # if the agent is at an airport 
-        # if list(self._agent_location) in self._airport_locations:
-        #     c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
-        #     x_center, y_center = round(c_dict['x_center'], 1), round(c_dict['y_center'], 1)
-        #     target = [x_center+75, y_center+75]
-
-        #     print(f'X Center: {x_center}, Y Center: {y_center}')
-
-        #     self._action_list = get_path_to_point(start=self._agent_location, goal=target)
-
-        # # drop phos chek 
-        # if self.helicopter.phoschek_level > 0:
-        #     get_action_from_list = False
-        #     action = self.action_space.sample()
-        
-        # # agent is done dropping phos chek and needs to return to airport
-        # else:
-        #     # get the position of the closest airport 
-        #     closest_airport_location: list = get_closest_airport(agent_location=self._agent_location, airport_locations=self._airport_locations)
-        #     # get the action path that leads to that airport 
-        #     self._action_list = get_path_to_point(start=self._agent_location, goal=closest_airport_location)
-
-        # if get_action_from_list: 
-        #     action = self._action_list[0]
-        # self._action_list = self._action_list[1:]
-
-        # return action
 
 """
 TODOs 
