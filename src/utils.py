@@ -28,7 +28,12 @@ import cv2
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 sys.path.append(str(PATH_TO_WORKING_DIR))
-from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS
+from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS, \
+     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT
+
+
+def get_path_to_point(start: list, end: list):
+    return []
 
 
 def Cumulative(lst):
@@ -190,8 +195,8 @@ def get_fire_centroid(env_state: np.array, verbose = False):
         plt.show()
 
     # calculate the centroid of the currently burning nodes 
-    count = (env_state == 1).sum()
-    y_center, x_center = np.argwhere(env_state==1).sum(0)/count
+    count = (env_state == FIRE).sum()
+    y_center, x_center = np.argwhere(env_state == FIRE).sum(0)/count
     centroid = {'x_center': x_center, 'y_center': y_center}
 
     return centroid
