@@ -56,6 +56,7 @@ class EnvParams:
     forest_fraction: bool = CONFIG_DICT['env']['forest_fraction']
     fire_spread_prob: bool = CONFIG_DICT['env']['fire_spread_prob']
     up_wind_spread_prob: bool = CONFIG_DICT['env']['up_wind_spread_prob']
+    down_wind_spread_prob: bool = CONFIG_DICT['env']['down_wind_spread_prob']
     fire_speed: bool = CONFIG_DICT['env']['fire_speed']
     grid_size: bool = CONFIG_DICT['env']['grid_size']
     ignition_points: bool = CONFIG_DICT['env']['ignition_points']
