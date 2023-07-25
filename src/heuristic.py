@@ -31,7 +31,7 @@ sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AgentParams, AnimationParams, EnvParams, \
      ABSPATH_TO_ANIMATIONS, direction_dict, direction_to_action
 from wildfire_env_v3 import WildfireEnv
-from utils import Cumulative
+from utils import Cumulative, get_path_to_point
 
 
 class Heuristic():
@@ -49,9 +49,10 @@ class Heuristic():
         self.helicopter = obs['agent_list'][0]
 
     def get_phoschek_path(self, obs: dict):
-        path_len = int(1 / AgentParams.phoscheck_drop_rate) + 1
+        path_len = int(1 / AgentParams.phoscheck_drop_rate)
         # drop fire retardant randomly until its gone
-        return choices(list(direction_dict.values()), k=path_len)
+        # return choices(list(direction_dict.values()), k=path_len)
+        return choices([3, 7], k=path_len)
     
     def get_perp_phoschek_path(self, obs: dict):
         self.helicopter = obs['agent_list'][0]  # <-- later on we will iterate over all agents
@@ -73,7 +74,7 @@ class Heuristic():
     def get_path_to_drop_site(self, obs: dict):
         # return random list as placeholder
         # return [self.env.action_space.sample() for x in range(20)]
-        return [1 for x in range(25)]
+        return [1 for x in range(10)]
 
     def get_path_to_closest_airport(self, obs: dict, agent):
         """
@@ -94,40 +95,45 @@ class Heuristic():
 
         closest_airport_location: list = airport_locations[closest_airport_index]
 
-        # step 2: get the path to the closest airport 
-        agent_loc = agent_location.copy()
-        path_list = [agent_loc.copy()]
-        while agent_loc != closest_airport_location:
+        # # step 2: get the path to the closest airport 
+        # agent_loc = agent_location.copy()
+        # path_list = [agent_loc.copy()]
+        # while agent_loc != closest_airport_location:
             
-            if agent_loc[0] < closest_airport_location[0]:
-                agent_loc[0] += 1
-            elif agent_loc[0] > closest_airport_location[0]:
-                agent_loc[0] -= 1
+        #     if agent_loc[0] < closest_airport_location[0]:
+        #         agent_loc[0] += 1
+        #     elif agent_loc[0] > closest_airport_location[0]:
+        #         agent_loc[0] -= 1
 
-            if agent_loc[1] < closest_airport_location[1]:
-                agent_loc[1] += 1
-            elif agent_loc[1] > closest_airport_location[1]:
-                agent_loc[1] -= 1
+        #     if agent_loc[1] < closest_airport_location[1]:
+        #         agent_loc[1] += 1
+        #     elif agent_loc[1] > closest_airport_location[1]:
+        #         agent_loc[1] -= 1
 
-            path_list.append(agent_loc.copy())
+        #     path_list.append(agent_loc.copy())
 
-        # step 3: convert the path to a list of actions
-        action_list = []
-        for i in range(len(path_list)-1):
-            pos1 = path_list[i]
-            pos2 = path_list[i+1]
+        # print(f'PATH LIST: {path_list}')
 
-            direction = [0, 0]
-            direction[0] = pos2[0] - pos1[0]
-            direction[1] = pos2[1] - pos1[1]
+        # # step 3: convert the path to a list of actions
+        # action_list = []
+        # for i in range(len(path_list)-1):
+        #     pos1 = path_list[i]
+        #     pos2 = path_list[i+1]
 
-            action = direction_to_action[tuple(direction)]
-            action_list.append(action)
+        #     direction = [0, 0]
+        #     direction[0] = pos2[0] - pos1[0]
+        #     direction[1] = pos2[1] - pos1[1]
 
-        action_list.append(action_list[-1])
+        #     action = direction_to_action[tuple(direction)]
+        #     action_list.append(action)
+
+        # action_list.append(action_list[-1])
+
+        # print(f'ACTION LIST: {action_list}')
+
+        action_list = get_path_to_point(start=agent_location, goal=closest_airport_location)
             
         return action_list
-
 
 
     def take_action(self):
@@ -135,6 +141,9 @@ class Heuristic():
         # take an action along the path to the current goal for this stage 
         action = self.actions_list[0]
         self.actions_list = self.actions_list[1:]
+
+        if self.stage == 3: 
+            print(f'Action: {action}, {self.helicopter.location}')
 
         return action
 
@@ -148,7 +157,7 @@ class Heuristic():
             self.helicopter.dropping_phoschek = False
             self.stage = 1
             self.actions_list = self.get_path_to_drop_site(obs=obs)
-            print(f'STAGE 1, Agent Location: {self.helicopter.location}')
+            # print(f'STAGE 1, Agent Location: {self.helicopter.location}')
 
         if len(self.actions_list) > 0: 
             action = self.take_action()
@@ -166,11 +175,13 @@ class Heuristic():
             # STAGE 2: drop the fire retardant 
             elif ((self.helicopter.phoschek_level == 1.0) & (self.helicopter.location not in obs['airport_locations'])):
                 self.helicopter.dropping_phoschek = True
+                self.stage = 2
                 self.actions_list = self.get_phoschek_path(obs=obs)
                 print(f'STAGE 2, Agent Location: {self.helicopter.location}')
 
             # STAGE 3: move to the closest airport to refuel and get more phoschek
             elif round(self.helicopter.phoschek_level, 2) == 0:
+                self.stage = 3
                 self.actions_list = self.get_path_to_closest_airport(obs=obs, agent=self.helicopter)
                 print(f'STAGE 3, Agent Location: {self.helicopter.location}')
 
@@ -180,5 +191,10 @@ class Heuristic():
 """
 TODO 
 
-clean up bugs
+Bugs to fix 
+1. if phoscheck_drop_rate = 0.2 then we get an error
+2. the agent flies just past the airport on each return flight 
+
+TODOs:
+1. Implement the part of the heuristic to fly in front of the fire
 """
