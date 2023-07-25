@@ -23,7 +23,7 @@ from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO
     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
 from fire_sim_v2 import iterate_fire_v2, initialize_env
 from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative, \
-    plot_animation_v2
+    plot_animation_v2, get_path_to_point, get_fire_centroid
 
 # set the random seed for predictable runs 
 SEED = 0
@@ -44,7 +44,10 @@ class WildfireEnv(gym.Env):
         self.phoschek_array = self.generate_starting_phoschek_array()
         # store the alphas used for creating the animation later on
         self.alphas_list = []
-
+        # define airport locations
+        self._airport_locations = [[EnvParams.grid_size-3, EnvParams.grid_size-3], 
+                                   [EnvParams.grid_size-3, 3]]
+        # ensure the render mode is in the list of possible values
         assert render_mode is None or render_mode in self.metadata["render_modes"]
         self.render_mode = render_mode
 
@@ -153,9 +156,8 @@ class WildfireEnv(gym.Env):
 
         self._env_state = initialize_env()
 
-        # define airport locations
-        self._airport_locations = [[EnvParams.grid_size-3, EnvParams.grid_size-3], 
-                                   [EnvParams.grid_size-3, 3]]
+        # define the agent 
+        self.helicopter = Helicopter(location=self._airport_locations[1])
         
         # generate a numpy array containing airport locations (used for animation)
         self._airport_array = np.zeros((EnvParams.grid_size, EnvParams.grid_size))
@@ -166,9 +168,8 @@ class WildfireEnv(gym.Env):
             self._airport_array[loc[0], loc[1]] = AIRPORT
 
         # set the initial location to the airport 
-        self.helicopter = Helicopter(location=self._airport_locations[1])
         self._agent_location = self.helicopter.location
-        # self._env_state[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
+        self._env_state[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
 
         full_frame = self._env_state.copy()
         full_frame[self._agent_location[0], self._agent_location[1]] = AIRCRAFT
@@ -185,6 +186,11 @@ class WildfireEnv(gym.Env):
 
         self.render()
 
+        s = 10*'-'
+        LOGGER.info(f'{s} Environment Reset Complete {s}')
+        LOGGER.info(f'Airport Locations: {self._airport_locations}')
+        LOGGER.info(f'Starting Agent Locations: {self._agent_location}')
+
         return observation, info
 
     def render(self, close=False):
@@ -199,6 +205,26 @@ class WildfireEnv(gym.Env):
         else:
             pass
             # raise an error, unsupported mode
+
+    def heuristic2(self, obs: dict):
+
+        # if the agent is at an airport 
+        if list(self._agent_location) in self._airport_locations:
+            c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
+            x_center, y_center = round(c_dict['x_center'], 1), round(c_dict['y_center'], 1)
+            target = [x_center+75, y_center+75]
+
+            print(f'X Center: {x_center}, Y Center: {y_center}')
+
+            self._action_list = get_path_to_point(start=self._agent_location, goal=target)
+
+        if len(self._action_list) == 0:
+            action = self.action_space.sample()
+        else:
+            action = self._action_list[0]
+            self._action_list = self._action_list[1:]
+
+        return action
 
 """
 TODOs 
