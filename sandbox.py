@@ -4,6 +4,7 @@ import numpy as np
 import random
 import time
 from random import choices
+import seaborn as sns
 
 def plot_np_array():
     """
@@ -41,5 +42,21 @@ def timer():
     l = [random.choice(A) for x in range(1_000_000)]
     print(f'Time taken for method 2: {time.time() - tic}')
 
+
+def get_centroid():
+    arr = np.zeros([10, 10])
+    for i in range(10):
+        x = np.random.choice([0, 1, 2, 3, 4, 5, 6])
+        y = np.random.choice([3, 4, 5, 6, 7])
+        arr[x, y] = 1
+    ax = sns.heatmap(arr, linewidth=0.5)
+    plt.show()
+
+    count = (arr == 1).sum()
+    y_center, x_center = np.argwhere(arr==1).sum(0)/count
+    print(x_center, y_center)
+
 if __name__ == "__main__":
-    timer()
+    get_centroid()
+
+
