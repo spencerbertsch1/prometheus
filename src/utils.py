@@ -24,6 +24,7 @@ from matplotlib.pyplot import imread
 from PIL import Image, ImageDraw
 import cv2
 import random
+import math
 
 # local imports
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
@@ -31,6 +32,19 @@ PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS, \
      EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_to_action, action_to_direction
+
+
+def get_closest_airport(agent_location: list, airport_locations: list):
+    closest_airport_index: int = 0
+    min_dist: float = math.dist(airport_locations[0], agent_location)
+    for i, airport_location in enumerate(airport_locations):
+        curr_dist: float = math.dist(airport_location, agent_location)
+        if curr_dist < min_dist:
+            closest_airport_index = i
+            min_dist = curr_dist
+
+    closest_airport_location: list = airport_locations[closest_airport_index]
+    return closest_airport_location
 
 
 def get_path_to_point(start: list[int, int], goal: list[int, int], verbose: bool = False) -> list:
@@ -41,12 +55,14 @@ def get_path_to_point(start: list[int, int], goal: list[int, int], verbose: bool
     :param: start - 2-length list describing the x and y coordinates of the starting state
     :param: goal - 2-length list describing the x and y coordinates of the goal state
     """
+    goal[0] = int(round(goal[0]))
+    goal[1] = int(round(goal[1]))
     print(f'GETTING PATH: Start: {start}, Goal: {goal}')
     
     temp = start.copy()
     path: list = [temp.copy()]
 
-    while temp != goal:
+    while list(temp) != list(goal):
 
         if temp[0] < goal[0]:
             temp[0] += 1
@@ -60,16 +76,16 @@ def get_path_to_point(start: list[int, int], goal: list[int, int], verbose: bool
 
         path.append(temp.copy())
 
-    if verbose: 
-        print(path)
-        # visualize path 
-        A = np.zeros([100, 100])
-        for loc in path: 
-            A[loc[0]][loc[1]] = 1
-        A[start[0]][start[1]] = 2
-        A[goal[0]][goal[1]] = 2
-        ax = sns.heatmap(A, linewidth=0, cmap="YlGnBu")
-        plt.show()
+    # if verbose: 
+    #     print(path)
+    #     # visualize path 
+    #     A = np.zeros([100, 100])
+    #     for loc in path: 
+    #         A[loc[0]][loc[1]] = 1
+    #     A[start[0]][start[1]] = 2
+    #     A[goal[0]][goal[1]] = 2
+    #     ax = sns.heatmap(A, linewidth=0, cmap="YlGnBu")
+    #     plt.show()
 
     # get the list of actions that correspond to this path 
     actions_list = []
@@ -82,20 +98,20 @@ def get_path_to_point(start: list[int, int], goal: list[int, int], verbose: bool
         action = direction_to_action[tuple(dir)]
         actions_list.append(action)
 
-    if verbose: 
-        print(actions_list)
-        # visualize path again
-        current_pos = start.copy()
-        B = np.zeros([100, 100])
-        for action in actions_list: 
-            dir = action_to_direction[action]
-            current_pos[0] += dir[0]
-            current_pos[1] += dir[1]
-            B[current_pos[0]][current_pos[1]] = 1
-        B[start[0]][start[1]] = 2
-        B[goal[0]][goal[1]] = 2
-        ax = sns.heatmap(B, linewidth=0)
-        plt.show()
+    # if verbose: 
+    #     print(actions_list)
+    #     # visualize path again
+    #     current_pos = start.copy()
+    #     B = np.zeros([100, 100])
+    #     for action in actions_list: 
+    #         dir = action_to_direction[action]
+    #         current_pos[0] += dir[0]
+    #         current_pos[1] += dir[1]
+    #         B[current_pos[0]][current_pos[1]] = 1
+    #     B[start[0]][start[1]] = 2
+    #     B[goal[0]][goal[1]] = 2
+    #     ax = sns.heatmap(B, linewidth=0)
+    #     plt.show()
 
     # we shuffle the actions to prevent slight corners from appearing in the route
     random.shuffle(actions_list)
@@ -257,9 +273,9 @@ def get_fire_centroid(env_state: np.array, verbose = False):
     Simple utility function to get the centroid of the currently burning nodes.     
     """
 
-    if verbose: 
-        ax = sns.heatmap(env_state, linewidth=0)
-        plt.show()
+    # if verbose: 
+    #     ax = sns.heatmap(env_state, linewidth=0)
+    #     plt.show()
 
     # calculate the centroid of the currently burning nodes 
     count = (env_state == FIRE).sum()
