@@ -27,8 +27,6 @@ sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS
 from wildfire_env_v3 import WildfireEnv
 from utils import Cumulative, Helicopter
-from heuristic import Heuristic
-from heuristic2 import heuristic2 as heuristic_policy
 
 # import environment, agent, and animation parameters 
 def main():
