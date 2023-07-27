@@ -15,7 +15,6 @@ from matplotlib import pyplot as plt
 import numpy as np
 from matplotlib import animation
 from matplotlib import colors
-import seaborn as sns
 import time 
 from pathlib import Path
 import sys
@@ -279,10 +278,14 @@ def get_fire_centroid(env_state: np.array, verbose = False):
 
     # calculate the centroid of the currently burning nodes 
     count = (env_state == FIRE).sum()
-    y_center, x_center = np.argwhere(env_state == FIRE).sum(0)/count
+    x_center, y_center = np.argwhere(env_state == FIRE).sum(0)/count
     centroid = {'x_center': x_center, 'y_center': y_center}
 
     return centroid
+
+
+
+
 
 
 class Aircraft():
@@ -322,7 +325,7 @@ class Plane(Aircraft):
 
 if __name__ == "__main__":
 
+    # some driver code for the get_path_to_point function
     start = [np.random.choice(list(range(100))), np.random.choice(list(range(100)))]
     goal = [np.random.choice(list(range(100))), np.random.choice(list(range(100)))]
-
     get_path_to_point(start=start, goal=goal)
