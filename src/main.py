@@ -33,8 +33,6 @@ def main():
     env = WildfireEnv(render_mode='rgb_array')
     obs, info = env.reset()
 
-    # heuristic = Heuristic(name='H1', env=env, verbose=True, obs=obs)
-
     i = 0
     curr_burning_nodes_lst = []
     while True:
