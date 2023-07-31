@@ -26,7 +26,7 @@ repeat = false
 # set the time interval between frames in the animation
 interval = 30  #ms 30
 # true in order to show the animation after the episode ends 
-save_anim = false
+save_anim = true
 # true in order to save the animation to disk
 show_anim = false
 # true if we want to observe the frame-by-frame animation
