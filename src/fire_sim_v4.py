@@ -51,15 +51,15 @@ norm = colors.BoundaryNorm(bounds, cmap.N)
 def get_num_burning_neighbors(iy: int, ix: int, X: np.array):
 
     # upper left corner 
-    if ((iy==1) & (ix == 1)):
+    if ((iy==0) & (ix == 0)):
         N = [X[iy+1, ix], X[iy, ix+1], X[iy+1, ix+1]]
 
     # upper right corner 
-    elif ((iy==1) & (ix == GRID_SIZE-1)):
+    elif ((iy==0) & (ix == GRID_SIZE-1)):
         N = [X[iy+1, ix], X[iy, ix-1], X[iy+1, ix-1]]
 
     # lower left corner 
-    elif ((iy==GRID_SIZE-1) & (ix == 1)):
+    elif ((iy==GRID_SIZE-1) & (ix == 0)):
         N = [X[iy-1, ix], X[iy, ix+1], X[iy-1, ix+1]]
     
     # lower right corner 
@@ -67,11 +67,11 @@ def get_num_burning_neighbors(iy: int, ix: int, X: np.array):
         N = [X[iy-1, ix], X[iy, ix-1], X[iy-1, ix-1]]
 
     # middle upper boundary
-    elif ((iy == 1) & ((ix > 1) & (ix < GRID_SIZE-1))):
+    elif ((iy == 0) & ((ix > 0) & (ix < GRID_SIZE-1))):
         N = [X[iy, ix-1], X[iy+1, ix-1], X[iy+1, ix], X[iy+1, ix+1], X[iy, ix+1]]
 
     # middle right boundary
-    elif (((iy > 1) & (iy < GRID_SIZE-1)) & (ix == GRID_SIZE-1)):
+    elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == GRID_SIZE-1)):
         N = [X[iy-1, ix], X[iy-1, ix-1], X[iy, ix-1], X[iy+1, ix-1], X[iy+1, ix]]
 
     # middle bottom boundary
@@ -79,10 +79,10 @@ def get_num_burning_neighbors(iy: int, ix: int, X: np.array):
         N = [X[iy, ix-1], X[iy-1, ix-1], X[iy-1, ix], X[iy-1, ix+1], X[iy, ix+1]]
 
     # middle left boundary
-    elif (((iy > 1) & (iy < GRID_SIZE-1)) & (ix == 1)):
+    elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == 0)):
         N = [X[iy-1, ix], X[iy-1, ix+1], X[iy, ix+1], X[iy+1, ix+1], X[iy+1, ix]]
 
-    elif (((iy > 1) & (iy < GRID_SIZE-1)) & ((ix > 1) & (ix < GRID_SIZE-1))):
+    elif (((iy > 0) & (iy < GRID_SIZE-1)) & ((ix > 0) & (ix < GRID_SIZE-1))):
         N = [X[iy-1, ix], X[iy-1, ix+1], X[iy, ix+1], X[iy+1, ix+1], 
              X[iy+1, ix], X[iy+1, ix-1], X[iy, ix-1], X[iy-1, ix-1]]
         
@@ -122,8 +122,8 @@ def iterate_fire_v3(X: np.array, phoschek_array: np.array, i: int):
         np.copyto(X1, X, where=X != EMPTY)
 
         # iterate over the currently burning nodes 
-        for ix in range(1,nx):
-            for iy in range(1,ny):
+        for ix in range(0,nx):
+            for iy in range(0,ny):
                 if X[iy, ix] == TREE:
                     # get the number of burning neighbor nodes
                     b_i: int = get_num_burning_neighbors(iy=iy, ix=ix, X=X)

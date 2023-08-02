@@ -77,8 +77,8 @@ def iterate_fire_v3(X: np.array, phoschek_array: np.array, i: int):
         np.copyto(X1, X, where=X != EMPTY)
 
         # iterate over the currently burning nodes 
-        for ix in range(1,nx):
-            for iy in range(1,ny):
+        for ix in range(0,nx):
+            for iy in range(0,ny):
                 if X[iy,ix] == FIRE:
                     curr_burning_nodes += 1
                     X1[iy,ix] = EMPTY
@@ -216,25 +216,94 @@ def main():
     return arr 
 
 
-def get_burn_dist():
+def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
     """
     Function to generate the burn distribution 
     """
-    fire_mask_list = []
+    # Don't save animations on each run because we will be running many animations here 
+    AnimationParams.save_anim = False
+    episodes: int = 3
 
-    for i in range(10):
+    # generate subplots 
+    # fig, axn = plt.subplots(3, 1, sharex=True, sharey=True)
+
+    # for i, ax in enumerate(axn.flat):
+    #     EnvParams.up_wind_spread_prob = (i+1)*0.06
+
+    #     fire_mask_list = []
+    #     for i in range(episodes):
+    #         # set the random seed to a different value on each iteration
+    #         np.random.seed(i)
+    #         fire_mask: np.array = main()
+    #         fire_mask_list.append(fire_mask)
+        
+    #     arr_sum: np.array = sum(fire_mask_list)
+        
+    #     # plot the resulting fire distribution
+    #     sns.heatmap(arr_sum, linewidth=0, cmap="flare_r", ax=ax)
+        # ax1.set(title=f'Burn Distribution Over {episodes} Episodes, $\omega_w$: {EnvParams.down_wind_spread_prob}, $\gamma_w$: {EnvParams.up_wind_spread_prob}')
+    
+
+    # # --------------- Parameter Setting #1 ---------------
+    # EnvParams.up_wind_spread_prob = 0.12
+
+    fire_mask_list = []
+    for i in range(episodes):
         # set the random seed to a different value on each iteration
         np.random.seed(i)
         fire_mask: np.array = main()
         fire_mask_list.append(fire_mask)
-
+    
     arr_sum: np.array = sum(fire_mask_list)
-
+    
     # plot the resulting fire distribution
-    ax = sns.heatmap(arr_sum, linewidth=0, cmap="YlGnBu")
-    plt.show()
+    ax1 = sns.heatmap(arr_sum, linewidth=0, cmap="flare_r")
+    ax1.set(title=f'Burn Distribution Over {episodes} Episodes, $\omega_w$: {EnvParams.down_wind_spread_prob}, $\gamma_w$: {EnvParams.up_wind_spread_prob}')
+    
+    # # --------------- Parameter Setting #2 ---------------
+    # EnvParams.up_wind_spread_prob = 0.12
+
+    # fire_mask_list = []
+    # for i in range(episodes):
+    #     # set the random seed to a different value on each iteration
+    #     np.random.seed(i)
+    #     fire_mask: np.array = main()
+    #     fire_mask_list.append(fire_mask)
+    
+    # arr_sum: np.array = sum(fire_mask_list)
+    
+    # # plot the resulting fire distribution
+    # ax2 = sns.heatmap(arr_sum, linewidth=0, cmap="flare_r")
+    # ax2.set(title=f'Burn Distribution Over {episodes} Episodes, $\omega_w$: {EnvParams.down_wind_spread_prob}, $\gamma_w$: {EnvParams.up_wind_spread_prob}')
+    
+    # # --------------- Parameter Setting #3 ---------------
+    # EnvParams.up_wind_spread_prob = 0.16
+
+    # fire_mask_list = []
+    # for i in range(episodes):
+    #     # set the random seed to a different value on each iteration
+    #     np.random.seed(i)
+    #     fire_mask: np.array = main()
+    #     fire_mask_list.append(fire_mask)
+    
+    # arr_sum: np.array = sum(fire_mask_list)
+    
+    # # plot the resulting fire distribution
+    # ax3 = sns.heatmap(arr_sum, linewidth=0, cmap="flare_r")
+    # ax3.set(title=f'Burn Distribution Over {episodes} Episodes, $\omega_w$: {EnvParams.down_wind_spread_prob}, $\gamma_w$: {EnvParams.up_wind_spread_prob}')
+    
+
+
+    # save the resulting figure to disk
+    if save_fig: 
+        fig = ax1.get_figure()
+        fig.savefig(f"burn_distribution_{episodes}_episodes.svg", format="svg") 
+    
+    # show the figure 
+    if show_fig: 
+        plt.show()
 
 
 if __name__ == "__main__":
-    # main()
-    get_burn_dist()
+    main()
+    # get_burn_dist(save_fig=True, show_fig=True)
