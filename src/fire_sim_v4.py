@@ -50,10 +50,6 @@ norm = colors.BoundaryNorm(bounds, cmap.N)
 
 def get_num_burning_neighbors(iy: int, ix: int, X: np.array):
 
-    # ix and iy are passed as 1-indexed values, but we need them to be 0-indexed values
-    # ix -= 1
-    # iy -= 1
-
     # upper left corner 
     if ((iy==1) & (ix == 1)):
         N = [X[iy+1, ix], X[iy, ix+1], X[iy+1, ix+1]]
