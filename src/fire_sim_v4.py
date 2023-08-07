@@ -155,12 +155,26 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
         else: 
             raise Exception('We should never get here... Examine conditions above.')
         
-    lamda = math.cos(math.radians(45))
+    # define the wind speed 
+    w = 1
 
-    epsilon = 0.015
+    lamda = math.cos(math.radians(45)) * w
+
+    epsilon = 0.05
+
+    # write the logic in section 2.2.1 in the wildfires paper (wind fire transition probability)
+    if direction_dict[WIND] % 2 ==0:
+        # the direction is even, so the wind is N, E, S, or W
+        b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * (delta * lamda)) + epsilon
+    else:
+        # the direction is odd, so the wind is NE, SE, SW, or NW
+        b_ij: float = (N.count(FIRE) * lamda) + ((N_diag.count(FIRE) * delta)) + epsilon
+
+
 
     # return the number of currently burning nodes 
-    return N.count(FIRE) + (N_diag.count(FIRE) * delta * lamda) + epsilon
+    return b_ij
+    # return N.count(FIRE) + (N_diag.count(FIRE) * (delta * lamda)) + epsilon
 
 def test_get_fire_adjacent_nodes():
     """
@@ -251,7 +265,7 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
             # print(f'Burn adjacent node: y:{iy}, x:{ix}')
             nodes_searched += 1
 
-            if X[iy, ix] == TREE:
+            if X1[iy, ix] == TREE:
                 # get the number of burning neighbor nodes
                 b_i: int = get_b_wind(iy=iy, ix=ix, X=X, delta=delta)
 
@@ -259,9 +273,6 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
                     prob_fire: float = 1 - ((1 - ALPHA)**b_i)
                     if np.random.random() < prob_fire: 
                         X1[iy,ix] = FIRE
-            
-            else:
-                X1[iy,ix] = EMPTY
             
         # replace currently burning nodes with empty nodes 
         # TODO remove this loop!!
