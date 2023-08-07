@@ -20,6 +20,7 @@ import time
 from pathlib import Path
 import sys
 import math
+from scipy.signal import convolve2d
 
 # local imports
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
@@ -38,7 +39,7 @@ GRID_SIZE = EnvParams.grid_size
 IGNITION_POINTS = EnvParams.ignition_points
 
 # set the random seed for predictable runs 
-np.random.seed(0)
+np.random.seed(1)
 
 # Colours for visualization: brown for EMPTY, dark green for TREE and orange
 # for FIRE. Note that for the colormap to work, this list and the bounds list
@@ -48,53 +49,178 @@ cmap = colors.ListedColormap(colors_list)
 bounds = [0,1,2,3]
 norm = colors.BoundaryNorm(bounds, cmap.N)
 
-def get_num_burning_neighbors(iy: int, ix: int, X: np.array):
+def get_num_burning_neighbors(iy: int, ix: int, X: np.array, delta: float):
 
     # upper left corner 
     if ((iy==0) & (ix == 0)):
-        N = [X[iy+1, ix], X[iy, ix+1], X[iy+1, ix+1]]
+        N = [X[iy+1, ix], X[iy, ix+1]]
+        N_diag = [X[iy+1, ix+1]]
 
     # upper right corner 
     elif ((iy==0) & (ix == GRID_SIZE-1)):
-        N = [X[iy+1, ix], X[iy, ix-1], X[iy+1, ix-1]]
+        N = [X[iy+1, ix], X[iy, ix-1]]
+        N_diag = [X[iy+1, ix-1]]
 
     # lower left corner 
     elif ((iy==GRID_SIZE-1) & (ix == 0)):
-        N = [X[iy-1, ix], X[iy, ix+1], X[iy-1, ix+1]]
+        N = [X[iy-1, ix], X[iy, ix+1]]
+        N_diag = [X[iy-1, ix+1]]
     
     # lower right corner 
     elif ((iy==GRID_SIZE-1) & (ix == GRID_SIZE-1)):
-        N = [X[iy-1, ix], X[iy, ix-1], X[iy-1, ix-1]]
+        N = [X[iy-1, ix], X[iy, ix-1]]
+        N_diag = [X[iy-1, ix-1]]
 
     # middle upper boundary
     elif ((iy == 0) & ((ix > 0) & (ix < GRID_SIZE-1))):
-        N = [X[iy, ix-1], X[iy+1, ix-1], X[iy+1, ix], X[iy+1, ix+1], X[iy, ix+1]]
+        N = [X[iy, ix-1], X[iy+1, ix], X[iy, ix+1]]
+        N_diag = [X[iy+1, ix-1], X[iy+1, ix+1]]
 
     # middle right boundary
     elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == GRID_SIZE-1)):
-        N = [X[iy-1, ix], X[iy-1, ix-1], X[iy, ix-1], X[iy+1, ix-1], X[iy+1, ix]]
+        N = [X[iy-1, ix],  X[iy, ix-1], X[iy+1, ix]]
+        N_diag = [X[iy-1, ix-1], X[iy+1, ix-1]]
 
     # middle bottom boundary
     elif ((iy == GRID_SIZE-1) & ((ix > 0) & (ix < GRID_SIZE-1))):
-        N = [X[iy, ix-1], X[iy-1, ix-1], X[iy-1, ix], X[iy-1, ix+1], X[iy, ix+1]]
+        N = [X[iy, ix-1],  X[iy-1, ix],  X[iy, ix+1]]
+        N_diag = [X[iy-1, ix-1], X[iy-1, ix+1]]
 
     # middle left boundary
     elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == 0)):
-        N = [X[iy-1, ix], X[iy-1, ix+1], X[iy, ix+1], X[iy+1, ix+1], X[iy+1, ix]]
+        N = [X[iy-1, ix],  X[iy, ix+1],  X[iy+1, ix]]
+        N_diag = [X[iy-1, ix+1], X[iy+1, ix+1]]
 
+    # non-boundary node 
     elif (((iy > 0) & (iy < GRID_SIZE-1)) & ((ix > 0) & (ix < GRID_SIZE-1))):
-        N = [X[iy-1, ix], X[iy-1, ix+1], X[iy, ix+1], X[iy+1, ix+1], 
-             X[iy+1, ix], X[iy+1, ix-1], X[iy, ix-1], X[iy-1, ix-1]]
+        N = [X[iy-1, ix], X[iy, ix+1], X[iy+1, ix], X[iy, ix-1]]
+        N_diag = [X[iy-1, ix+1], X[iy+1, ix+1], X[iy+1, ix-1], X[iy-1, ix-1]]
         
     else: 
         raise Exception('We should never get here... Examine conditions above.')
 
     # return the number of currently burning nodes 
-    return N.count(FIRE)
+    return N.count(FIRE) + (N_diag.count(FIRE) * delta)
 
 
+def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
 
-def iterate_fire_v3(X: np.array, phoschek_array: np.array, i: int):
+    if WIND == "N":
+
+        # upper left corner 
+        if ((iy==0) & (ix == 0)):
+            N = [X[iy+1, ix]]
+            N_diag = [X[iy+1, ix+1]]
+
+        # upper right corner 
+        elif ((iy==0) & (ix == GRID_SIZE-1)):
+            N = [X[iy+1, ix]]
+            N_diag = [X[iy+1, ix-1]]
+
+        # lower left corner 
+        elif ((iy==GRID_SIZE-1) & (ix == 0)):
+            N = []
+            N_diag = []
+        
+        # lower right corner 
+        elif ((iy==GRID_SIZE-1) & (ix == GRID_SIZE-1)):
+            N = []
+            N_diag = []
+
+        # middle upper boundary
+        elif ((iy == 0) & ((ix > 0) & (ix < GRID_SIZE-1))):
+            N = [X[iy+1, ix]]
+            N_diag = [X[iy+1, ix-1], X[iy+1, ix+1]]
+
+        # middle right boundary
+        elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == GRID_SIZE-1)):
+            N = [X[iy+1, ix]]
+            N_diag = [X[iy+1, ix-1]]
+
+        # middle bottom boundary
+        elif ((iy == GRID_SIZE-1) & ((ix > 0) & (ix < GRID_SIZE-1))):
+            N = []
+            N_diag = []
+
+        # middle left boundary
+        elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == 0)):
+            N = [X[iy+1, ix]]
+            N_diag = [X[iy+1, ix+1]]
+
+        # non-boundary node 
+        elif (((iy > 0) & (iy < GRID_SIZE-1)) & ((ix > 0) & (ix < GRID_SIZE-1))):
+            N = [X[iy+1, ix]]
+            N_diag = [X[iy+1, ix+1], X[iy+1, ix-1]]
+            
+        else: 
+            raise Exception('We should never get here... Examine conditions above.')
+        
+    lamda = math.cos(math.radians(45))
+
+    epsilon = 0.015
+
+    # return the number of currently burning nodes 
+    return N.count(FIRE) + (N_diag.count(FIRE) * delta * lamda) + epsilon
+
+def test_get_fire_adjacent_nodes():
+    """
+    Tester for get_fire_adjacent_nodes function
+    """
+    X = np.array([[3, 1, 1, 3, 1],
+                  [1, 2, 2, 2, 2],
+                  [1, 2, 1, 1, 1],
+                  [1, 2, 1, 0, 1],
+                  [1, 2, 0, 3, 1]])
+    
+    adjacent_burn_indices = get_fire_adjacent_nodes(X=X)
+
+    B = np.zeros([5, 5])
+    for y, x in zip(adjacent_burn_indices[0], adjacent_burn_indices[1]):
+        # print(f'Burn adjacent node: y:{y}, x:{x}')
+        B[y, x] = 1
+
+    solution = np.array([[1, 1, 1, 1, 1],
+                         [1, 0, 0, 0, 0],
+                         [1, 0, 1, 1, 1],
+                         [1, 0, 1, 0, 0],
+                         [1, 0, 1, 0, 0]])
+    
+    # test to see if the solutions match 
+    assert np.array_equal(B, solution), f"TEST FAILED: \n {B} \n \n IS NOT EQUAL TO \n \n {solution}. \
+                              Check get_fire_adjacent_nodes function. "
+    print('TEST PASSED.')
+
+
+def get_fire_adjacent_nodes(X: np.array):
+    """
+    Helper function that returns the indices of the nodes adjacent to fire nodes
+
+    Based on: 
+    https://stackoverflow.com/questions/65297426/get-indices-for-all-elements-adjacent-to-zeros-in-a-numpy-2d-array
+    """
+    # convert all non-fire nodes into tree nodes
+    X[X != FIRE] = TREE
+    
+    kernel = np.full((3,3), 1)
+
+    # remove center of kernel -- not count 1 at the center of the square
+    # we may not need to remove center
+    # in which case change the mask for counts
+    kernel[1,1]=2
+
+    # counts 1 among the neighborhoods
+    counts = convolve2d(X, kernel, mode='same', 
+                        boundary='fill', fillvalue=1)
+
+    # counts==8 meaning surrounding 8 neighborhoods are all 1
+    # change to 9 if we leave kernel[1,1] == 1
+    # and we want ocean, i.e. a==1
+    adjacent_burn_indices: tuple = np.where((counts != 10) & (X==1))
+
+    return adjacent_burn_indices
+    
+
+def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
     """
     Iterate the forest according to the forest-fire rules.
     https://scipython.com/blog/the-forest-fire-model/
@@ -107,10 +233,6 @@ def iterate_fire_v3(X: np.array, phoschek_array: np.array, i: int):
 
         # define environment parameters based on the current configuration
         ny, nx = EnvParams.grid_size, EnvParams.grid_size
-        wind = EnvParams.wind
-        fire_spread_prob = EnvParams.fire_spread_prob
-        up_wind_spread_prob = EnvParams.up_wind_spread_prob
-        down_wind_spread_prob = EnvParams.down_wind_spread_prob
         
         # The boundary of the forest is always empty, so only consider cells
         # indexed from 1 to nx-2, 1 to ny-2
@@ -118,24 +240,36 @@ def iterate_fire_v3(X: np.array, phoschek_array: np.array, i: int):
         X1 = np.zeros((ny, nx))
         nodes_searched = 0
         curr_burning_nodes = 0
+        delta: float = 0.525
         
         np.copyto(X1, X, where=X != EMPTY)
 
-        # iterate over the currently burning nodes 
-        for ix in range(0,nx):
-            for iy in range(0,ny):
-                if X[iy, ix] == TREE:
-                    # get the number of burning neighbor nodes
-                    b_i: int = get_num_burning_neighbors(iy=iy, ix=ix, X=X)
+        # get two tuples each containing the indices of all fire-adjacent nodes
+        adjacent_burn_indices: tuple = get_fire_adjacent_nodes(X=X)
 
-                    if b_i > 0: 
-                        prob_fire: float = 1 - ((1 - ALPHA)**b_i)
-                        if np.random.random() < prob_fire: 
-                            X1[iy,ix] = FIRE
-                
-                if X[iy,ix] == FIRE:
-                    curr_burning_nodes += 1
-                    X1[iy,ix] = EMPTY
+        for iy, ix in zip(adjacent_burn_indices[0], adjacent_burn_indices[1]):
+            # print(f'Burn adjacent node: y:{iy}, x:{ix}')
+            nodes_searched += 1
+
+            if X[iy, ix] == TREE:
+                # get the number of burning neighbor nodes
+                b_i: int = get_b_wind(iy=iy, ix=ix, X=X, delta=delta)
+
+                if b_i > 0: 
+                    prob_fire: float = 1 - ((1 - ALPHA)**b_i)
+                    if np.random.random() < prob_fire: 
+                        X1[iy,ix] = FIRE
+            
+            else:
+                X1[iy,ix] = EMPTY
+            
+        # replace currently burning nodes with empty nodes 
+        # TODO remove this loop!!
+        fire_indices: tuple = np.where(X == FIRE)
+        curr_burning_nodes = len(fire_indices[0])
+        for iy, ix in zip(fire_indices[0], fire_indices[1]):
+            X1[iy,ix] = EMPTY
+
 
                 # if X[iy,ix] == FIRE:
                 #     curr_burning_nodes += 1
@@ -232,9 +366,9 @@ def main():
     # run the RL algorithm and get the frames of the environment state 
     done = False
     for i, step in enumerate(range(10_000)):
-        X_dict = iterate_fire_v3(X=X, phoschek_array=phoschek_array, i=i)
+        X_dict = iterate_fire_v4(X=X, phoschek_array=phoschek_array, i=i)
         X = X_dict['X']
-        frames.append(X_dict['X'])
+        frames.append(X.copy())
 
         # log the progress 
         if i%10==0:
@@ -258,7 +392,6 @@ def main():
         plot_animation(frames=frames, repeat=AnimationParams.repeat, interval=AnimationParams.interval, 
                     save_anim=AnimationParams.save_anim, show_anim=AnimationParams.show_anim)
     
-
     # here we generate a mask showing the burned nodes for this run and return it
     # NOTE: we represent burned nodes using 1 here instead of the integer representing BURNED
     # so that we can generate multi-episode distributions of the burn area for each fire. 
@@ -301,7 +434,6 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
     #     sns.heatmap(arr_sum, linewidth=0, cmap="flare_r", ax=ax)
         # ax1.set(title=f'Burn Distribution Over {episodes} Episodes, $\omega_w$: {EnvParams.down_wind_spread_prob}, $\gamma_w$: {EnvParams.up_wind_spread_prob}')
     
-
     # # --------------- Parameter Setting #1 ---------------
     # EnvParams.up_wind_spread_prob = 0.12
 
@@ -365,3 +497,8 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
 if __name__ == "__main__":
     main()
     # get_burn_dist(save_fig=True, show_fig=True)
+    # test_get_fire_adjacent_nodes()
+
+"""
+Step 2: add small epsilon for fire spread chance 
+"""
