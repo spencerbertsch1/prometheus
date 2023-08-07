@@ -1,18 +1,18 @@
 [env]
 # Wind options: ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
-wind = 'SE' 
+wind = 'N' 
 # The initial fraction of the forest occupied by trees.
 forest_fraction = 1
 # Define fire spread probability (ignored when wind is not 'none')
-fire_spread_prob = 0.55
+fire_spread_prob = 0.75
 # Define probability that the fire burns outward against the wind
 up_wind_spread_prob = 0.12
 # Define the probability of fire spreading down wind 
-down_wind_spread_prob = 0.8
+down_wind_spread_prob = 0.98
 # Define the speed of the fire (1 is fastest, larger numbers represent fires that move slower)
 fire_speed = 10
 # Forest size (number of cells in x and y directions).
-grid_size = 300
+grid_size = 100
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
 
@@ -28,11 +28,11 @@ interval = 30  #ms 30
 # true in order to show the animation after the episode ends 
 save_anim = true
 # true in order to save the animation to disk
-show_anim = false
+show_anim = true
 # true if we want to observe the frame-by-frame animation
 # this can become very long if the fire speed is slower (if fire_speed > 5)
 show_full_anim = false
 # option to greatly speed up the animation in order to iterate quickly indevelopment 
-dev_fast_anim = true
+dev_fast_anim = false
 # show the image of the landscape behind the animation
 show_background_image = true
