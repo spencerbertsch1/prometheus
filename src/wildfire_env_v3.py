@@ -22,11 +22,12 @@ sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO_ANIMATIONS, ABSPATH_TO_DATA, \
     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
 from fire_sim_v3 import iterate_fire_v3, initialize_env
+from fire_sim_v4 import iterate_fire_v4, initialize_env
 from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative, \
     plot_animation_v2, get_path_to_point, get_fire_centroid, get_closest_airport
 
 # set the random seed for predictable runs 
-SEED = 0
+SEED = 1
 np.random.seed(SEED)
 
 
@@ -103,7 +104,7 @@ class WildfireEnv(gym.Env):
             self.helicopter.phoschek_level -= AgentParams.phoscheck_drop_rate
 
         # Execute one time step in the environment
-        X_dict = iterate_fire_v3(X=self._env_state, phoschek_array=self.phoschek_array, i=i)
+        X_dict = iterate_fire_v4(X=self._env_state, phoschek_array=self.phoschek_array, i=i)
         self._env_state = X_dict['X']
         
         full_frame = self._env_state.copy()
@@ -217,8 +218,8 @@ class WildfireEnv(gym.Env):
             self.helicopter.fuel_level = 1.0
             self.helicopter.dropping_phoschek = False
             c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
-            x_center, y_center = round(c_dict['x_center'], 1), round(c_dict['y_center'], 1)
-            target = [x_center+35, y_center+35]
+            y_center, x_center = round(c_dict['x_center'], 1), round(c_dict['y_center'], 1)
+            target = [y_center - 45, x_center]
 
             print(f'X Center: {x_center}, Y Center: {y_center}')
 
