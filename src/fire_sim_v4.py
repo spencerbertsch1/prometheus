@@ -154,6 +154,42 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
             
         else: 
             raise Exception('We should never get here... Examine conditions above.')
+
+    elif WIND == "NE":
+        N = [X[iy+1, ix], X[iy, ix-1]]
+        N_diag = [X[iy+1, ix-1]]
+
+    elif WIND == "E":
+        N = [X[iy, ix-1]]
+        N_diag = [X[iy+1, ix-1], X[iy-1, ix-1]]
+
+    elif WIND == "SE":
+        N = [X[iy, ix-1], X[iy-1, ix]]
+        N_diag = [X[iy-1, ix-1]]
+
+    elif WIND == "S":
+        N = [X[iy-1, ix]]
+        N_diag = [X[iy-1, ix-1], X[iy-1, ix+1]]
+
+    elif WIND == "SW":
+        N = [X[iy-1, ix], X[iy, ix+1]]
+        N_diag = [X[iy-1, ix+1]]
+
+    elif WIND == "W":
+        N = [X[iy, ix+1]]
+        N_diag = [X[iy-1, ix+1], X[iy+1, ix+1]]
+
+    elif WIND == "NW":
+        N = [X[iy, ix+1], X[iy+1, ix]]
+        N_diag = [X[iy+1, ix+1]]
+
+    # TODO add the rest of the wind directions here
+
+    # TODO add general case for edges if need be (I think we will never need them...)
+
+    else: 
+        raise Exception('We should never get here... Examine conditions above.')
+
         
     # define the wind speed 
     w = 0.6
