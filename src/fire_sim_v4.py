@@ -156,11 +156,13 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
             raise Exception('We should never get here... Examine conditions above.')
         
     # define the wind speed 
-    w = 1
+    w = 0.6
 
-    lamda = math.cos(math.radians(45)) * w
+    lamda = math.cos(math.radians(45)) * w  # <-- TODO update lambda to angle, not just 45 degrees
 
     epsilon = 0.05
+
+    # TODO update wind implementation and add other wind directions!
 
     # write the logic in section 2.2.1 in the wildfires paper (wind fire transition probability)
     if direction_dict[WIND] % 2 ==0:
@@ -169,8 +171,6 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
     else:
         # the direction is odd, so the wind is NE, SE, SW, or NW
         b_ij: float = (N.count(FIRE) * lamda) + ((N_diag.count(FIRE) * delta)) + epsilon
-
-
 
     # return the number of currently burning nodes 
     return b_ij
@@ -280,7 +280,6 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
         curr_burning_nodes = len(fire_indices[0])
         for iy, ix in zip(fire_indices[0], fire_indices[1]):
             X1[iy,ix] = EMPTY
-
 
                 # if X[iy,ix] == FIRE:
                 #     curr_burning_nodes += 1
