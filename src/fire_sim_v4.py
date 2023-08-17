@@ -50,6 +50,15 @@ bounds = [0,1,2,3]
 norm = colors.BoundaryNorm(bounds, cmap.N)
 
 def get_num_burning_neighbors(iy: int, ix: int, X: np.array, delta: float):
+    """
+    OLD CODE
+    ------------------------------------------------------------------------
+    THIS IS AN OLD FUNCTION THAT HAS BEEN REPLACED BY THE FOLLOWING FUNCTION: 
+    get_b_wind()
+
+    THIS FUNCTION (get_num_burning_neighbors) WILL BE REMOVED AFTER ALL FIRE 
+    SPREAD FUNCTIONS HAVE BEEN FINALIZED. 
+    """
 
     # upper left corner 
     if ((iy==0) & (ix == 0)):
@@ -326,51 +335,6 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
         for iy, ix in zip(fire_indices[0], fire_indices[1]):
             X1[iy,ix] = EMPTY
 
-                # if X[iy,ix] == FIRE:
-                #     curr_burning_nodes += 1
-                #     X1[iy,ix] = EMPTY
-                    
-                #     # iterate over each of the 8 actions and their respective neighbor nodes
-                #     # here we index by dy then dx since that's how Numpy indexing works 
-                #     for action, (dy,dx) in action_to_direction.items():
-                #         # print(f'action: {action}, direction: {direction_dict[wind]}, dx: {dx}, dy: {dy}')
-                #         nodes_searched += 1
-                #         # The diagonally-adjacent trees are further away, so
-                #         # only catch fire with a reduced probability:
-                #         if abs(dx) == abs(dy) and wind == 'none' and np.random.random() < 0.573:
-                #             continue
-
-
-                #         if wind != 'none' and np.random.random() < 0.03:
-                #             continue
-                        
-                #         try: 
-                #             if X[iy+dy,ix+dx] == TREE:
-                #                 # in this case there is no wind so the fire spreads radially outwards
-                #                 if wind == 'none': 
-                #                     if np.random.random() < fire_spread_prob:
-                #                         if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
-                #                             X1[iy+dy,ix+dx] = FIRE
-                #                         # break
-                #                 else:
-                #                     # account for wind
-                #                     if action==direction_dict[wind]: 
-                #                         if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
-                #                             # this prevents straight right corners from occuring in the fire frontier
-                #                             # TODO fix fire from going out 9% of the time 
-                #                             if np.random.random() < down_wind_spread_prob:
-                #                                 X1[iy+dy,ix+dx] = FIRE
-                                    
-                #                     # add additional condition to slow fire spread based on probability of spreading
-                #                     else:
-                #                         if np.random.random() < up_wind_spread_prob:
-                #                             if ((phoschek_array[iy+dy,ix+dx] == 0) & (phoschek_array[iy+dy,ix] == 0) & (phoschek_array[iy,ix+dx] == 0)):
-                #                                 X1[iy+dy,ix+dx] = FIRE
-                #         except: 
-                #             # here the fire reaches the boarder of the map so we can't index its neighbors! 
-                #             # we add this try - except block to prevent index out of bounds errors
-                #             pass
-                            
         np.copyto(X1, phoschek_array, where=phoschek_array != EMPTY)
 
         return {"X": X1, "nodes_processed": nodes_searched, 'curr_burning_nodes': curr_burning_nodes}
@@ -395,6 +359,7 @@ def initialize_env() -> np.array:
         # we only have one ignition point at the center of the environment
         ignition_index = int(GRID_SIZE/2)
         X[ignition_index, ignition_index] = FIRE
+        # vvv ---------- UNCOMMENT TO CREATE MORE INITIAL BURN NODES ---------- vvv
         # X[ignition_index+1, ignition_index] = FIRE
         # X[ignition_index, ignition_index+1] = FIRE
         # X[ignition_index-1, ignition_index] = FIRE
