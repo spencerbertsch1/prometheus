@@ -105,55 +105,63 @@ def get_num_burning_neighbors(iy: int, ix: int, X: np.array, delta: float):
 
 def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
 
-    if WIND == "N":
+    # ensure the wind is one of the expected values 
+    assert WIND in ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'Nw'], \
+        f'Wind should be \'none\', \'N\', ..., \'NW\', not {WIND}'
+
+    if WIND == "none":
 
         # upper left corner 
         if ((iy==0) & (ix == 0)):
-            N = [X[iy+1, ix]]
+            N = [X[iy+1, ix], X[iy, ix+1]]
             N_diag = [X[iy+1, ix+1]]
 
         # upper right corner 
         elif ((iy==0) & (ix == GRID_SIZE-1)):
-            N = [X[iy+1, ix]]
+            N = [X[iy+1, ix], X[iy, ix-1]]
             N_diag = [X[iy+1, ix-1]]
 
         # lower left corner 
         elif ((iy==GRID_SIZE-1) & (ix == 0)):
-            N = []
-            N_diag = []
+            N = [X[iy-1, ix], X[iy, ix+1]]
+            N_diag = [X[iy-1, ix+1]]
         
         # lower right corner 
         elif ((iy==GRID_SIZE-1) & (ix == GRID_SIZE-1)):
-            N = []
-            N_diag = []
+            N = [X[iy-1, ix], X[iy, ix-1]]
+            N_diag = [X[iy-1, ix-1]]
 
         # middle upper boundary
         elif ((iy == 0) & ((ix > 0) & (ix < GRID_SIZE-1))):
-            N = [X[iy+1, ix]]
+            N = [X[iy, ix-1], X[iy+1, ix], X[iy, ix+1]]
             N_diag = [X[iy+1, ix-1], X[iy+1, ix+1]]
 
         # middle right boundary
         elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == GRID_SIZE-1)):
-            N = [X[iy+1, ix]]
-            N_diag = [X[iy+1, ix-1]]
+            N = [X[iy-1, ix],  X[iy, ix-1], X[iy+1, ix]]
+            N_diag = [X[iy-1, ix-1], X[iy+1, ix-1]]
 
         # middle bottom boundary
         elif ((iy == GRID_SIZE-1) & ((ix > 0) & (ix < GRID_SIZE-1))):
-            N = []
-            N_diag = []
+            N = [X[iy, ix-1],  X[iy-1, ix],  X[iy, ix+1]]
+            N_diag = [X[iy-1, ix-1], X[iy-1, ix+1]]
 
         # middle left boundary
         elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == 0)):
-            N = [X[iy+1, ix]]
-            N_diag = [X[iy+1, ix+1]]
+            N = [X[iy-1, ix],  X[iy, ix+1],  X[iy+1, ix]]
+            N_diag = [X[iy-1, ix+1], X[iy+1, ix+1]]
 
         # non-boundary node 
         elif (((iy > 0) & (iy < GRID_SIZE-1)) & ((ix > 0) & (ix < GRID_SIZE-1))):
-            N = [X[iy+1, ix]]
-            N_diag = [X[iy+1, ix+1], X[iy+1, ix-1]]
+            N = [X[iy-1, ix], X[iy, ix+1], X[iy+1, ix], X[iy, ix-1]]
+            N_diag = [X[iy-1, ix+1], X[iy+1, ix+1], X[iy+1, ix-1], X[iy-1, ix-1]]
             
         else: 
             raise Exception('We should never get here... Examine conditions above.')
+        
+    elif WIND == "N":
+        N = [X[iy+1, ix]]
+        N_diag = [X[iy+1, ix+1], X[iy+1, ix-1]]
 
     elif WIND == "NE":
         N = [X[iy+1, ix], X[iy, ix-1]]
@@ -183,10 +191,6 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
         N = [X[iy, ix+1], X[iy+1, ix]]
         N_diag = [X[iy+1, ix+1]]
 
-    # TODO add the rest of the wind directions here
-
-    # TODO add general case for edges if need be (I think we will never need them...)
-
     else: 
         raise Exception('We should never get here... Examine conditions above.')
 
@@ -201,12 +205,17 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
     # TODO update wind implementation and add other wind directions!
 
     # write the logic in section 2.2.1 in the wildfires paper (wind fire transition probability)
-    if direction_dict[WIND] % 2 ==0:
-        # the direction is even, so the wind is N, E, S, or W
-        b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * (delta * lamda)) + epsilon
+    if WIND != 'none':
+        if direction_dict[WIND] % 2 ==0:
+            # the direction is even, so the wind is N, E, S, or W
+            b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * (delta * lamda)) + epsilon
+        else:
+            # the direction is odd, so the wind is NE, SE, SW, or NW
+            b_ij: float = (N.count(FIRE) * lamda) + ((N_diag.count(FIRE) * delta)) + epsilon
     else:
-        # the direction is odd, so the wind is NE, SE, SW, or NW
-        b_ij: float = (N.count(FIRE) * lamda) + ((N_diag.count(FIRE) * delta)) + epsilon
+        # there is no wind here, so we dont need to worry about w (wind speed), lambda (wind coefficient) or 
+        # espilon (small constant)
+        b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * delta)
 
     # return the number of currently burning nodes 
     return b_ij
@@ -545,6 +554,3 @@ if __name__ == "__main__":
     # get_burn_dist(save_fig=True, show_fig=True)
     # test_get_fire_adjacent_nodes()
 
-"""
-Step 2: add small epsilon for fire spread chance 
-"""
