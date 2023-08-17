@@ -93,7 +93,6 @@ def iterate_fire_v3(X: np.array, phoschek_array: np.array, i: int):
                         if abs(dx) == abs(dy) and wind == 'none' and np.random.random() < 0.573:
                             continue
 
-
                         if wind != 'none' and np.random.random() < 0.03:
                             continue
                         
