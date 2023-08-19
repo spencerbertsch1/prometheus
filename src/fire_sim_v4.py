@@ -433,7 +433,7 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
     """
     # Don't save animations on each run because we will be running many animations here 
     AnimationParams.save_anim = False
-    episodes: int = 3
+    episodes: int = 5
 
     # generate subplots 
     # fig, axn = plt.subplots(3, 1, sharex=True, sharey=True)
@@ -515,7 +515,7 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
 
 
 if __name__ == "__main__":
-    main()
-    # get_burn_dist(save_fig=True, show_fig=True)
+    # main()
+    get_burn_dist(save_fig=True, show_fig=True)
     # test_get_fire_adjacent_nodes()
 
