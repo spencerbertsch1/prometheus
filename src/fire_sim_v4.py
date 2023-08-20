@@ -33,10 +33,13 @@ from utils import numpy_element_counter, plot_animation
 # import environment, agent, and animation parameters 
 WIND = EnvParams.wind
 FOREST_FRACTION = EnvParams.forest_fraction
-ALPHA = EnvParams.fire_spread_prob
-FIRE_SPEED = EnvParams.fire_speed
+ALPHA = EnvParams.alpha
 GRID_SIZE = EnvParams.grid_size
 IGNITION_POINTS = EnvParams.ignition_points
+# define the three parameters that control fire dynamics
+W = EnvParams.w
+DELTA = EnvParams.delt
+EPSILON = EnvParams.epsilon
 
 # set the random seed for predictable runs 
 np.random.seed(1)
@@ -202,29 +205,22 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
 
     else: 
         raise Exception('We should never get here... Examine conditions above.')
-
-        
-    # define the wind speed 
-    w = 0.6
-
-    lamda = math.cos(math.radians(45)) * w  # <-- TODO update lambda to angle, not just 45 degrees
-
-    epsilon = 0.05
-
-    # TODO update wind implementation and add other wind directions!
+    
+            # define the wind coefficient based on the cosine of the wind direction 
+    lamda = math.cos(math.radians(45)) * W
 
     # write the logic in section 2.2.1 in the wildfires paper (wind fire transition probability)
     if WIND != 'none':
         if direction_dict[WIND] % 2 ==0:
             # the direction is even, so the wind is N, E, S, or W
-            b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * (delta * lamda)) + epsilon
+            b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * (DELTA * lamda)) + EPSILON
         else:
             # the direction is odd, so the wind is NE, SE, SW, or NW
-            b_ij: float = (N.count(FIRE) * lamda) + ((N_diag.count(FIRE) * delta)) + epsilon
+            b_ij: float = (N.count(FIRE) * lamda) + ((N_diag.count(FIRE) * DELTA)) + EPSILON
     else:
         # there is no wind here, so we dont need to worry about w (wind speed), lambda (wind coefficient) or 
         # espilon (small constant)
-        b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * delta)
+        b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * DELTA)
 
     # return the number of currently burning nodes 
     return b_ij
@@ -360,10 +356,10 @@ def initialize_env() -> np.array:
         ignition_index = int(GRID_SIZE/2)
         X[ignition_index, ignition_index] = FIRE
         # vvv ---------- UNCOMMENT TO CREATE MORE INITIAL BURN NODES ---------- vvv
-        # X[ignition_index+1, ignition_index] = FIRE
-        # X[ignition_index, ignition_index+1] = FIRE
-        # X[ignition_index-1, ignition_index] = FIRE
-        # X[ignition_index, ignition_index-1] = FIRE
+        X[ignition_index+1, ignition_index] = FIRE
+        X[ignition_index, ignition_index+1] = FIRE
+        X[ignition_index-1, ignition_index] = FIRE
+        X[ignition_index, ignition_index-1] = FIRE
     else:
         # randomly select some ignition points
         point_list = [int(GRID_SIZE - GRID_SIZE/5), int(GRID_SIZE/2), int(GRID_SIZE/3), int(GRID_SIZE - GRID_SIZE/7), int(GRID_SIZE/9), int(GRID_SIZE/4)]
@@ -468,7 +464,9 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
     
     # plot the resulting fire distribution
     ax1 = sns.heatmap(arr_sum, linewidth=0, cmap="flare_r")
-    ax1.set(title=f'Burn Distribution Over {episodes} Episodes, $\omega_w$: {EnvParams.down_wind_spread_prob}, $\gamma_w$: {EnvParams.up_wind_spread_prob}')
+    ax1.set(title=fr'Burn Distribution Over {episodes} Episodes, Wind Direction: {EnvParams.wind}\
+            $\delta$: {EnvParams.delt}, $\alpha$: {EnvParams.alpha}, \
+            $\epsilon$: {EnvParams.epsilon}, $w$: {EnvParams.w}, ')
     
     # # --------------- Parameter Setting #2 ---------------
     # EnvParams.up_wind_spread_prob = 0.12
@@ -502,8 +500,6 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
     # ax3 = sns.heatmap(arr_sum, linewidth=0, cmap="flare_r")
     # ax3.set(title=f'Burn Distribution Over {episodes} Episodes, $\omega_w$: {EnvParams.down_wind_spread_prob}, $\gamma_w$: {EnvParams.up_wind_spread_prob}')
     
-
-
     # save the resulting figure to disk
     if save_fig: 
         fig = ax1.get_figure()
