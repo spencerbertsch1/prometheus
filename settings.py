@@ -54,12 +54,13 @@ CONFIG_DICT: Dict[Any, Any] = toml.load(str(ABSPATH_TO_TOML))
 class EnvParams:
     wind: bool = CONFIG_DICT['env']['wind']
     forest_fraction: bool = CONFIG_DICT['env']['forest_fraction']
-    fire_spread_prob: bool = CONFIG_DICT['env']['fire_spread_prob']
-    up_wind_spread_prob: bool = CONFIG_DICT['env']['up_wind_spread_prob']
-    down_wind_spread_prob: bool = CONFIG_DICT['env']['down_wind_spread_prob']
     fire_speed: bool = CONFIG_DICT['env']['fire_speed']
     grid_size: bool = CONFIG_DICT['env']['grid_size']
     ignition_points: bool = CONFIG_DICT['env']['ignition_points']
+    alpha: bool = CONFIG_DICT['env']['alpha']
+    w: bool = CONFIG_DICT['env']['w']
+    epsilon: bool = CONFIG_DICT['env']['epsilon']
+    delt: bool = CONFIG_DICT['env']['delt']
 
 class AgentParams:
     phoscheck_drop_rate: bool = CONFIG_DICT['agent']['phoscheck_drop_rate']
