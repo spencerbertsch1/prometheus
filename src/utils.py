@@ -278,15 +278,10 @@ def get_fire_centroid(env_state: np.array, verbose = False):
 
     # calculate the centroid of the currently burning nodes 
     count = (env_state == FIRE).sum()
-    x_center, y_center = np.argwhere(env_state == FIRE).sum(0)/count
-    centroid = {'x_center': x_center, 'y_center': y_center}
+    y_center, x_center = np.argwhere(env_state == FIRE).sum(0)/count
+    centroid = {'y_center': y_center, 'x_center': x_center}
 
     return centroid
-
-
-
-
-
 
 class Aircraft():
     aircraft_type = 'Aircraft'
