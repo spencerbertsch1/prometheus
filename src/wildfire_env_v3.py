@@ -21,7 +21,6 @@ print(f'Working directory: {PATH_TO_WORKING_DIR}')
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, AgentParams, ABSPATH_TO_ANIMATIONS, ABSPATH_TO_DATA, \
     EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT, direction_dict, action_to_direction
-from fire_sim_v3 import iterate_fire_v3, initialize_env
 from fire_sim_v4 import iterate_fire_v4, initialize_env
 from utils import numpy_element_counter, plot_animation, viewer, Helicopter, Cumulative, \
     plot_animation_v2, get_path_to_point, get_fire_centroid, get_closest_airport
@@ -218,7 +217,7 @@ class WildfireEnv(gym.Env):
             self.helicopter.fuel_level = 1.0
             self.helicopter.dropping_phoschek = False
             c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
-            y_center, x_center = round(c_dict['x_center'], 1), round(c_dict['y_center'], 1)
+            y_center, x_center = round(c_dict['y_center'], 1), round(c_dict['x_center'], 1)
             target = [y_center - 45, x_center]
 
             print(f'X Center: {x_center}, Y Center: {y_center}')
