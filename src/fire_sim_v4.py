@@ -355,11 +355,12 @@ def initialize_env() -> np.array:
         # we only have one ignition point at the center of the environment
         ignition_index = int(GRID_SIZE/2)
         X[ignition_index, ignition_index] = FIRE
-        # vvv ---------- UNCOMMENT TO CREATE MORE INITIAL BURN NODES ---------- vvv
-        X[ignition_index+1, ignition_index] = FIRE
-        X[ignition_index, ignition_index+1] = FIRE
-        X[ignition_index-1, ignition_index] = FIRE
-        X[ignition_index, ignition_index-1] = FIRE
+        # use addiitonal starting burn nodes if wind is present so the fire doesnt burn out
+        if EnvParams.wind != 'none':
+            X[ignition_index+1, ignition_index] = FIRE
+            X[ignition_index, ignition_index+1] = FIRE
+            X[ignition_index-1, ignition_index] = FIRE
+            X[ignition_index, ignition_index-1] = FIRE
     else:
         # randomly select some ignition points
         point_list = [int(GRID_SIZE - GRID_SIZE/5), int(GRID_SIZE/2), int(GRID_SIZE/3), int(GRID_SIZE - GRID_SIZE/7), int(GRID_SIZE/9), int(GRID_SIZE/4)]
