@@ -3,18 +3,20 @@
 wind = 'N' 
 # The initial fraction of the forest occupied by trees.
 forest_fraction = 1
-# Define fire spread probability (ignored when wind is not 'none')
-fire_spread_prob = 0.75
-# Define probability that the fire burns outward against the wind
-up_wind_spread_prob = 0.12
-# Define the probability of fire spreading down wind 
-down_wind_spread_prob = 0.98
 # Define the speed of the fire (1 is fastest, larger numbers represent fires that move slower)
 fire_speed = 10
 # Forest size (number of cells in x and y directions).
-grid_size = 100
+grid_size = 200
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
+# ---------- define the burn simulation parameters [alpha, w, delta, and epsilon] ---------- 
+alpha = 0.83
+# define the wind speed 
+w = 0.6
+# define diagonal burn speed reduction coefficient
+delt = 0.25
+# small constant that accounts for up-wind burn (against wind direction)
+epsilon = 0.05
 
 [agent]
 # the percentage (0.1 represents 10% dropped) of phoscheck dropped over each node 
@@ -28,7 +30,7 @@ interval = 30  #ms 30
 # true in order to show the animation after the episode ends 
 save_anim = true
 # true in order to save the animation to disk
-show_anim = true
+show_anim = false
 # true if we want to observe the frame-by-frame animation
 # this can become very long if the fire speed is slower (if fire_speed > 5)
 show_full_anim = false
