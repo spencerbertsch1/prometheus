@@ -325,11 +325,9 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
                         X1[iy,ix] = FIRE
             
         # replace currently burning nodes with empty nodes 
-        # TODO remove this loop!!
         fire_indices: tuple = np.where(X == FIRE)
         curr_burning_nodes = len(fire_indices[0])
-        for iy, ix in zip(fire_indices[0], fire_indices[1]):
-            X1[iy,ix] = EMPTY
+        X1[fire_indices] = EMPTY
 
         np.copyto(X1, phoschek_array, where=phoschek_array != EMPTY)
 
@@ -465,9 +463,8 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
     
     # plot the resulting fire distribution
     ax1 = sns.heatmap(arr_sum, linewidth=0, cmap="flare_r")
-    ax1.set(title=fr'Burn Distribution Over {episodes} Episodes, Wind Direction: {EnvParams.wind}\
-            $\delta$: {EnvParams.delt}, $\alpha$: {EnvParams.alpha}, \
-            $\epsilon$: {EnvParams.epsilon}, $w$: {EnvParams.w}, ')
+    ax1.set(title=fr"""Burn Distribution Over {episodes} Episodes 
+            Wind Direction: {EnvParams.wind}, $\delta$: {EnvParams.delt}, $\alpha$: {EnvParams.alpha}, $\epsilon$: {EnvParams.epsilon}, $w$: {EnvParams.w}""")
     
     # # --------------- Parameter Setting #2 ---------------
     # EnvParams.up_wind_spread_prob = 0.12
@@ -512,7 +509,7 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
 
 
 if __name__ == "__main__":
-    # main()
-    get_burn_dist(save_fig=True, show_fig=True)
+    main()
+    # get_burn_dist(save_fig=True, show_fig=True)
     # test_get_fire_adjacent_nodes()
 
