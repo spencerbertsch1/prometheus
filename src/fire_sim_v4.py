@@ -115,10 +115,10 @@ def get_num_burning_neighbors(iy: int, ix: int, X: np.array, delta: float):
     return N.count(FIRE) + (N_diag.count(FIRE) * delta)
 
 
-def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
+def get_b_wind_eight_neighbor(iy: int, ix: int, X: np.array, delta: float):
 
     # ensure the wind is one of the expected values 
-    assert WIND in ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'Nw'], \
+    assert WIND in ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'], \
         f'Wind should be \'none\', \'N\', ..., \'NW\', not {WIND}'
 
     if WIND == "none":
@@ -226,6 +226,101 @@ def get_b_wind(iy: int, ix: int, X: np.array, delta: float):
     return b_ij
     # return N.count(FIRE) + (N_diag.count(FIRE) * (delta * lamda)) + epsilon
 
+
+def get_b_wind_four_neighbor(iy: int, ix: int, X: np.array, delta: float):
+
+    # ensure the wind is one of the expected values 
+    assert WIND in ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'], \
+        f'Wind should be \'none\', \'N\', ..., \'NW\', not {WIND}'
+
+    if WIND == "none":
+
+        # upper left corner 
+        if ((iy==0) & (ix == 0)):
+            N = [X[iy+1, ix], X[iy, ix+1]]
+
+        # upper right corner 
+        elif ((iy==0) & (ix == GRID_SIZE-1)):
+            N = [X[iy+1, ix], X[iy, ix-1]]
+
+        # lower left corner 
+        elif ((iy==GRID_SIZE-1) & (ix == 0)):
+            N = [X[iy-1, ix], X[iy, ix+1]]
+        
+        # lower right corner 
+        elif ((iy==GRID_SIZE-1) & (ix == GRID_SIZE-1)):
+            N = [X[iy-1, ix], X[iy, ix-1]]
+
+        # middle upper boundary
+        elif ((iy == 0) & ((ix > 0) & (ix < GRID_SIZE-1))):
+            N = [X[iy, ix-1], X[iy+1, ix], X[iy, ix+1]]
+
+        # middle right boundary
+        elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == GRID_SIZE-1)):
+            N = [X[iy-1, ix],  X[iy, ix-1], X[iy+1, ix]]
+
+        # middle bottom boundary
+        elif ((iy == GRID_SIZE-1) & ((ix > 0) & (ix < GRID_SIZE-1))):
+            N = [X[iy, ix-1],  X[iy-1, ix],  X[iy, ix+1]]
+
+        # middle left boundary
+        elif (((iy > 0) & (iy < GRID_SIZE-1)) & (ix == 0)):
+            N = [X[iy-1, ix],  X[iy, ix+1],  X[iy+1, ix]]
+
+        # non-boundary node 
+        elif (((iy > 0) & (iy < GRID_SIZE-1)) & ((ix > 0) & (ix < GRID_SIZE-1))):
+            N = [X[iy-1, ix], X[iy, ix+1], X[iy+1, ix], X[iy, ix-1]]
+            
+        else: 
+            raise Exception('We should never get here... Examine conditions above.')
+        
+    elif WIND == "N":
+        N = [X[iy+1, ix]]
+
+    elif WIND == "NE":
+        N = [X[iy+1, ix], X[iy, ix-1]]
+
+    elif WIND == "E":
+        N = [X[iy, ix-1]]
+
+    elif WIND == "SE":
+        N = [X[iy, ix-1], X[iy-1, ix]]
+
+    elif WIND == "S":
+        N = [X[iy-1, ix]]
+
+    elif WIND == "SW":
+        N = [X[iy-1, ix], X[iy, ix+1]]
+
+    elif WIND == "W":
+        N = [X[iy, ix+1]]
+
+    elif WIND == "NW":
+        N = [X[iy, ix+1], X[iy+1, ix]]
+
+    else: 
+        raise Exception('We should never get here... Examine conditions above.')
+    
+            # define the wind coefficient based on the cosine of the wind direction 
+    lamda = math.cos(math.radians(45)) * W
+
+    # write the logic in section 2.2.1 in the wildfires paper (wind fire transition probability)
+    if WIND != 'none':
+        if direction_dict[WIND] % 2 ==0:
+            # the direction is even, so the wind is N, E, S, or W
+            b_ij: float = (N.count(FIRE) * lamda) + EPSILON
+        else:
+            # the direction is odd, so the wind is NE, SE, SW, or NW
+            b_ij: float = (N.count(FIRE) * lamda) + EPSILON
+    else:
+        # there is no wind here, so we dont need to worry about w (wind speed), lambda (wind coefficient) or 
+        # espilon (small constant)
+        b_ij: float = N.count(FIRE)
+
+    # return the number of currently burning nodes 
+    return b_ij
+    # return N.count(FIRE) + (N_diag.count(FIRE) * (delta * lamda)) + epsilon
+
 def test_get_fire_adjacent_nodes():
     """
     Tester for get_fire_adjacent_nodes function
@@ -281,6 +376,23 @@ def get_fire_adjacent_nodes(X: np.array):
     # and we want ocean, i.e. a==1
     adjacent_burn_indices: tuple = np.where((counts != 10) & (X==1))
 
+    if EnvParams.four_neighbor_burn: 
+        """
+        Here we need to remove the healthy nodes that only have diagonally adjacent fire nodes
+        TODO - vectorize this section of the function ! 
+        """
+        four_neighbor_adjacent_burn_indices = []
+        iy_index_list = []
+        ix_index_list = []
+        for iy, ix in zip(adjacent_burn_indices[0], adjacent_burn_indices[1]):
+            # only keep the healthy nodes that only have vertically or horizontally adjacent fire nodes
+            if ((X[iy+1, ix] == FIRE) | (X[iy-1, ix] == FIRE) | (X[iy, ix+1] == FIRE) | (X[iy, ix-1] == FIRE)):
+                iy_index_list.append(iy)
+                ix_index_list.append(ix)
+
+        four_neighbor_adjacent_burn_indices = [tuple(iy_index_list), tuple(ix_index_list)]
+        adjacent_burn_indices = tuple(four_neighbor_adjacent_burn_indices)
+
     return adjacent_burn_indices
     
 
@@ -317,12 +429,14 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
 
             if X1[iy, ix] == TREE:
                 # get the number of burning neighbor nodes
-                b_i: int = get_b_wind(iy=iy, ix=ix, X=X, delta=delta)
+                b_i: int = get_b_wind_four_neighbor(iy=iy, ix=ix, X=X, delta=delta)
 
                 if b_i > 0: 
                     prob_fire: float = 1 - ((1 - ALPHA)**b_i)
                     if np.random.random() < prob_fire: 
-                        X1[iy,ix] = FIRE
+                        if ((phoschek_array[iy-1,ix] != PHOSCHEK) & (phoschek_array[iy+1,ix] != PHOSCHEK) & \
+                            (phoschek_array[iy,ix-1] != PHOSCHEK) & (phoschek_array[iy,ix+1] != PHOSCHEK)):
+                            X1[iy,ix] = FIRE
             
         # replace currently burning nodes with empty nodes 
         fire_indices: tuple = np.where(X == FIRE)
