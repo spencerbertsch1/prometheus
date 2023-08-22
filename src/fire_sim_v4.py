@@ -386,9 +386,15 @@ def get_fire_adjacent_nodes(X: np.array):
         ix_index_list = []
         for iy, ix in zip(adjacent_burn_indices[0], adjacent_burn_indices[1]):
             # only keep the healthy nodes that only have vertically or horizontally adjacent fire nodes
-            if ((X[iy+1, ix] == FIRE) | (X[iy-1, ix] == FIRE) | (X[iy, ix+1] == FIRE) | (X[iy, ix-1] == FIRE)):
-                iy_index_list.append(iy)
-                ix_index_list.append(ix)
+            # FIXME remove the try except! This section is throwing an out-of-bounds error when the fire
+            # reaches the perimiter of the env. Fix this later (try-except-pass works for now, although 
+            # is not best practice programatically)
+            try: 
+                if ((X[iy+1, ix] == FIRE) | (X[iy-1, ix] == FIRE) | (X[iy, ix+1] == FIRE) | (X[iy, ix-1] == FIRE)):
+                    iy_index_list.append(iy)
+                    ix_index_list.append(ix)
+            except:
+                pass
 
         four_neighbor_adjacent_burn_indices = [tuple(iy_index_list), tuple(ix_index_list)]
         adjacent_burn_indices = tuple(four_neighbor_adjacent_burn_indices)
@@ -434,9 +440,9 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
                 if b_i > 0: 
                     prob_fire: float = 1 - ((1 - ALPHA)**b_i)
                     if np.random.random() < prob_fire: 
-                        if ((phoschek_array[iy-1,ix] != PHOSCHEK) & (phoschek_array[iy+1,ix] != PHOSCHEK) & \
-                            (phoschek_array[iy,ix-1] != PHOSCHEK) & (phoschek_array[iy,ix+1] != PHOSCHEK)):
-                            X1[iy,ix] = FIRE
+                        # if ((phoschek_array[iy-1,ix] != PHOSCHEK) & (phoschek_array[iy+1,ix] != PHOSCHEK) & \
+                        #     (phoschek_array[iy,ix-1] != PHOSCHEK) & (phoschek_array[iy,ix+1] != PHOSCHEK)):
+                        X1[iy,ix] = FIRE
             
         # replace currently burning nodes with empty nodes 
         fire_indices: tuple = np.where(X == FIRE)
