@@ -229,7 +229,7 @@ class WildfireEnv(gym.Env):
                 # initiate the phos chek drop if it hasn't happened already
                 return 8
             else:
-                return self.action_space.sample()
+                return np.random.choice([2, 3]) # self.action_space.sample()
 
         if len(self._action_list) == 0:
             # action = self.action_space.sample()
