@@ -6,21 +6,24 @@ forest_fraction = 1
 # Define the speed of the fire (1 is fastest, larger numbers represent fires that move slower)
 fire_speed = 10
 # Forest size (number of cells in x and y directions).
-grid_size = 200
+grid_size = 400
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
+# True when we want to use the 4-neighbor model for the fire transition
+four_neighbor_burn = true
 # ---------- define the burn simulation parameters [alpha, w, delta, and epsilon] ---------- 
-alpha = 0.83
+alpha = 0.85
 # define the wind speed 
-w = 0.6
+w = 0.75
+# small constant that accounts for up-wind burn (against wind direction)
+epsilon = 0.3
+# Eight neighbor model parameter: ignored in the four neighbor model 
 # define diagonal burn speed reduction coefficient
 delt = 0.25
-# small constant that accounts for up-wind burn (against wind direction)
-epsilon = 0.05
 
 [agent]
 # the percentage (0.1 represents 10% dropped) of phoscheck dropped over each node 
-phoscheck_drop_rate = 0.01
+phoscheck_drop_rate = 0.1
 
 [animation]
 # true if the animation should repeat before stopping

@@ -57,6 +57,7 @@ class EnvParams:
     fire_speed: bool = CONFIG_DICT['env']['fire_speed']
     grid_size: bool = CONFIG_DICT['env']['grid_size']
     ignition_points: bool = CONFIG_DICT['env']['ignition_points']
+    four_neighbor_burn: bool = CONFIG_DICT['env']['four_neighbor_burn']
     alpha: bool = CONFIG_DICT['env']['alpha']
     w: bool = CONFIG_DICT['env']['w']
     epsilon: bool = CONFIG_DICT['env']['epsilon']
