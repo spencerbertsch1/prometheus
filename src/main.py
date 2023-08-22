@@ -19,6 +19,8 @@ from matplotlib import colors
 import time 
 from pathlib import Path
 import sys
+import pandas as pd
+import plotly.express as px
 
 # local imports
 PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
@@ -26,40 +28,46 @@ PATH_TO_WORKING_DIR: Path = PATH_TO_THIS_FILE.parent.parent
 sys.path.append(str(PATH_TO_WORKING_DIR))
 from settings import LOGGER, AnimationParams, EnvParams, ABSPATH_TO_ANIMATIONS
 from wildfire_env_v3 import WildfireEnv
-from utils import Cumulative, Helicopter
+from utils import Cumulative, Helicopter, visualize_episodes
 
 # import environment, agent, and animation parameters 
-def main():
-    env = WildfireEnv(render_mode='rgb_array')
-    obs, info = env.reset()
+def main(verbose: bool = False):
 
-    i = 0
-    curr_burning_nodes_lst = []
-    while True:
-        i += 1
-        # Take a random action
-        # action = env.action_space.sample()
-        action = env.heuristic2(obs=obs)
-        # action = heuristic.get_action(obs=obs)
-        obs, reward, done, info = env.step(action, i=i)
-        
-        # Render the game
-        # env.render()
+    num_episodes = 1
+    burn_lists = []
 
-        # store environment info for plotting
-        # curr_burning_nodes = info['curr_burning_nodes']
-        # curr_burning_nodes_lst.append(curr_burning_nodes)
-        
-        if done == True:
-            break
+    for ep in range(num_episodes):
 
-    env.close()
+        env = WildfireEnv(render_mode='rgb_array')
+        obs, info = env.reset()
 
-    c_burning_lst = Cumulative(lst=curr_burning_nodes_lst)
+        i = 0
+        curr_burning_nodes_lst = []
+        while True:
+            i += 1
+            # Take a random action
+            # action = env.action_space.sample()
+            action = env.heuristic2(obs=obs)
+            obs, reward, done, info = env.step(action, i=i)
+            
+            # Render the game
+            # env.render()
 
-    # df = pd.DataFrame({'x_data':range(len(c_burning_lst)), 'y_data':c_burning_lst})
-    # fig = px.line(df, x='x_data', y='y_data', title="Testing")
-    # fig.show()
+            # store environment info for plotting
+            curr_burning_nodes = info['curr_burning_nodes']
+            curr_burning_nodes_lst.append(curr_burning_nodes)
+            
+            if done == True:
+                break
+
+        env.close()
+
+        c_burning_lst = Cumulative(lst=curr_burning_nodes_lst)
+        burn_lists.append(c_burning_lst)
+
+    if verbose: 
+        visualize_episodes(burn_lists=burn_lists)
+
 
 if __name__ == "__main__":
     main()

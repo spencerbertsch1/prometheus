@@ -13,8 +13,10 @@ This script contains utility functions used through out this project.
 import pygame
 from matplotlib import pyplot as plt
 import numpy as np
+import pandas as pd
 from matplotlib import animation
 from matplotlib import colors
+import plotly.express as px
 import time 
 from pathlib import Path
 import sys
@@ -316,6 +318,34 @@ class Plane(Aircraft):
         def __init__(self, fuel_level: float = 1.0, phoschek_level: float = 1.0, curr_direction: str = 'N', 
                      dropping_phoschek: bool = False, location = [1, 1]):
             super().__init__(fuel_level, phoschek_level, curr_direction, dropping_phoschek, location)
+
+
+def visualize_episodes(num_episodes: int, burn_lists: list):
+    """
+    Function to generate a multi-line plot in plotly express showing the cumulative nodes burned for each 
+    episode in the training run. 
+    """
+    longest_burn_list = 0
+    for i in range(num_episodes):
+        if len(burn_lists[i]) > longest_burn_list:
+            longest_burn_list = len(burn_lists[i])
+
+    for i in range(num_episodes):
+        if len(burn_lists[i]) < longest_burn_list:
+            # pad the current burn list with final cumulative score 
+            num_missing_vals = longest_burn_list - len(burn_lists[i])
+            for j in range(num_missing_vals):
+                burn_lists[i].append(burn_lists[i][-1])
+
+    # generate dataframe for plotting
+    df = pd.DataFrame({'Timesteps':range(len(burn_lists[0])), 'ep-0':burn_lists[0]})
+    for i in range(1, num_episodes, 1):
+        df[f'ep-{i}'] = burn_lists[i]
+
+    # plot the resulting data
+    fig = px.line(df, x='Timesteps', y=df.columns[1:(num_episodes+1)], title="Number of Burned Nodes Over Each Episode")
+    fig.show()
+
 
 
 if __name__ == "__main__":
