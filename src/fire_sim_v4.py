@@ -211,7 +211,7 @@ def get_b_wind_eight_neighbor(iy: int, ix: int, X: np.array, delta: float):
 
     # write the logic in section 2.2.1 in the wildfires paper (wind fire transition probability)
     if WIND != 'none':
-        if direction_dict[WIND] % 2 ==0:
+        if direction_dict[WIND] % 2 == 0:
             # the direction is even, so the wind is N, E, S, or W
             b_ij: float = N.count(FIRE) + (N_diag.count(FIRE) * (DELTA * lamda)) + EPSILON
         else:
@@ -435,15 +435,39 @@ def iterate_fire_v4(X: np.array, phoschek_array: np.array, i: int):
 
             if X1[iy, ix] == TREE:
                 # get the number of burning neighbor nodes
-                b_i: int = get_b_wind_four_neighbor(iy=iy, ix=ix, X=X, delta=delta)
+                b_i: int = get_b_wind_eight_neighbor(iy=iy, ix=ix, X=X, delta=delta)
 
                 if b_i > 0: 
                     prob_fire: float = 1 - ((1 - ALPHA)**b_i)
-                    if np.random.random() < prob_fire: 
-                        # if ((phoschek_array[iy-1,ix] != PHOSCHEK) & (phoschek_array[iy+1,ix] != PHOSCHEK) & \
-                        #     (phoschek_array[iy,ix-1] != PHOSCHEK) & (phoschek_array[iy,ix+1] != PHOSCHEK)):
-                        X1[iy,ix] = FIRE
-            
+                    if np.random.random() < prob_fire:                       
+                        """
+                        Here we add logic to prevent fire from burning through diagonally placed fire retardant:
+                        """
+                        # Vertical or Horizontal burning neighbor case: 
+                        # if any of the vertical or horizontal nodes are Fire nodes then we continue
+                        # FIXME - remove this try-except-pass (replace with index checker) !
+                        try: 
+                            if ((X1[iy-1,ix] == FIRE) | (X1[iy+1,ix] == FIRE) | (X1[iy,ix-1] == FIRE) | (X1[iy,ix+1] == FIRE)):
+                                X1[iy,ix] = FIRE
+                            # Diagonal burning neighbor case (upper left): 
+                            if X1[iy-1,ix-1] == FIRE:
+                                if not ((phoschek_array[iy-1,ix] == PHOSCHEK) & (phoschek_array[iy,ix-1] == PHOSCHEK)):
+                                    X1[iy,ix] = FIRE
+                            # Diagonal burning neighbor case (upper right): 
+                            if X1[iy-1,ix+1] == FIRE:
+                                if not ((phoschek_array[iy-1,ix] == PHOSCHEK) & (phoschek_array[iy,ix+1] == PHOSCHEK)):
+                                    X1[iy,ix] = FIRE
+                            # Diagonal burning neighbor case (lower right): 
+                            if X1[iy+1,ix+1] == FIRE:
+                                if not ((phoschek_array[iy+1,ix] == PHOSCHEK) & (phoschek_array[iy,ix+1] == PHOSCHEK)):
+                                    X1[iy,ix] = FIRE
+                            # Diagonal burning neighbor case (lower left): 
+                            if X1[iy+1,ix-1] == FIRE:
+                                if not ((phoschek_array[iy+1,ix] == PHOSCHEK) & (phoschek_array[iy,ix-1] == PHOSCHEK)):
+                                    X1[iy,ix] = FIRE
+                        except: 
+                            pass
+                        
         # replace currently burning nodes with empty nodes 
         fire_indices: tuple = np.where(X == FIRE)
         curr_burning_nodes = len(fire_indices[0])
@@ -548,7 +572,7 @@ def get_burn_dist(save_fig: bool = False, show_fig: bool = True):
     """
     # Don't save animations on each run because we will be running many animations here 
     AnimationParams.save_anim = False
-    episodes: int = 5
+    episodes: int = 3
 
     # generate subplots 
     # fig, axn = plt.subplots(3, 1, sharex=True, sharey=True)
