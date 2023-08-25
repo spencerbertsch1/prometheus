@@ -56,7 +56,16 @@ def get_centroid():
     y_center, x_center = np.argwhere(arr==1).sum(0)/count
     print(x_center, y_center)
 
+def test():
+    x = 5
+    y = 6
+    z = 6
+
+    if not ((x == y) & (z == y)):
+        print('something')
+
 if __name__ == "__main__":
-    get_centroid()
+    # get_centroid()
+    test()
 
 
