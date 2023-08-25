@@ -10,20 +10,20 @@ grid_size = 200
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
 # True when we want to use the 4-neighbor model for the fire transition
-four_neighbor_burn = true
+four_neighbor_burn = false
 # ---------- define the burn simulation parameters [alpha, w, delta, and epsilon] ---------- 
-alpha = 0.99
+alpha = 0.675
 # define the wind speed 
-w = 0.465
+w = 1.5
 # small constant that accounts for up-wind burn (against wind direction)
-epsilon = 0.07
+epsilon = 0.1
 # Eight neighbor model parameter: ignored in the four neighbor model 
 # define diagonal burn speed reduction coefficient
 delt = 0.25
 
 [agent]
 # the percentage (0.1 represents 10% dropped) of phoscheck dropped over each node 
-phoscheck_drop_rate = 0.1
+phoscheck_drop_rate = 0.05
 
 [animation]
 # true if the animation should repeat before stopping
