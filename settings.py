@@ -27,6 +27,7 @@ PATH_TO_THIS_FILE: Path = Path(__file__).resolve()
 ABSPATH_TO_TOML: Path = PATH_TO_THIS_FILE.parent / "config.toml"
 ABSPATH_TO_ANIMATIONS: Path = PATH_TO_THIS_FILE.parent / "src" / "animations"
 ABSPATH_TO_DATA: Path = PATH_TO_THIS_FILE.parent / "src" / "data" 
+ABSPATH_TO_RESULTS: Path = PATH_TO_THIS_FILE.parent / "src" / "results" 
 
 EMPTY, TREE, FIRE, AIRCRAFT, PHOSCHEK, AIRPORT = 0, 1, 2, 3, 4, 5
 
