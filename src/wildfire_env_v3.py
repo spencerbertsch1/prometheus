@@ -45,8 +45,8 @@ class WildfireEnv(gym.Env):
         # store the alphas used for creating the animation later on
         self.alphas_list = []
         # define airport locations
-        self._airport_locations = [[EnvParams.grid_size-3, EnvParams.grid_size-3], 
-                                   [EnvParams.grid_size-3, 3]]
+        self._airport_locations = [[EnvParams.grid_size-50, EnvParams.grid_size-3], 
+                                   [round(EnvParams.grid_size/4), round(EnvParams.grid_size/7)]]
         # initialize action list to empty
         self._action_list = []
         # ensure the render mode is in the list of possible values
@@ -218,7 +218,7 @@ class WildfireEnv(gym.Env):
             self.helicopter.dropping_phoschek = False
             c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
             y_center, x_center = round(c_dict['y_center'], 1), round(c_dict['x_center'], 1)
-            target = [y_center - 45, x_center]
+            target = [y_center - 40, x_center]
 
             print(f'X Center: {x_center}, Y Center: {y_center}')
 
