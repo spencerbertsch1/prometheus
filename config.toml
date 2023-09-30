@@ -1,10 +1,10 @@
 [env]
 # Wind options: ['none', 'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
-wind = 'N' 
+wind = 'NE' 
 # The initial fraction of the forest occupied by trees.
 forest_fraction = 1
 # Define the speed of the fire (1 is fastest, larger numbers represent fires that move slower)
-fire_speed = 10
+fire_speed = 6
 # Forest size (number of cells in x and y directions).
 grid_size = 200
 # Define the number of ignition points (1 will set a central ignition)
@@ -14,7 +14,7 @@ four_neighbor_burn = false
 # ---------- define the burn simulation parameters [alpha, w, delta, and epsilon] ---------- 
 alpha = 0.675
 # define the wind speed 
-w = 1.5
+w = 1
 # small constant that accounts for up-wind burn (against wind direction)
 epsilon = 0.1
 # Eight neighbor model parameter: ignored in the four neighbor model 
@@ -31,7 +31,7 @@ repeat = false
 # set the time interval between frames in the animation
 interval = 30  #ms 30
 # true in order to show the animation after the episode ends 
-save_anim = true
+save_anim = false
 # true in order to save the animation to disk
 show_anim = false
 # true if we want to observe the frame-by-frame animation
