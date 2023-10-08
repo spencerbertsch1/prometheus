@@ -48,7 +48,7 @@ def run_episodes(num_episodes: int, verbose: bool = False):
         obs, info = env.reset()
 
         i = 0
-        curr_burning_nodes_lst = []
+        num_burned_nodes_lst = []
         while True:
             i += 1
             # Take a random action
@@ -61,19 +61,22 @@ def run_episodes(num_episodes: int, verbose: bool = False):
             # env.render()
 
             # store environment info for plotting
-            curr_burning_nodes = info['curr_burning_nodes']
-            curr_burning_nodes_lst.append(curr_burning_nodes)
+            num_burned_nodes = info['num_burned_nodes']
+            num_burned_nodes_lst.append(num_burned_nodes)
             
             if done == True:
                 break
 
         env.close()
 
-        c_burning_lst = Cumulative(lst=curr_burning_nodes_lst)
-        burn_lists.append(c_burning_lst)
+        num_burned_lst = Cumulative(lst=num_burned_nodes_lst)
+        burn_lists.append(num_burned_lst)
 
     if verbose: 
         visualize_episodes(burn_lists=burn_lists)
+
+    if num_episodes == 1:
+        print(f'Number of burned nodes: {burn_lists[0][-1]}')
 
     burned_nodes_lst: list = [burn_lists[i][-1] for i in range(len(burn_lists))]
     return {'burned_nodes_lst': burned_nodes_lst}
@@ -81,9 +84,12 @@ def run_episodes(num_episodes: int, verbose: bool = False):
 
 def generate_results(save_results: bool = True):
 
+    # overwrite save_anim to ensure animations are NOT saved on each iteration
+    AnimationParams.save_anim = False
+
     results_df = pd.DataFrame([])
 
-    for fire_speed in [6, 7, 8, 9]:
+    for fire_speed in [3, 4, 5, 6]:
         for drop_rate in [0.05,0.04, 0.03, 0.005]:
 
             # set global configs 
@@ -107,5 +113,5 @@ def generate_results(save_results: bool = True):
     return results_df
 
 if __name__ == "__main__":
-    # results_dict = run_episodes(num_episodes=1)
-    df: pd.DataFrame = generate_results(save_results=True)
+    results_dict = run_episodes(num_episodes=1)
+    # df: pd.DataFrame = generate_results(save_results=True)
