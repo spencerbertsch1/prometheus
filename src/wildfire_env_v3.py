@@ -130,11 +130,14 @@ class WildfireEnv(gym.Env):
                 plot_animation(frames=self.frames, repeat=AnimationParams.repeat, interval=AnimationParams.interval, 
                     save_anim=AnimationParams.save_anim, show_anim=AnimationParams.show_anim)
             
-            info = {'curr_burning_nodes': 0}
+            # return episode info
+            node_cnt_dict = numpy_element_counter(arr=self._env_state)
+            info = {'num_burned_nodes': node_cnt_dict[EMPTY]}
         
         else:
-            curr_burning_nodes: int = node_cnt_dict[FIRE]
-            info = {'curr_burning_nodes': curr_burning_nodes}
+            # num_burned_nodes: int = node_cnt_dict[EMPTY]
+            # we don't really care about the inter-episode burn count, so we can just return a placeholder here
+            info = {'num_burned_nodes': 0}
 
         # TODO get info from the iterate function - how many currently burning nodes, etc
         reward = 1
@@ -218,7 +221,7 @@ class WildfireEnv(gym.Env):
             self.helicopter.dropping_phoschek = False
             c_dict: dict = get_fire_centroid(env_state=self._env_state, verbose=True)
             y_center, x_center = round(c_dict['y_center'], 1), round(c_dict['x_center'], 1)
-            target = [y_center - 40, x_center]
+            target = [y_center - (100*(1/EnvParams.fire_speed)), x_center]
 
             print(f'X Center: {x_center}, Y Center: {y_center}')
 
