@@ -4,9 +4,9 @@ wind = 'NE'
 # The initial fraction of the forest occupied by trees.
 forest_fraction = 1
 # Define the speed of the fire (1 is fastest, larger numbers represent fires that move slower)
-fire_speed = 6
+fire_speed = 4
 # Forest size (number of cells in x and y directions).
-grid_size = 200
+grid_size = 100
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
 # True when we want to use the 4-neighbor model for the fire transition
@@ -14,7 +14,7 @@ four_neighbor_burn = false
 # ---------- define the burn simulation parameters [alpha, w, delta, and epsilon] ---------- 
 alpha = 0.675
 # define the wind speed 
-w = 1
+w = 1.5
 # small constant that accounts for up-wind burn (against wind direction)
 epsilon = 0.1
 # Eight neighbor model parameter: ignored in the four neighbor model 
@@ -23,7 +23,7 @@ delt = 0.25
 
 [agent]
 # the percentage (0.1 represents 10% dropped) of phoscheck dropped over each node 
-phoscheck_drop_rate = 0.05
+phoscheck_drop_rate = 0.02
 
 [animation]
 # true if the animation should repeat before stopping
@@ -31,7 +31,7 @@ repeat = false
 # set the time interval between frames in the animation
 interval = 30  #ms 30
 # true in order to show the animation after the episode ends 
-save_anim = false
+save_anim = true
 # true in order to save the animation to disk
 show_anim = false
 # true if we want to observe the frame-by-frame animation
