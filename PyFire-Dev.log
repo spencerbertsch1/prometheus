@@ -1,0 +1,57 @@
+Wildfire Dev - 2023-10-15 16:34:07,421 - PyFire-Dev - INFO - ---------- Environment Reset Complete ----------
+Wildfire Dev - 2023-10-15 16:34:07,421 - PyFire-Dev - INFO - Airport Locations: [[250, 297], [75, 43]]
+Wildfire Dev - 2023-10-15 16:34:07,421 - PyFire-Dev - INFO - Starting Agent Locations: [75, 43]
+Wildfire Dev - 2023-10-15 16:34:07,449 - PyFire-Dev - INFO - Nodes processed on step 10: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,477 - PyFire-Dev - INFO - Nodes processed on step 20: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,504 - PyFire-Dev - INFO - Nodes processed on step 30: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,531 - PyFire-Dev - INFO - Nodes processed on step 40: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,557 - PyFire-Dev - INFO - Nodes processed on step 50: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,584 - PyFire-Dev - INFO - Nodes processed on step 60: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,612 - PyFire-Dev - INFO - Nodes processed on step 70: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,639 - PyFire-Dev - INFO - Nodes processed on step 80: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,667 - PyFire-Dev - INFO - Nodes processed on step 90: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,695 - PyFire-Dev - INFO - Nodes processed on step 100: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:07,722 - PyFire-Dev - INFO - Nodes processed on step 110: 26, Phoschek Level: 0.94
+Wildfire Dev - 2023-10-15 16:34:07,750 - PyFire-Dev - INFO - Nodes processed on step 120: 26, Phoschek Level: 0.74
+Wildfire Dev - 2023-10-15 16:34:07,778 - PyFire-Dev - INFO - Nodes processed on step 130: 26, Phoschek Level: 0.54
+Wildfire Dev - 2023-10-15 16:34:07,805 - PyFire-Dev - INFO - Nodes processed on step 140: 26, Phoschek Level: 0.34
+Wildfire Dev - 2023-10-15 16:34:07,832 - PyFire-Dev - INFO - Nodes processed on step 150: 26, Phoschek Level: 0.14
+Wildfire Dev - 2023-10-15 16:34:07,859 - PyFire-Dev - INFO - Nodes processed on step 160: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:07,886 - PyFire-Dev - INFO - Nodes processed on step 170: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:07,913 - PyFire-Dev - INFO - Nodes processed on step 180: 24, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:07,940 - PyFire-Dev - INFO - Nodes processed on step 190: 22, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:07,967 - PyFire-Dev - INFO - Nodes processed on step 200: 20, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:07,994 - PyFire-Dev - INFO - Nodes processed on step 210: 18, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:08,021 - PyFire-Dev - INFO - Nodes processed on step 220: 18, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:08,048 - PyFire-Dev - INFO - Nodes processed on step 230: 14, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:08,075 - PyFire-Dev - INFO - Nodes processed on step 240: 12, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:08,102 - PyFire-Dev - INFO - Nodes processed on step 250: 12, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:08,130 - PyFire-Dev - INFO - Nodes processed on step 260: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,157 - PyFire-Dev - INFO - Nodes processed on step 270: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,184 - PyFire-Dev - INFO - Nodes processed on step 280: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,211 - PyFire-Dev - INFO - Nodes processed on step 290: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,238 - PyFire-Dev - INFO - Nodes processed on step 300: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,265 - PyFire-Dev - INFO - Nodes processed on step 310: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,292 - PyFire-Dev - INFO - Nodes processed on step 320: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,319 - PyFire-Dev - INFO - Nodes processed on step 330: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,345 - PyFire-Dev - INFO - Nodes processed on step 340: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,373 - PyFire-Dev - INFO - Nodes processed on step 350: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,400 - PyFire-Dev - INFO - Nodes processed on step 360: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,427 - PyFire-Dev - INFO - Nodes processed on step 370: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-15 16:34:08,454 - PyFire-Dev - INFO - Nodes processed on step 380: 12, Phoschek Level: 0.86
+Wildfire Dev - 2023-10-15 16:34:08,481 - PyFire-Dev - INFO - Nodes processed on step 390: 12, Phoschek Level: 0.66
+Wildfire Dev - 2023-10-15 16:34:08,508 - PyFire-Dev - INFO - Nodes processed on step 400: 12, Phoschek Level: 0.46
+Wildfire Dev - 2023-10-15 16:34:08,535 - PyFire-Dev - INFO - Nodes processed on step 410: 12, Phoschek Level: 0.26
+Wildfire Dev - 2023-10-15 16:34:08,562 - PyFire-Dev - INFO - Nodes processed on step 420: 12, Phoschek Level: 0.06
+Wildfire Dev - 2023-10-15 16:34:08,589 - PyFire-Dev - INFO - Nodes processed on step 430: 10, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:08,616 - PyFire-Dev - INFO - Nodes processed on step 440: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-15 16:34:08,925 - PyFire-Dev - INFO - Currently writing frame 0 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:08,927 - PyFire-Dev - INFO - Currently writing frame 0 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:10,322 - PyFire-Dev - INFO - Currently writing frame 10 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:11,714 - PyFire-Dev - INFO - Currently writing frame 20 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:13,129 - PyFire-Dev - INFO - Currently writing frame 30 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:14,525 - PyFire-Dev - INFO - Currently writing frame 40 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:15,911 - PyFire-Dev - INFO - Currently writing frame 50 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:17,293 - PyFire-Dev - INFO - Currently writing frame 60 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:18,683 - PyFire-Dev - INFO - Currently writing frame 70 of 90 to animation.
+Wildfire Dev - 2023-10-15 16:34:20,077 - PyFire-Dev - INFO - Currently writing frame 80 of 90 to animation.
