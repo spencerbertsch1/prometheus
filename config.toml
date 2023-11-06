@@ -6,7 +6,7 @@ forest_fraction = 1
 # Define the speed of the fire (1 is fastest, larger numbers represent fires that move slower)
 fire_speed = 5
 # Forest size (number of cells in x and y directions).
-grid_size = 300
+grid_size = 150
 # Define the number of ignition points (1 will set a central ignition)
 ignition_points = 1
 # True when we want to use the 4-neighbor model for the fire transition
@@ -14,6 +14,7 @@ four_neighbor_burn = false
 # ---------- define the burn simulation parameters [alpha, w, delta, and epsilon] ---------- 
 alpha = 0.675
 # define the wind speed 
+
 w = 1.5
 # small constant that accounts for up-wind burn (against wind direction)
 epsilon = 0.1

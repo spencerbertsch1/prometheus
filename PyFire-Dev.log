@@ -55,3 +55,1059 @@ Wildfire Dev - 2023-10-15 16:34:15,911 - PyFire-Dev - INFO - Currently writing f
 Wildfire Dev - 2023-10-15 16:34:17,293 - PyFire-Dev - INFO - Currently writing frame 60 of 90 to animation.
 Wildfire Dev - 2023-10-15 16:34:18,683 - PyFire-Dev - INFO - Currently writing frame 70 of 90 to animation.
 Wildfire Dev - 2023-10-15 16:34:20,077 - PyFire-Dev - INFO - Currently writing frame 80 of 90 to animation.
+Wildfire Dev - 2023-10-17 11:20:47,305 - PyFire-Dev - INFO - Nodes processed on step 0: 26
+Wildfire Dev - 2023-10-17 11:20:47,330 - PyFire-Dev - INFO - Nodes processed on step 10: 26
+Wildfire Dev - 2023-10-17 11:20:47,354 - PyFire-Dev - INFO - Nodes processed on step 20: 26
+Wildfire Dev - 2023-10-17 11:20:47,378 - PyFire-Dev - INFO - Nodes processed on step 30: 26
+Wildfire Dev - 2023-10-17 11:20:47,403 - PyFire-Dev - INFO - Nodes processed on step 40: 26
+Wildfire Dev - 2023-10-17 11:20:47,427 - PyFire-Dev - INFO - Nodes processed on step 50: 26
+Wildfire Dev - 2023-10-17 11:20:47,451 - PyFire-Dev - INFO - Nodes processed on step 60: 26
+Wildfire Dev - 2023-10-17 11:20:47,475 - PyFire-Dev - INFO - Nodes processed on step 70: 26
+Wildfire Dev - 2023-10-17 11:20:47,499 - PyFire-Dev - INFO - Nodes processed on step 80: 26
+Wildfire Dev - 2023-10-17 11:20:47,523 - PyFire-Dev - INFO - Nodes processed on step 90: 26
+Wildfire Dev - 2023-10-17 11:20:47,547 - PyFire-Dev - INFO - Nodes processed on step 100: 26
+Wildfire Dev - 2023-10-17 11:20:47,572 - PyFire-Dev - INFO - Nodes processed on step 110: 26
+Wildfire Dev - 2023-10-17 11:20:47,596 - PyFire-Dev - INFO - Nodes processed on step 120: 26
+Wildfire Dev - 2023-10-17 11:20:47,620 - PyFire-Dev - INFO - Nodes processed on step 130: 26
+Wildfire Dev - 2023-10-17 11:20:47,643 - PyFire-Dev - INFO - Nodes processed on step 140: 26
+Wildfire Dev - 2023-10-17 11:20:47,668 - PyFire-Dev - INFO - Nodes processed on step 150: 26
+Wildfire Dev - 2023-10-17 11:20:47,692 - PyFire-Dev - INFO - Nodes processed on step 160: 26
+Wildfire Dev - 2023-10-17 11:20:47,715 - PyFire-Dev - INFO - Nodes processed on step 170: 26
+Wildfire Dev - 2023-10-17 11:20:47,739 - PyFire-Dev - INFO - Nodes processed on step 180: 26
+Wildfire Dev - 2023-10-17 11:20:47,763 - PyFire-Dev - INFO - Nodes processed on step 190: 26
+Wildfire Dev - 2023-10-17 11:20:47,787 - PyFire-Dev - INFO - Nodes processed on step 200: 26
+Wildfire Dev - 2023-10-17 11:20:47,811 - PyFire-Dev - INFO - Nodes processed on step 210: 26
+Wildfire Dev - 2023-10-17 11:20:47,835 - PyFire-Dev - INFO - Nodes processed on step 220: 26
+Wildfire Dev - 2023-10-17 11:20:47,859 - PyFire-Dev - INFO - Nodes processed on step 230: 26
+Wildfire Dev - 2023-10-17 11:20:47,883 - PyFire-Dev - INFO - Nodes processed on step 240: 26
+Wildfire Dev - 2023-10-17 11:20:47,907 - PyFire-Dev - INFO - Nodes processed on step 250: 26
+Wildfire Dev - 2023-10-17 11:20:47,931 - PyFire-Dev - INFO - Nodes processed on step 260: 26
+Wildfire Dev - 2023-10-17 11:20:47,955 - PyFire-Dev - INFO - Nodes processed on step 270: 26
+Wildfire Dev - 2023-10-17 11:20:47,979 - PyFire-Dev - INFO - Nodes processed on step 280: 26
+Wildfire Dev - 2023-10-17 11:20:48,003 - PyFire-Dev - INFO - Nodes processed on step 290: 26
+Wildfire Dev - 2023-10-17 11:20:48,027 - PyFire-Dev - INFO - Nodes processed on step 300: 26
+Wildfire Dev - 2023-10-17 11:20:48,051 - PyFire-Dev - INFO - Nodes processed on step 310: 26
+Wildfire Dev - 2023-10-17 11:20:48,075 - PyFire-Dev - INFO - Nodes processed on step 320: 26
+Wildfire Dev - 2023-10-17 11:20:48,099 - PyFire-Dev - INFO - Nodes processed on step 330: 26
+Wildfire Dev - 2023-10-17 11:20:48,123 - PyFire-Dev - INFO - Nodes processed on step 340: 26
+Wildfire Dev - 2023-10-17 11:20:48,147 - PyFire-Dev - INFO - Nodes processed on step 350: 26
+Wildfire Dev - 2023-10-17 11:20:48,171 - PyFire-Dev - INFO - Nodes processed on step 360: 26
+Wildfire Dev - 2023-10-17 11:20:48,195 - PyFire-Dev - INFO - Nodes processed on step 370: 26
+Wildfire Dev - 2023-10-17 11:20:48,219 - PyFire-Dev - INFO - Nodes processed on step 380: 26
+Wildfire Dev - 2023-10-17 11:20:48,243 - PyFire-Dev - INFO - Nodes processed on step 390: 26
+Wildfire Dev - 2023-10-17 11:20:48,267 - PyFire-Dev - INFO - Nodes processed on step 400: 26
+Wildfire Dev - 2023-10-17 11:20:48,292 - PyFire-Dev - INFO - Nodes processed on step 410: 26
+Wildfire Dev - 2023-10-17 11:20:48,317 - PyFire-Dev - INFO - Nodes processed on step 420: 26
+Wildfire Dev - 2023-10-17 11:20:48,342 - PyFire-Dev - INFO - Nodes processed on step 430: 26
+Wildfire Dev - 2023-10-17 11:20:48,367 - PyFire-Dev - INFO - Nodes processed on step 440: 26
+Wildfire Dev - 2023-10-17 11:20:48,392 - PyFire-Dev - INFO - Nodes processed on step 450: 26
+Wildfire Dev - 2023-10-17 11:20:48,417 - PyFire-Dev - INFO - Nodes processed on step 460: 26
+Wildfire Dev - 2023-10-17 11:20:48,443 - PyFire-Dev - INFO - Nodes processed on step 470: 26
+Wildfire Dev - 2023-10-17 11:20:48,468 - PyFire-Dev - INFO - Nodes processed on step 480: 26
+Wildfire Dev - 2023-10-17 11:20:48,493 - PyFire-Dev - INFO - Nodes processed on step 490: 26
+Wildfire Dev - 2023-10-17 11:20:48,518 - PyFire-Dev - INFO - Nodes processed on step 500: 26
+Wildfire Dev - 2023-10-17 11:20:48,543 - PyFire-Dev - INFO - Nodes processed on step 510: 26
+Wildfire Dev - 2023-10-17 11:20:48,567 - PyFire-Dev - INFO - Nodes processed on step 520: 26
+Wildfire Dev - 2023-10-17 11:20:48,593 - PyFire-Dev - INFO - Nodes processed on step 530: 26
+Wildfire Dev - 2023-10-17 11:20:48,618 - PyFire-Dev - INFO - Nodes processed on step 540: 26
+Wildfire Dev - 2023-10-17 11:20:48,643 - PyFire-Dev - INFO - Nodes processed on step 550: 26
+Wildfire Dev - 2023-10-17 11:20:48,668 - PyFire-Dev - INFO - Nodes processed on step 560: 26
+Wildfire Dev - 2023-10-17 11:20:48,692 - PyFire-Dev - INFO - Nodes processed on step 570: 26
+Wildfire Dev - 2023-10-17 11:20:48,716 - PyFire-Dev - INFO - Nodes processed on step 580: 26
+Wildfire Dev - 2023-10-17 11:20:48,741 - PyFire-Dev - INFO - Nodes processed on step 590: 26
+Wildfire Dev - 2023-10-17 11:20:48,765 - PyFire-Dev - INFO - Nodes processed on step 600: 26
+Wildfire Dev - 2023-10-17 11:20:48,789 - PyFire-Dev - INFO - Nodes processed on step 610: 26
+Wildfire Dev - 2023-10-17 11:20:48,813 - PyFire-Dev - INFO - Nodes processed on step 620: 26
+Wildfire Dev - 2023-10-17 11:20:48,837 - PyFire-Dev - INFO - Nodes processed on step 630: 26
+Wildfire Dev - 2023-10-17 11:20:48,863 - PyFire-Dev - INFO - Nodes processed on step 640: 26
+Wildfire Dev - 2023-10-17 11:20:48,887 - PyFire-Dev - INFO - Nodes processed on step 650: 26
+Wildfire Dev - 2023-10-17 11:20:48,913 - PyFire-Dev - INFO - Nodes processed on step 660: 26
+Wildfire Dev - 2023-10-17 11:20:48,937 - PyFire-Dev - INFO - Nodes processed on step 670: 26
+Wildfire Dev - 2023-10-17 11:20:48,962 - PyFire-Dev - INFO - Nodes processed on step 680: 26
+Wildfire Dev - 2023-10-17 11:20:48,987 - PyFire-Dev - INFO - Nodes processed on step 690: 26
+Wildfire Dev - 2023-10-17 11:20:49,012 - PyFire-Dev - INFO - Nodes processed on step 700: 26
+Wildfire Dev - 2023-10-17 11:20:49,036 - PyFire-Dev - INFO - Nodes processed on step 710: 26
+Wildfire Dev - 2023-10-17 11:20:49,062 - PyFire-Dev - INFO - Nodes processed on step 720: 26
+Wildfire Dev - 2023-10-17 11:20:49,087 - PyFire-Dev - INFO - Nodes processed on step 730: 26
+Wildfire Dev - 2023-10-17 11:20:49,111 - PyFire-Dev - INFO - Nodes processed on step 740: 26
+Wildfire Dev - 2023-10-17 11:21:03,746 - PyFire-Dev - INFO - Nodes processed on step 0: 26
+Wildfire Dev - 2023-10-17 11:21:03,749 - PyFire-Dev - INFO - Nodes processed on step 10: 26
+Wildfire Dev - 2023-10-17 11:21:03,751 - PyFire-Dev - INFO - Nodes processed on step 20: 26
+Wildfire Dev - 2023-10-17 11:21:03,754 - PyFire-Dev - INFO - Nodes processed on step 30: 26
+Wildfire Dev - 2023-10-17 11:21:03,757 - PyFire-Dev - INFO - Nodes processed on step 40: 26
+Wildfire Dev - 2023-10-17 11:21:03,759 - PyFire-Dev - INFO - Nodes processed on step 50: 26
+Wildfire Dev - 2023-10-17 11:21:03,762 - PyFire-Dev - INFO - Nodes processed on step 60: 26
+Wildfire Dev - 2023-10-17 11:21:03,765 - PyFire-Dev - INFO - Nodes processed on step 70: 26
+Wildfire Dev - 2023-10-17 11:21:03,767 - PyFire-Dev - INFO - Nodes processed on step 80: 26
+Wildfire Dev - 2023-10-17 11:21:03,770 - PyFire-Dev - INFO - Nodes processed on step 90: 26
+Wildfire Dev - 2023-10-17 11:21:03,773 - PyFire-Dev - INFO - Nodes processed on step 100: 26
+Wildfire Dev - 2023-10-17 11:21:03,775 - PyFire-Dev - INFO - Nodes processed on step 110: 26
+Wildfire Dev - 2023-10-17 11:21:03,778 - PyFire-Dev - INFO - Nodes processed on step 120: 26
+Wildfire Dev - 2023-10-17 11:21:03,781 - PyFire-Dev - INFO - Nodes processed on step 130: 26
+Wildfire Dev - 2023-10-17 11:21:03,783 - PyFire-Dev - INFO - Nodes processed on step 140: 26
+Wildfire Dev - 2023-10-17 11:21:03,786 - PyFire-Dev - INFO - Nodes processed on step 150: 26
+Wildfire Dev - 2023-10-17 11:21:03,789 - PyFire-Dev - INFO - Nodes processed on step 160: 26
+Wildfire Dev - 2023-10-17 11:21:03,791 - PyFire-Dev - INFO - Nodes processed on step 170: 26
+Wildfire Dev - 2023-10-17 11:21:03,794 - PyFire-Dev - INFO - Nodes processed on step 180: 26
+Wildfire Dev - 2023-10-17 11:21:03,797 - PyFire-Dev - INFO - Nodes processed on step 190: 26
+Wildfire Dev - 2023-10-17 11:21:03,800 - PyFire-Dev - INFO - Nodes processed on step 200: 26
+Wildfire Dev - 2023-10-17 11:21:03,802 - PyFire-Dev - INFO - Nodes processed on step 210: 26
+Wildfire Dev - 2023-10-17 11:21:03,805 - PyFire-Dev - INFO - Nodes processed on step 220: 26
+Wildfire Dev - 2023-10-17 11:21:03,807 - PyFire-Dev - INFO - Nodes processed on step 230: 26
+Wildfire Dev - 2023-10-17 11:21:03,810 - PyFire-Dev - INFO - Nodes processed on step 240: 26
+Wildfire Dev - 2023-10-17 11:36:33,790 - PyFire-Dev - INFO - Nodes processed on step 0: 16
+Wildfire Dev - 2023-10-17 11:36:33,793 - PyFire-Dev - INFO - Nodes processed on step 10: 28
+Wildfire Dev - 2023-10-17 11:36:33,796 - PyFire-Dev - INFO - Nodes processed on step 20: 45
+Wildfire Dev - 2023-10-17 11:36:33,799 - PyFire-Dev - INFO - Nodes processed on step 30: 58
+Wildfire Dev - 2023-10-17 11:36:33,802 - PyFire-Dev - INFO - Nodes processed on step 40: 79
+Wildfire Dev - 2023-10-17 11:36:33,805 - PyFire-Dev - INFO - Nodes processed on step 50: 82
+Wildfire Dev - 2023-10-17 11:36:33,808 - PyFire-Dev - INFO - Nodes processed on step 60: 89
+Wildfire Dev - 2023-10-17 11:36:33,812 - PyFire-Dev - INFO - Nodes processed on step 70: 95
+Wildfire Dev - 2023-10-17 11:36:33,815 - PyFire-Dev - INFO - Nodes processed on step 80: 109
+Wildfire Dev - 2023-10-17 11:36:33,818 - PyFire-Dev - INFO - Nodes processed on step 90: 130
+Wildfire Dev - 2023-10-17 11:36:33,822 - PyFire-Dev - INFO - Nodes processed on step 100: 141
+Wildfire Dev - 2023-10-17 11:36:33,826 - PyFire-Dev - INFO - Nodes processed on step 110: 132
+Wildfire Dev - 2023-10-17 11:36:33,829 - PyFire-Dev - INFO - Nodes processed on step 120: 144
+Wildfire Dev - 2023-10-17 11:36:33,832 - PyFire-Dev - INFO - Nodes processed on step 130: 162
+Wildfire Dev - 2023-10-17 11:36:33,836 - PyFire-Dev - INFO - Nodes processed on step 140: 162
+Wildfire Dev - 2023-10-17 11:36:33,839 - PyFire-Dev - INFO - Nodes processed on step 150: 180
+Wildfire Dev - 2023-10-17 11:36:33,843 - PyFire-Dev - INFO - Nodes processed on step 160: 204
+Wildfire Dev - 2023-10-17 11:36:33,847 - PyFire-Dev - INFO - Nodes processed on step 170: 226
+Wildfire Dev - 2023-10-17 11:36:33,851 - PyFire-Dev - INFO - Nodes processed on step 180: 257
+Wildfire Dev - 2023-10-17 11:36:33,855 - PyFire-Dev - INFO - Nodes processed on step 190: 262
+Wildfire Dev - 2023-10-17 11:36:33,859 - PyFire-Dev - INFO - Nodes processed on step 200: 261
+Wildfire Dev - 2023-10-17 11:36:33,864 - PyFire-Dev - INFO - Nodes processed on step 210: 263
+Wildfire Dev - 2023-10-17 11:36:33,868 - PyFire-Dev - INFO - Nodes processed on step 220: 242
+Wildfire Dev - 2023-10-17 11:36:33,872 - PyFire-Dev - INFO - Nodes processed on step 230: 250
+Wildfire Dev - 2023-10-17 11:36:33,876 - PyFire-Dev - INFO - Nodes processed on step 240: 267
+Wildfire Dev - 2023-10-17 11:36:33,880 - PyFire-Dev - INFO - Nodes processed on step 250: 278
+Wildfire Dev - 2023-10-17 11:36:33,884 - PyFire-Dev - INFO - Nodes processed on step 260: 233
+Wildfire Dev - 2023-10-17 11:36:33,888 - PyFire-Dev - INFO - Nodes processed on step 270: 200
+Wildfire Dev - 2023-10-17 11:36:33,892 - PyFire-Dev - INFO - Nodes processed on step 280: 147
+Wildfire Dev - 2023-10-17 11:36:33,895 - PyFire-Dev - INFO - Nodes processed on step 290: 122
+Wildfire Dev - 2023-10-17 11:36:33,898 - PyFire-Dev - INFO - Nodes processed on step 300: 88
+Wildfire Dev - 2023-10-17 11:36:33,901 - PyFire-Dev - INFO - Nodes processed on step 310: 51
+Wildfire Dev - 2023-10-17 11:36:33,904 - PyFire-Dev - INFO - Nodes processed on step 320: 32
+Wildfire Dev - 2023-10-17 11:36:33,907 - PyFire-Dev - INFO - Nodes processed on step 330: 22
+Wildfire Dev - 2023-10-17 11:36:33,910 - PyFire-Dev - INFO - Nodes processed on step 340: 5
+Wildfire Dev - 2023-10-17 11:36:49,952 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:36:49,956 - PyFire-Dev - INFO - Nodes processed on step 10: 29
+Wildfire Dev - 2023-10-17 11:36:49,959 - PyFire-Dev - INFO - Nodes processed on step 20: 63
+Wildfire Dev - 2023-10-17 11:36:49,962 - PyFire-Dev - INFO - Nodes processed on step 30: 90
+Wildfire Dev - 2023-10-17 11:36:49,966 - PyFire-Dev - INFO - Nodes processed on step 40: 129
+Wildfire Dev - 2023-10-17 11:36:49,970 - PyFire-Dev - INFO - Nodes processed on step 50: 160
+Wildfire Dev - 2023-10-17 11:36:49,975 - PyFire-Dev - INFO - Nodes processed on step 60: 214
+Wildfire Dev - 2023-10-17 11:36:49,980 - PyFire-Dev - INFO - Nodes processed on step 70: 233
+Wildfire Dev - 2023-10-17 11:36:49,985 - PyFire-Dev - INFO - Nodes processed on step 80: 265
+Wildfire Dev - 2023-10-17 11:36:49,990 - PyFire-Dev - INFO - Nodes processed on step 90: 313
+Wildfire Dev - 2023-10-17 11:36:49,995 - PyFire-Dev - INFO - Nodes processed on step 100: 340
+Wildfire Dev - 2023-10-17 11:36:50,001 - PyFire-Dev - INFO - Nodes processed on step 110: 379
+Wildfire Dev - 2023-10-17 11:36:50,007 - PyFire-Dev - INFO - Nodes processed on step 120: 407
+Wildfire Dev - 2023-10-17 11:36:50,013 - PyFire-Dev - INFO - Nodes processed on step 130: 457
+Wildfire Dev - 2023-10-17 11:36:50,020 - PyFire-Dev - INFO - Nodes processed on step 140: 506
+Wildfire Dev - 2023-10-17 11:36:50,026 - PyFire-Dev - INFO - Nodes processed on step 150: 535
+Wildfire Dev - 2023-10-17 11:36:50,034 - PyFire-Dev - INFO - Nodes processed on step 160: 586
+Wildfire Dev - 2023-10-17 11:36:50,041 - PyFire-Dev - INFO - Nodes processed on step 170: 617
+Wildfire Dev - 2023-10-17 11:36:50,049 - PyFire-Dev - INFO - Nodes processed on step 180: 643
+Wildfire Dev - 2023-10-17 11:36:50,057 - PyFire-Dev - INFO - Nodes processed on step 190: 665
+Wildfire Dev - 2023-10-17 11:36:50,065 - PyFire-Dev - INFO - Nodes processed on step 200: 713
+Wildfire Dev - 2023-10-17 11:36:50,074 - PyFire-Dev - INFO - Nodes processed on step 210: 791
+Wildfire Dev - 2023-10-17 11:36:50,083 - PyFire-Dev - INFO - Nodes processed on step 220: 801
+Wildfire Dev - 2023-10-17 11:36:50,092 - PyFire-Dev - INFO - Nodes processed on step 230: 858
+Wildfire Dev - 2023-10-17 11:36:50,102 - PyFire-Dev - INFO - Nodes processed on step 240: 884
+Wildfire Dev - 2023-10-17 11:36:50,112 - PyFire-Dev - INFO - Nodes processed on step 250: 899
+Wildfire Dev - 2023-10-17 11:36:50,121 - PyFire-Dev - INFO - Nodes processed on step 260: 820
+Wildfire Dev - 2023-10-17 11:36:50,129 - PyFire-Dev - INFO - Nodes processed on step 270: 692
+Wildfire Dev - 2023-10-17 11:36:50,136 - PyFire-Dev - INFO - Nodes processed on step 280: 567
+Wildfire Dev - 2023-10-17 11:36:50,142 - PyFire-Dev - INFO - Nodes processed on step 290: 467
+Wildfire Dev - 2023-10-17 11:36:50,148 - PyFire-Dev - INFO - Nodes processed on step 300: 404
+Wildfire Dev - 2023-10-17 11:36:50,153 - PyFire-Dev - INFO - Nodes processed on step 310: 313
+Wildfire Dev - 2023-10-17 11:36:50,158 - PyFire-Dev - INFO - Nodes processed on step 320: 207
+Wildfire Dev - 2023-10-17 11:36:50,162 - PyFire-Dev - INFO - Nodes processed on step 330: 190
+Wildfire Dev - 2023-10-17 11:36:50,166 - PyFire-Dev - INFO - Nodes processed on step 340: 142
+Wildfire Dev - 2023-10-17 11:36:50,170 - PyFire-Dev - INFO - Nodes processed on step 350: 95
+Wildfire Dev - 2023-10-17 11:36:50,173 - PyFire-Dev - INFO - Nodes processed on step 360: 65
+Wildfire Dev - 2023-10-17 11:36:50,176 - PyFire-Dev - INFO - Nodes processed on step 370: 25
+Wildfire Dev - 2023-10-17 11:37:27,561 - PyFire-Dev - INFO - Nodes processed on step 0: 16
+Wildfire Dev - 2023-10-17 11:37:27,564 - PyFire-Dev - INFO - Nodes processed on step 10: 27
+Wildfire Dev - 2023-10-17 11:37:27,567 - PyFire-Dev - INFO - Nodes processed on step 20: 22
+Wildfire Dev - 2023-10-17 11:37:27,570 - PyFire-Dev - INFO - Nodes processed on step 30: 21
+Wildfire Dev - 2023-10-17 11:37:27,573 - PyFire-Dev - INFO - Nodes processed on step 40: 13
+Wildfire Dev - 2023-10-17 11:37:27,575 - PyFire-Dev - INFO - Nodes processed on step 50: 12
+Wildfire Dev - 2023-10-17 11:37:27,578 - PyFire-Dev - INFO - Nodes processed on step 60: 8
+Wildfire Dev - 2023-10-17 11:37:27,581 - PyFire-Dev - INFO - Nodes processed on step 70: 10
+Wildfire Dev - 2023-10-17 11:37:27,584 - PyFire-Dev - INFO - Nodes processed on step 80: 12
+Wildfire Dev - 2023-10-17 11:37:27,587 - PyFire-Dev - INFO - Nodes processed on step 90: 18
+Wildfire Dev - 2023-10-17 11:37:27,590 - PyFire-Dev - INFO - Nodes processed on step 100: 22
+Wildfire Dev - 2023-10-17 11:37:27,593 - PyFire-Dev - INFO - Nodes processed on step 110: 37
+Wildfire Dev - 2023-10-17 11:37:27,596 - PyFire-Dev - INFO - Nodes processed on step 120: 44
+Wildfire Dev - 2023-10-17 11:37:27,599 - PyFire-Dev - INFO - Nodes processed on step 130: 54
+Wildfire Dev - 2023-10-17 11:37:27,602 - PyFire-Dev - INFO - Nodes processed on step 140: 58
+Wildfire Dev - 2023-10-17 11:37:27,605 - PyFire-Dev - INFO - Nodes processed on step 150: 66
+Wildfire Dev - 2023-10-17 11:37:27,608 - PyFire-Dev - INFO - Nodes processed on step 160: 64
+Wildfire Dev - 2023-10-17 11:37:27,611 - PyFire-Dev - INFO - Nodes processed on step 170: 66
+Wildfire Dev - 2023-10-17 11:37:27,615 - PyFire-Dev - INFO - Nodes processed on step 180: 64
+Wildfire Dev - 2023-10-17 11:37:27,617 - PyFire-Dev - INFO - Nodes processed on step 190: 74
+Wildfire Dev - 2023-10-17 11:37:27,620 - PyFire-Dev - INFO - Nodes processed on step 200: 78
+Wildfire Dev - 2023-10-17 11:37:27,624 - PyFire-Dev - INFO - Nodes processed on step 210: 81
+Wildfire Dev - 2023-10-17 11:37:27,627 - PyFire-Dev - INFO - Nodes processed on step 220: 74
+Wildfire Dev - 2023-10-17 11:37:27,630 - PyFire-Dev - INFO - Nodes processed on step 230: 73
+Wildfire Dev - 2023-10-17 11:37:27,633 - PyFire-Dev - INFO - Nodes processed on step 240: 77
+Wildfire Dev - 2023-10-17 11:37:27,636 - PyFire-Dev - INFO - Nodes processed on step 250: 46
+Wildfire Dev - 2023-10-17 11:37:27,639 - PyFire-Dev - INFO - Nodes processed on step 260: 20
+Wildfire Dev - 2023-10-17 11:37:27,642 - PyFire-Dev - INFO - Nodes processed on step 270: 16
+Wildfire Dev - 2023-10-17 11:41:43,691 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:41:43,694 - PyFire-Dev - INFO - Nodes processed on step 10: 29
+Wildfire Dev - 2023-10-17 11:41:43,697 - PyFire-Dev - INFO - Nodes processed on step 20: 63
+Wildfire Dev - 2023-10-17 11:41:43,701 - PyFire-Dev - INFO - Nodes processed on step 30: 90
+Wildfire Dev - 2023-10-17 11:41:43,704 - PyFire-Dev - INFO - Nodes processed on step 40: 129
+Wildfire Dev - 2023-10-17 11:41:43,709 - PyFire-Dev - INFO - Nodes processed on step 50: 160
+Wildfire Dev - 2023-10-17 11:41:43,714 - PyFire-Dev - INFO - Nodes processed on step 60: 214
+Wildfire Dev - 2023-10-17 11:41:43,718 - PyFire-Dev - INFO - Nodes processed on step 70: 233
+Wildfire Dev - 2023-10-17 11:41:43,724 - PyFire-Dev - INFO - Nodes processed on step 80: 265
+Wildfire Dev - 2023-10-17 11:41:43,729 - PyFire-Dev - INFO - Nodes processed on step 90: 313
+Wildfire Dev - 2023-10-17 11:41:43,734 - PyFire-Dev - INFO - Nodes processed on step 100: 340
+Wildfire Dev - 2023-10-17 11:41:43,740 - PyFire-Dev - INFO - Nodes processed on step 110: 379
+Wildfire Dev - 2023-10-17 11:41:43,746 - PyFire-Dev - INFO - Nodes processed on step 120: 407
+Wildfire Dev - 2023-10-17 11:41:43,752 - PyFire-Dev - INFO - Nodes processed on step 130: 457
+Wildfire Dev - 2023-10-17 11:41:43,758 - PyFire-Dev - INFO - Nodes processed on step 140: 506
+Wildfire Dev - 2023-10-17 11:41:43,765 - PyFire-Dev - INFO - Nodes processed on step 150: 535
+Wildfire Dev - 2023-10-17 11:41:43,772 - PyFire-Dev - INFO - Nodes processed on step 160: 586
+Wildfire Dev - 2023-10-17 11:41:43,779 - PyFire-Dev - INFO - Nodes processed on step 170: 617
+Wildfire Dev - 2023-10-17 11:41:43,787 - PyFire-Dev - INFO - Nodes processed on step 180: 643
+Wildfire Dev - 2023-10-17 11:41:43,795 - PyFire-Dev - INFO - Nodes processed on step 190: 665
+Wildfire Dev - 2023-10-17 11:41:43,802 - PyFire-Dev - INFO - Nodes processed on step 200: 713
+Wildfire Dev - 2023-10-17 11:41:43,811 - PyFire-Dev - INFO - Nodes processed on step 210: 791
+Wildfire Dev - 2023-10-17 11:41:43,820 - PyFire-Dev - INFO - Nodes processed on step 220: 801
+Wildfire Dev - 2023-10-17 11:41:43,830 - PyFire-Dev - INFO - Nodes processed on step 230: 858
+Wildfire Dev - 2023-10-17 11:41:43,839 - PyFire-Dev - INFO - Nodes processed on step 240: 884
+Wildfire Dev - 2023-10-17 11:41:43,849 - PyFire-Dev - INFO - Nodes processed on step 250: 899
+Wildfire Dev - 2023-10-17 11:41:43,858 - PyFire-Dev - INFO - Nodes processed on step 260: 820
+Wildfire Dev - 2023-10-17 11:41:43,866 - PyFire-Dev - INFO - Nodes processed on step 270: 692
+Wildfire Dev - 2023-10-17 11:41:43,873 - PyFire-Dev - INFO - Nodes processed on step 280: 567
+Wildfire Dev - 2023-10-17 11:41:43,879 - PyFire-Dev - INFO - Nodes processed on step 290: 467
+Wildfire Dev - 2023-10-17 11:41:43,885 - PyFire-Dev - INFO - Nodes processed on step 300: 404
+Wildfire Dev - 2023-10-17 11:41:43,890 - PyFire-Dev - INFO - Nodes processed on step 310: 313
+Wildfire Dev - 2023-10-17 11:41:43,894 - PyFire-Dev - INFO - Nodes processed on step 320: 207
+Wildfire Dev - 2023-10-17 11:41:43,898 - PyFire-Dev - INFO - Nodes processed on step 330: 190
+Wildfire Dev - 2023-10-17 11:41:43,902 - PyFire-Dev - INFO - Nodes processed on step 340: 142
+Wildfire Dev - 2023-10-17 11:41:43,905 - PyFire-Dev - INFO - Nodes processed on step 350: 95
+Wildfire Dev - 2023-10-17 11:41:43,908 - PyFire-Dev - INFO - Nodes processed on step 360: 65
+Wildfire Dev - 2023-10-17 11:41:43,911 - PyFire-Dev - INFO - Nodes processed on step 370: 25
+Wildfire Dev - 2023-10-17 11:42:38,558 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:42:38,561 - PyFire-Dev - INFO - Nodes processed on step 10: 29
+Wildfire Dev - 2023-10-17 11:42:38,564 - PyFire-Dev - INFO - Nodes processed on step 20: 63
+Wildfire Dev - 2023-10-17 11:42:38,567 - PyFire-Dev - INFO - Nodes processed on step 30: 90
+Wildfire Dev - 2023-10-17 11:42:38,570 - PyFire-Dev - INFO - Nodes processed on step 40: 129
+Wildfire Dev - 2023-10-17 11:42:38,574 - PyFire-Dev - INFO - Nodes processed on step 50: 160
+Wildfire Dev - 2023-10-17 11:42:38,578 - PyFire-Dev - INFO - Nodes processed on step 60: 214
+Wildfire Dev - 2023-10-17 11:42:38,582 - PyFire-Dev - INFO - Nodes processed on step 70: 233
+Wildfire Dev - 2023-10-17 11:42:38,586 - PyFire-Dev - INFO - Nodes processed on step 80: 265
+Wildfire Dev - 2023-10-17 11:42:38,591 - PyFire-Dev - INFO - Nodes processed on step 90: 313
+Wildfire Dev - 2023-10-17 11:42:38,596 - PyFire-Dev - INFO - Nodes processed on step 100: 340
+Wildfire Dev - 2023-10-17 11:42:38,600 - PyFire-Dev - INFO - Nodes processed on step 110: 379
+Wildfire Dev - 2023-10-17 11:42:38,605 - PyFire-Dev - INFO - Nodes processed on step 120: 407
+Wildfire Dev - 2023-10-17 11:42:38,611 - PyFire-Dev - INFO - Nodes processed on step 130: 457
+Wildfire Dev - 2023-10-17 11:42:38,616 - PyFire-Dev - INFO - Nodes processed on step 140: 506
+Wildfire Dev - 2023-10-17 11:42:38,622 - PyFire-Dev - INFO - Nodes processed on step 150: 535
+Wildfire Dev - 2023-10-17 11:42:38,628 - PyFire-Dev - INFO - Nodes processed on step 160: 586
+Wildfire Dev - 2023-10-17 11:42:38,634 - PyFire-Dev - INFO - Nodes processed on step 170: 617
+Wildfire Dev - 2023-10-17 11:42:38,640 - PyFire-Dev - INFO - Nodes processed on step 180: 643
+Wildfire Dev - 2023-10-17 11:42:38,646 - PyFire-Dev - INFO - Nodes processed on step 190: 665
+Wildfire Dev - 2023-10-17 11:42:38,653 - PyFire-Dev - INFO - Nodes processed on step 200: 713
+Wildfire Dev - 2023-10-17 11:42:38,660 - PyFire-Dev - INFO - Nodes processed on step 210: 791
+Wildfire Dev - 2023-10-17 11:42:38,667 - PyFire-Dev - INFO - Nodes processed on step 220: 801
+Wildfire Dev - 2023-10-17 11:42:38,674 - PyFire-Dev - INFO - Nodes processed on step 230: 858
+Wildfire Dev - 2023-10-17 11:42:38,682 - PyFire-Dev - INFO - Nodes processed on step 240: 884
+Wildfire Dev - 2023-10-17 11:42:38,690 - PyFire-Dev - INFO - Nodes processed on step 250: 906
+Wildfire Dev - 2023-10-17 11:42:38,697 - PyFire-Dev - INFO - Nodes processed on step 260: 840
+Wildfire Dev - 2023-10-17 11:42:38,703 - PyFire-Dev - INFO - Nodes processed on step 270: 705
+Wildfire Dev - 2023-10-17 11:42:38,709 - PyFire-Dev - INFO - Nodes processed on step 280: 559
+Wildfire Dev - 2023-10-17 11:42:38,714 - PyFire-Dev - INFO - Nodes processed on step 290: 478
+Wildfire Dev - 2023-10-17 11:42:38,719 - PyFire-Dev - INFO - Nodes processed on step 300: 393
+Wildfire Dev - 2023-10-17 11:42:38,723 - PyFire-Dev - INFO - Nodes processed on step 310: 310
+Wildfire Dev - 2023-10-17 11:42:38,727 - PyFire-Dev - INFO - Nodes processed on step 320: 233
+Wildfire Dev - 2023-10-17 11:42:38,730 - PyFire-Dev - INFO - Nodes processed on step 330: 177
+Wildfire Dev - 2023-10-17 11:42:38,734 - PyFire-Dev - INFO - Nodes processed on step 340: 131
+Wildfire Dev - 2023-10-17 11:42:38,737 - PyFire-Dev - INFO - Nodes processed on step 350: 85
+Wildfire Dev - 2023-10-17 11:42:38,740 - PyFire-Dev - INFO - Nodes processed on step 360: 64
+Wildfire Dev - 2023-10-17 11:42:38,743 - PyFire-Dev - INFO - Nodes processed on step 370: 26
+Wildfire Dev - 2023-10-17 11:42:38,746 - PyFire-Dev - INFO - Nodes processed on step 380: 5
+Wildfire Dev - 2023-10-17 11:44:38,436 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:44:38,439 - PyFire-Dev - INFO - Nodes processed on step 10: 10
+Wildfire Dev - 2023-10-17 11:44:38,442 - PyFire-Dev - INFO - Nodes processed on step 20: 10
+Wildfire Dev - 2023-10-17 11:44:38,445 - PyFire-Dev - INFO - Nodes processed on step 30: 8
+Wildfire Dev - 2023-10-17 11:45:09,040 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:45:09,042 - PyFire-Dev - INFO - Nodes processed on step 10: 14
+Wildfire Dev - 2023-10-17 11:45:09,045 - PyFire-Dev - INFO - Nodes processed on step 20: 17
+Wildfire Dev - 2023-10-17 11:45:09,048 - PyFire-Dev - INFO - Nodes processed on step 30: 19
+Wildfire Dev - 2023-10-17 11:45:09,051 - PyFire-Dev - INFO - Nodes processed on step 40: 20
+Wildfire Dev - 2023-10-17 11:45:09,053 - PyFire-Dev - INFO - Nodes processed on step 50: 18
+Wildfire Dev - 2023-10-17 11:45:09,074 - PyFire-Dev - INFO - Nodes processed on step 60: 24
+Wildfire Dev - 2023-10-17 11:45:09,077 - PyFire-Dev - INFO - Nodes processed on step 70: 27
+Wildfire Dev - 2023-10-17 11:45:09,080 - PyFire-Dev - INFO - Nodes processed on step 80: 34
+Wildfire Dev - 2023-10-17 11:45:09,083 - PyFire-Dev - INFO - Nodes processed on step 90: 55
+Wildfire Dev - 2023-10-17 11:45:09,086 - PyFire-Dev - INFO - Nodes processed on step 100: 51
+Wildfire Dev - 2023-10-17 11:45:09,088 - PyFire-Dev - INFO - Nodes processed on step 110: 43
+Wildfire Dev - 2023-10-17 11:45:09,092 - PyFire-Dev - INFO - Nodes processed on step 120: 62
+Wildfire Dev - 2023-10-17 11:45:09,095 - PyFire-Dev - INFO - Nodes processed on step 130: 91
+Wildfire Dev - 2023-10-17 11:45:09,098 - PyFire-Dev - INFO - Nodes processed on step 140: 82
+Wildfire Dev - 2023-10-17 11:45:09,101 - PyFire-Dev - INFO - Nodes processed on step 150: 94
+Wildfire Dev - 2023-10-17 11:45:09,105 - PyFire-Dev - INFO - Nodes processed on step 160: 73
+Wildfire Dev - 2023-10-17 11:45:09,108 - PyFire-Dev - INFO - Nodes processed on step 170: 100
+Wildfire Dev - 2023-10-17 11:45:09,112 - PyFire-Dev - INFO - Nodes processed on step 180: 126
+Wildfire Dev - 2023-10-17 11:45:09,115 - PyFire-Dev - INFO - Nodes processed on step 190: 159
+Wildfire Dev - 2023-10-17 11:45:09,119 - PyFire-Dev - INFO - Nodes processed on step 200: 155
+Wildfire Dev - 2023-10-17 11:45:09,123 - PyFire-Dev - INFO - Nodes processed on step 210: 157
+Wildfire Dev - 2023-10-17 11:45:09,127 - PyFire-Dev - INFO - Nodes processed on step 220: 165
+Wildfire Dev - 2023-10-17 11:45:09,131 - PyFire-Dev - INFO - Nodes processed on step 230: 201
+Wildfire Dev - 2023-10-17 11:45:09,135 - PyFire-Dev - INFO - Nodes processed on step 240: 211
+Wildfire Dev - 2023-10-17 11:45:09,139 - PyFire-Dev - INFO - Nodes processed on step 250: 189
+Wildfire Dev - 2023-10-17 11:45:09,143 - PyFire-Dev - INFO - Nodes processed on step 260: 160
+Wildfire Dev - 2023-10-17 11:45:09,146 - PyFire-Dev - INFO - Nodes processed on step 270: 120
+Wildfire Dev - 2023-10-17 11:45:09,149 - PyFire-Dev - INFO - Nodes processed on step 280: 110
+Wildfire Dev - 2023-10-17 11:45:09,153 - PyFire-Dev - INFO - Nodes processed on step 290: 89
+Wildfire Dev - 2023-10-17 11:45:09,156 - PyFire-Dev - INFO - Nodes processed on step 300: 95
+Wildfire Dev - 2023-10-17 11:45:09,159 - PyFire-Dev - INFO - Nodes processed on step 310: 64
+Wildfire Dev - 2023-10-17 11:45:09,162 - PyFire-Dev - INFO - Nodes processed on step 320: 41
+Wildfire Dev - 2023-10-17 11:45:09,165 - PyFire-Dev - INFO - Nodes processed on step 330: 27
+Wildfire Dev - 2023-10-17 11:45:09,168 - PyFire-Dev - INFO - Nodes processed on step 340: 26
+Wildfire Dev - 2023-10-17 11:45:09,171 - PyFire-Dev - INFO - Nodes processed on step 350: 41
+Wildfire Dev - 2023-10-17 11:45:09,174 - PyFire-Dev - INFO - Nodes processed on step 360: 38
+Wildfire Dev - 2023-10-17 11:45:09,177 - PyFire-Dev - INFO - Nodes processed on step 370: 39
+Wildfire Dev - 2023-10-17 11:45:09,180 - PyFire-Dev - INFO - Nodes processed on step 380: 34
+Wildfire Dev - 2023-10-17 11:45:09,183 - PyFire-Dev - INFO - Nodes processed on step 390: 30
+Wildfire Dev - 2023-10-17 11:45:09,186 - PyFire-Dev - INFO - Nodes processed on step 400: 26
+Wildfire Dev - 2023-10-17 11:45:09,188 - PyFire-Dev - INFO - Nodes processed on step 410: 22
+Wildfire Dev - 2023-10-17 11:45:09,191 - PyFire-Dev - INFO - Nodes processed on step 420: 23
+Wildfire Dev - 2023-10-17 11:45:09,194 - PyFire-Dev - INFO - Nodes processed on step 430: 18
+Wildfire Dev - 2023-10-17 11:45:09,197 - PyFire-Dev - INFO - Nodes processed on step 440: 30
+Wildfire Dev - 2023-10-17 11:45:09,200 - PyFire-Dev - INFO - Nodes processed on step 450: 39
+Wildfire Dev - 2023-10-17 11:45:09,203 - PyFire-Dev - INFO - Nodes processed on step 460: 43
+Wildfire Dev - 2023-10-17 11:45:09,206 - PyFire-Dev - INFO - Nodes processed on step 470: 35
+Wildfire Dev - 2023-10-17 11:45:29,941 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:45:29,944 - PyFire-Dev - INFO - Nodes processed on step 10: 32
+Wildfire Dev - 2023-10-17 11:45:29,947 - PyFire-Dev - INFO - Nodes processed on step 20: 59
+Wildfire Dev - 2023-10-17 11:45:29,950 - PyFire-Dev - INFO - Nodes processed on step 30: 87
+Wildfire Dev - 2023-10-17 11:45:29,954 - PyFire-Dev - INFO - Nodes processed on step 40: 124
+Wildfire Dev - 2023-10-17 11:45:29,958 - PyFire-Dev - INFO - Nodes processed on step 50: 171
+Wildfire Dev - 2023-10-17 11:45:29,962 - PyFire-Dev - INFO - Nodes processed on step 60: 169
+Wildfire Dev - 2023-10-17 11:45:29,966 - PyFire-Dev - INFO - Nodes processed on step 70: 230
+Wildfire Dev - 2023-10-17 11:45:29,971 - PyFire-Dev - INFO - Nodes processed on step 80: 287
+Wildfire Dev - 2023-10-17 11:45:29,975 - PyFire-Dev - INFO - Nodes processed on step 90: 291
+Wildfire Dev - 2023-10-17 11:45:29,980 - PyFire-Dev - INFO - Nodes processed on step 100: 300
+Wildfire Dev - 2023-10-17 11:45:29,985 - PyFire-Dev - INFO - Nodes processed on step 110: 346
+Wildfire Dev - 2023-10-17 11:45:29,990 - PyFire-Dev - INFO - Nodes processed on step 120: 393
+Wildfire Dev - 2023-10-17 11:45:29,996 - PyFire-Dev - INFO - Nodes processed on step 130: 420
+Wildfire Dev - 2023-10-17 11:45:30,001 - PyFire-Dev - INFO - Nodes processed on step 140: 483
+Wildfire Dev - 2023-10-17 11:45:30,008 - PyFire-Dev - INFO - Nodes processed on step 150: 524
+Wildfire Dev - 2023-10-17 11:45:30,014 - PyFire-Dev - INFO - Nodes processed on step 160: 561
+Wildfire Dev - 2023-10-17 11:45:30,020 - PyFire-Dev - INFO - Nodes processed on step 170: 616
+Wildfire Dev - 2023-10-17 11:45:30,027 - PyFire-Dev - INFO - Nodes processed on step 180: 614
+Wildfire Dev - 2023-10-17 11:45:30,034 - PyFire-Dev - INFO - Nodes processed on step 190: 673
+Wildfire Dev - 2023-10-17 11:45:30,041 - PyFire-Dev - INFO - Nodes processed on step 200: 717
+Wildfire Dev - 2023-10-17 11:45:30,048 - PyFire-Dev - INFO - Nodes processed on step 210: 740
+Wildfire Dev - 2023-10-17 11:45:30,056 - PyFire-Dev - INFO - Nodes processed on step 220: 790
+Wildfire Dev - 2023-10-17 11:45:30,063 - PyFire-Dev - INFO - Nodes processed on step 230: 830
+Wildfire Dev - 2023-10-17 11:45:30,071 - PyFire-Dev - INFO - Nodes processed on step 240: 830
+Wildfire Dev - 2023-10-17 11:45:30,079 - PyFire-Dev - INFO - Nodes processed on step 250: 882
+Wildfire Dev - 2023-10-17 11:45:30,087 - PyFire-Dev - INFO - Nodes processed on step 260: 853
+Wildfire Dev - 2023-10-17 11:45:30,095 - PyFire-Dev - INFO - Nodes processed on step 270: 860
+Wildfire Dev - 2023-10-17 11:45:30,102 - PyFire-Dev - INFO - Nodes processed on step 280: 759
+Wildfire Dev - 2023-10-17 11:45:30,109 - PyFire-Dev - INFO - Nodes processed on step 290: 692
+Wildfire Dev - 2023-10-17 11:45:30,115 - PyFire-Dev - INFO - Nodes processed on step 300: 615
+Wildfire Dev - 2023-10-17 11:45:30,121 - PyFire-Dev - INFO - Nodes processed on step 310: 472
+Wildfire Dev - 2023-10-17 11:45:30,126 - PyFire-Dev - INFO - Nodes processed on step 320: 402
+Wildfire Dev - 2023-10-17 11:45:30,131 - PyFire-Dev - INFO - Nodes processed on step 330: 362
+Wildfire Dev - 2023-10-17 11:45:30,136 - PyFire-Dev - INFO - Nodes processed on step 340: 287
+Wildfire Dev - 2023-10-17 11:45:30,140 - PyFire-Dev - INFO - Nodes processed on step 350: 230
+Wildfire Dev - 2023-10-17 11:45:30,144 - PyFire-Dev - INFO - Nodes processed on step 360: 173
+Wildfire Dev - 2023-10-17 11:45:30,147 - PyFire-Dev - INFO - Nodes processed on step 370: 123
+Wildfire Dev - 2023-10-17 11:45:30,151 - PyFire-Dev - INFO - Nodes processed on step 380: 91
+Wildfire Dev - 2023-10-17 11:45:30,154 - PyFire-Dev - INFO - Nodes processed on step 390: 56
+Wildfire Dev - 2023-10-17 11:45:30,157 - PyFire-Dev - INFO - Nodes processed on step 400: 47
+Wildfire Dev - 2023-10-17 11:45:30,161 - PyFire-Dev - INFO - Nodes processed on step 410: 26
+Wildfire Dev - 2023-10-17 11:45:30,163 - PyFire-Dev - INFO - Nodes processed on step 420: 15
+Wildfire Dev - 2023-10-17 11:45:41,711 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:45:41,714 - PyFire-Dev - INFO - Nodes processed on step 10: 32
+Wildfire Dev - 2023-10-17 11:45:41,718 - PyFire-Dev - INFO - Nodes processed on step 20: 59
+Wildfire Dev - 2023-10-17 11:45:41,721 - PyFire-Dev - INFO - Nodes processed on step 30: 84
+Wildfire Dev - 2023-10-17 11:45:41,724 - PyFire-Dev - INFO - Nodes processed on step 40: 101
+Wildfire Dev - 2023-10-17 11:45:41,728 - PyFire-Dev - INFO - Nodes processed on step 50: 138
+Wildfire Dev - 2023-10-17 11:45:41,732 - PyFire-Dev - INFO - Nodes processed on step 60: 208
+Wildfire Dev - 2023-10-17 11:45:41,737 - PyFire-Dev - INFO - Nodes processed on step 70: 208
+Wildfire Dev - 2023-10-17 11:45:41,741 - PyFire-Dev - INFO - Nodes processed on step 80: 220
+Wildfire Dev - 2023-10-17 11:45:41,745 - PyFire-Dev - INFO - Nodes processed on step 90: 259
+Wildfire Dev - 2023-10-17 11:45:41,750 - PyFire-Dev - INFO - Nodes processed on step 100: 272
+Wildfire Dev - 2023-10-17 11:45:41,754 - PyFire-Dev - INFO - Nodes processed on step 110: 293
+Wildfire Dev - 2023-10-17 11:45:41,760 - PyFire-Dev - INFO - Nodes processed on step 120: 352
+Wildfire Dev - 2023-10-17 11:45:41,765 - PyFire-Dev - INFO - Nodes processed on step 130: 375
+Wildfire Dev - 2023-10-17 11:45:41,771 - PyFire-Dev - INFO - Nodes processed on step 140: 410
+Wildfire Dev - 2023-10-17 11:45:41,776 - PyFire-Dev - INFO - Nodes processed on step 150: 461
+Wildfire Dev - 2023-10-17 11:45:41,781 - PyFire-Dev - INFO - Nodes processed on step 160: 455
+Wildfire Dev - 2023-10-17 11:45:41,787 - PyFire-Dev - INFO - Nodes processed on step 170: 531
+Wildfire Dev - 2023-10-17 11:45:41,794 - PyFire-Dev - INFO - Nodes processed on step 180: 606
+Wildfire Dev - 2023-10-17 11:45:41,800 - PyFire-Dev - INFO - Nodes processed on step 190: 591
+Wildfire Dev - 2023-10-17 11:45:41,807 - PyFire-Dev - INFO - Nodes processed on step 200: 660
+Wildfire Dev - 2023-10-17 11:45:41,813 - PyFire-Dev - INFO - Nodes processed on step 210: 665
+Wildfire Dev - 2023-10-17 11:45:41,820 - PyFire-Dev - INFO - Nodes processed on step 220: 682
+Wildfire Dev - 2023-10-17 11:45:41,828 - PyFire-Dev - INFO - Nodes processed on step 230: 770
+Wildfire Dev - 2023-10-17 11:45:41,836 - PyFire-Dev - INFO - Nodes processed on step 240: 873
+Wildfire Dev - 2023-10-17 11:45:41,843 - PyFire-Dev - INFO - Nodes processed on step 250: 857
+Wildfire Dev - 2023-10-17 11:45:41,851 - PyFire-Dev - INFO - Nodes processed on step 260: 803
+Wildfire Dev - 2023-10-17 11:45:41,858 - PyFire-Dev - INFO - Nodes processed on step 270: 760
+Wildfire Dev - 2023-10-17 11:45:41,866 - PyFire-Dev - INFO - Nodes processed on step 280: 827
+Wildfire Dev - 2023-10-17 11:45:41,873 - PyFire-Dev - INFO - Nodes processed on step 290: 786
+Wildfire Dev - 2023-10-17 11:45:41,880 - PyFire-Dev - INFO - Nodes processed on step 300: 795
+Wildfire Dev - 2023-10-17 11:45:41,888 - PyFire-Dev - INFO - Nodes processed on step 310: 739
+Wildfire Dev - 2023-10-17 11:45:41,894 - PyFire-Dev - INFO - Nodes processed on step 320: 654
+Wildfire Dev - 2023-10-17 11:45:41,900 - PyFire-Dev - INFO - Nodes processed on step 330: 590
+Wildfire Dev - 2023-10-17 11:45:41,906 - PyFire-Dev - INFO - Nodes processed on step 340: 522
+Wildfire Dev - 2023-10-17 11:45:41,911 - PyFire-Dev - INFO - Nodes processed on step 350: 459
+Wildfire Dev - 2023-10-17 11:45:41,916 - PyFire-Dev - INFO - Nodes processed on step 360: 387
+Wildfire Dev - 2023-10-17 11:45:41,920 - PyFire-Dev - INFO - Nodes processed on step 370: 254
+Wildfire Dev - 2023-10-17 11:45:41,924 - PyFire-Dev - INFO - Nodes processed on step 380: 151
+Wildfire Dev - 2023-10-17 11:45:41,927 - PyFire-Dev - INFO - Nodes processed on step 390: 111
+Wildfire Dev - 2023-10-17 11:45:41,930 - PyFire-Dev - INFO - Nodes processed on step 400: 83
+Wildfire Dev - 2023-10-17 11:45:41,934 - PyFire-Dev - INFO - Nodes processed on step 410: 82
+Wildfire Dev - 2023-10-17 11:45:41,937 - PyFire-Dev - INFO - Nodes processed on step 420: 60
+Wildfire Dev - 2023-10-17 11:45:41,940 - PyFire-Dev - INFO - Nodes processed on step 430: 23
+Wildfire Dev - 2023-10-17 11:45:41,943 - PyFire-Dev - INFO - Nodes processed on step 440: 13
+Wildfire Dev - 2023-10-17 11:45:53,682 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:45:53,685 - PyFire-Dev - INFO - Nodes processed on step 10: 30
+Wildfire Dev - 2023-10-17 11:45:53,688 - PyFire-Dev - INFO - Nodes processed on step 20: 28
+Wildfire Dev - 2023-10-17 11:45:53,691 - PyFire-Dev - INFO - Nodes processed on step 30: 35
+Wildfire Dev - 2023-10-17 11:45:53,694 - PyFire-Dev - INFO - Nodes processed on step 40: 50
+Wildfire Dev - 2023-10-17 11:45:53,697 - PyFire-Dev - INFO - Nodes processed on step 50: 53
+Wildfire Dev - 2023-10-17 11:45:53,700 - PyFire-Dev - INFO - Nodes processed on step 60: 64
+Wildfire Dev - 2023-10-17 11:45:53,704 - PyFire-Dev - INFO - Nodes processed on step 70: 84
+Wildfire Dev - 2023-10-17 11:45:53,707 - PyFire-Dev - INFO - Nodes processed on step 80: 96
+Wildfire Dev - 2023-10-17 11:45:53,711 - PyFire-Dev - INFO - Nodes processed on step 90: 107
+Wildfire Dev - 2023-10-17 11:45:53,715 - PyFire-Dev - INFO - Nodes processed on step 100: 126
+Wildfire Dev - 2023-10-17 11:45:53,719 - PyFire-Dev - INFO - Nodes processed on step 110: 128
+Wildfire Dev - 2023-10-17 11:45:53,722 - PyFire-Dev - INFO - Nodes processed on step 120: 133
+Wildfire Dev - 2023-10-17 11:45:53,726 - PyFire-Dev - INFO - Nodes processed on step 130: 174
+Wildfire Dev - 2023-10-17 11:45:53,730 - PyFire-Dev - INFO - Nodes processed on step 140: 209
+Wildfire Dev - 2023-10-17 11:45:53,735 - PyFire-Dev - INFO - Nodes processed on step 150: 250
+Wildfire Dev - 2023-10-17 11:45:53,740 - PyFire-Dev - INFO - Nodes processed on step 160: 334
+Wildfire Dev - 2023-10-17 11:45:53,745 - PyFire-Dev - INFO - Nodes processed on step 170: 354
+Wildfire Dev - 2023-10-17 11:45:53,750 - PyFire-Dev - INFO - Nodes processed on step 180: 364
+Wildfire Dev - 2023-10-17 11:45:53,755 - PyFire-Dev - INFO - Nodes processed on step 190: 339
+Wildfire Dev - 2023-10-17 11:45:53,760 - PyFire-Dev - INFO - Nodes processed on step 200: 323
+Wildfire Dev - 2023-10-17 11:45:53,765 - PyFire-Dev - INFO - Nodes processed on step 210: 360
+Wildfire Dev - 2023-10-17 11:45:53,770 - PyFire-Dev - INFO - Nodes processed on step 220: 409
+Wildfire Dev - 2023-10-17 11:45:53,775 - PyFire-Dev - INFO - Nodes processed on step 230: 426
+Wildfire Dev - 2023-10-17 11:45:53,781 - PyFire-Dev - INFO - Nodes processed on step 240: 450
+Wildfire Dev - 2023-10-17 11:45:53,787 - PyFire-Dev - INFO - Nodes processed on step 250: 498
+Wildfire Dev - 2023-10-17 11:45:53,793 - PyFire-Dev - INFO - Nodes processed on step 260: 583
+Wildfire Dev - 2023-10-17 11:45:53,799 - PyFire-Dev - INFO - Nodes processed on step 270: 586
+Wildfire Dev - 2023-10-17 11:45:53,805 - PyFire-Dev - INFO - Nodes processed on step 280: 525
+Wildfire Dev - 2023-10-17 11:45:53,811 - PyFire-Dev - INFO - Nodes processed on step 290: 575
+Wildfire Dev - 2023-10-17 11:45:53,817 - PyFire-Dev - INFO - Nodes processed on step 300: 514
+Wildfire Dev - 2023-10-17 11:45:53,823 - PyFire-Dev - INFO - Nodes processed on step 310: 534
+Wildfire Dev - 2023-10-17 11:45:53,829 - PyFire-Dev - INFO - Nodes processed on step 320: 503
+Wildfire Dev - 2023-10-17 11:45:53,835 - PyFire-Dev - INFO - Nodes processed on step 330: 486
+Wildfire Dev - 2023-10-17 11:45:53,841 - PyFire-Dev - INFO - Nodes processed on step 340: 483
+Wildfire Dev - 2023-10-17 11:45:53,847 - PyFire-Dev - INFO - Nodes processed on step 350: 538
+Wildfire Dev - 2023-10-17 11:45:53,853 - PyFire-Dev - INFO - Nodes processed on step 360: 496
+Wildfire Dev - 2023-10-17 11:45:53,858 - PyFire-Dev - INFO - Nodes processed on step 370: 475
+Wildfire Dev - 2023-10-17 11:45:53,864 - PyFire-Dev - INFO - Nodes processed on step 380: 486
+Wildfire Dev - 2023-10-17 11:45:53,869 - PyFire-Dev - INFO - Nodes processed on step 390: 437
+Wildfire Dev - 2023-10-17 11:45:53,875 - PyFire-Dev - INFO - Nodes processed on step 400: 433
+Wildfire Dev - 2023-10-17 11:45:53,881 - PyFire-Dev - INFO - Nodes processed on step 410: 503
+Wildfire Dev - 2023-10-17 11:45:53,886 - PyFire-Dev - INFO - Nodes processed on step 420: 439
+Wildfire Dev - 2023-10-17 11:45:53,891 - PyFire-Dev - INFO - Nodes processed on step 430: 285
+Wildfire Dev - 2023-10-17 11:45:53,896 - PyFire-Dev - INFO - Nodes processed on step 440: 293
+Wildfire Dev - 2023-10-17 11:45:53,901 - PyFire-Dev - INFO - Nodes processed on step 450: 312
+Wildfire Dev - 2023-10-17 11:45:53,906 - PyFire-Dev - INFO - Nodes processed on step 460: 320
+Wildfire Dev - 2023-10-17 11:45:53,911 - PyFire-Dev - INFO - Nodes processed on step 470: 378
+Wildfire Dev - 2023-10-17 11:45:53,916 - PyFire-Dev - INFO - Nodes processed on step 480: 458
+Wildfire Dev - 2023-10-17 11:45:53,922 - PyFire-Dev - INFO - Nodes processed on step 490: 478
+Wildfire Dev - 2023-10-17 11:45:53,927 - PyFire-Dev - INFO - Nodes processed on step 500: 421
+Wildfire Dev - 2023-10-17 11:45:53,932 - PyFire-Dev - INFO - Nodes processed on step 510: 352
+Wildfire Dev - 2023-10-17 11:45:53,936 - PyFire-Dev - INFO - Nodes processed on step 520: 288
+Wildfire Dev - 2023-10-17 11:45:53,940 - PyFire-Dev - INFO - Nodes processed on step 530: 223
+Wildfire Dev - 2023-10-17 11:45:53,944 - PyFire-Dev - INFO - Nodes processed on step 540: 149
+Wildfire Dev - 2023-10-17 11:45:53,947 - PyFire-Dev - INFO - Nodes processed on step 550: 112
+Wildfire Dev - 2023-10-17 11:45:53,950 - PyFire-Dev - INFO - Nodes processed on step 560: 105
+Wildfire Dev - 2023-10-17 11:45:53,954 - PyFire-Dev - INFO - Nodes processed on step 570: 113
+Wildfire Dev - 2023-10-17 11:45:53,958 - PyFire-Dev - INFO - Nodes processed on step 580: 123
+Wildfire Dev - 2023-10-17 11:45:53,961 - PyFire-Dev - INFO - Nodes processed on step 590: 120
+Wildfire Dev - 2023-10-17 11:45:53,965 - PyFire-Dev - INFO - Nodes processed on step 600: 140
+Wildfire Dev - 2023-10-17 11:45:53,968 - PyFire-Dev - INFO - Nodes processed on step 610: 187
+Wildfire Dev - 2023-10-17 11:45:53,972 - PyFire-Dev - INFO - Nodes processed on step 620: 137
+Wildfire Dev - 2023-10-17 11:45:53,975 - PyFire-Dev - INFO - Nodes processed on step 630: 73
+Wildfire Dev - 2023-10-17 11:45:53,978 - PyFire-Dev - INFO - Nodes processed on step 640: 39
+Wildfire Dev - 2023-10-17 11:45:53,981 - PyFire-Dev - INFO - Nodes processed on step 650: 17
+Wildfire Dev - 2023-10-17 11:45:53,984 - PyFire-Dev - INFO - Nodes processed on step 660: 5
+Wildfire Dev - 2023-10-17 11:46:11,127 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:46:11,130 - PyFire-Dev - INFO - Nodes processed on step 10: 27
+Wildfire Dev - 2023-10-17 11:46:11,133 - PyFire-Dev - INFO - Nodes processed on step 20: 39
+Wildfire Dev - 2023-10-17 11:46:11,136 - PyFire-Dev - INFO - Nodes processed on step 30: 42
+Wildfire Dev - 2023-10-17 11:46:11,140 - PyFire-Dev - INFO - Nodes processed on step 40: 64
+Wildfire Dev - 2023-10-17 11:46:11,144 - PyFire-Dev - INFO - Nodes processed on step 50: 97
+Wildfire Dev - 2023-10-17 11:46:11,147 - PyFire-Dev - INFO - Nodes processed on step 60: 144
+Wildfire Dev - 2023-10-17 11:46:11,151 - PyFire-Dev - INFO - Nodes processed on step 70: 132
+Wildfire Dev - 2023-10-17 11:46:11,155 - PyFire-Dev - INFO - Nodes processed on step 80: 140
+Wildfire Dev - 2023-10-17 11:46:11,159 - PyFire-Dev - INFO - Nodes processed on step 90: 179
+Wildfire Dev - 2023-10-17 11:46:11,163 - PyFire-Dev - INFO - Nodes processed on step 100: 225
+Wildfire Dev - 2023-10-17 11:46:11,168 - PyFire-Dev - INFO - Nodes processed on step 110: 246
+Wildfire Dev - 2023-10-17 11:46:11,172 - PyFire-Dev - INFO - Nodes processed on step 120: 230
+Wildfire Dev - 2023-10-17 11:46:11,177 - PyFire-Dev - INFO - Nodes processed on step 130: 259
+Wildfire Dev - 2023-10-17 11:46:11,181 - PyFire-Dev - INFO - Nodes processed on step 140: 240
+Wildfire Dev - 2023-10-17 11:46:11,186 - PyFire-Dev - INFO - Nodes processed on step 150: 315
+Wildfire Dev - 2023-10-17 11:46:11,191 - PyFire-Dev - INFO - Nodes processed on step 160: 328
+Wildfire Dev - 2023-10-17 11:46:11,196 - PyFire-Dev - INFO - Nodes processed on step 170: 327
+Wildfire Dev - 2023-10-17 11:46:11,201 - PyFire-Dev - INFO - Nodes processed on step 180: 370
+Wildfire Dev - 2023-10-17 11:46:11,207 - PyFire-Dev - INFO - Nodes processed on step 190: 384
+Wildfire Dev - 2023-10-17 11:46:11,212 - PyFire-Dev - INFO - Nodes processed on step 200: 403
+Wildfire Dev - 2023-10-17 11:46:11,217 - PyFire-Dev - INFO - Nodes processed on step 210: 457
+Wildfire Dev - 2023-10-17 11:46:11,223 - PyFire-Dev - INFO - Nodes processed on step 220: 483
+Wildfire Dev - 2023-10-17 11:46:11,229 - PyFire-Dev - INFO - Nodes processed on step 230: 518
+Wildfire Dev - 2023-10-17 11:46:11,236 - PyFire-Dev - INFO - Nodes processed on step 240: 590
+Wildfire Dev - 2023-10-17 11:46:11,242 - PyFire-Dev - INFO - Nodes processed on step 250: 535
+Wildfire Dev - 2023-10-17 11:46:11,248 - PyFire-Dev - INFO - Nodes processed on step 260: 508
+Wildfire Dev - 2023-10-17 11:46:11,253 - PyFire-Dev - INFO - Nodes processed on step 270: 454
+Wildfire Dev - 2023-10-17 11:46:11,259 - PyFire-Dev - INFO - Nodes processed on step 280: 493
+Wildfire Dev - 2023-10-17 11:46:11,265 - PyFire-Dev - INFO - Nodes processed on step 290: 517
+Wildfire Dev - 2023-10-17 11:46:11,271 - PyFire-Dev - INFO - Nodes processed on step 300: 525
+Wildfire Dev - 2023-10-17 11:46:11,277 - PyFire-Dev - INFO - Nodes processed on step 310: 501
+Wildfire Dev - 2023-10-17 11:46:11,283 - PyFire-Dev - INFO - Nodes processed on step 320: 512
+Wildfire Dev - 2023-10-17 11:46:11,289 - PyFire-Dev - INFO - Nodes processed on step 330: 527
+Wildfire Dev - 2023-10-17 11:46:11,295 - PyFire-Dev - INFO - Nodes processed on step 340: 442
+Wildfire Dev - 2023-10-17 11:46:11,300 - PyFire-Dev - INFO - Nodes processed on step 350: 324
+Wildfire Dev - 2023-10-17 11:46:11,304 - PyFire-Dev - INFO - Nodes processed on step 360: 253
+Wildfire Dev - 2023-10-17 11:46:11,308 - PyFire-Dev - INFO - Nodes processed on step 370: 231
+Wildfire Dev - 2023-10-17 11:46:11,312 - PyFire-Dev - INFO - Nodes processed on step 380: 185
+Wildfire Dev - 2023-10-17 11:46:11,316 - PyFire-Dev - INFO - Nodes processed on step 390: 132
+Wildfire Dev - 2023-10-17 11:46:11,320 - PyFire-Dev - INFO - Nodes processed on step 400: 143
+Wildfire Dev - 2023-10-17 11:46:11,323 - PyFire-Dev - INFO - Nodes processed on step 410: 90
+Wildfire Dev - 2023-10-17 11:46:11,327 - PyFire-Dev - INFO - Nodes processed on step 420: 64
+Wildfire Dev - 2023-10-17 11:46:11,330 - PyFire-Dev - INFO - Nodes processed on step 430: 57
+Wildfire Dev - 2023-10-17 11:46:11,334 - PyFire-Dev - INFO - Nodes processed on step 440: 72
+Wildfire Dev - 2023-10-17 11:46:11,337 - PyFire-Dev - INFO - Nodes processed on step 450: 73
+Wildfire Dev - 2023-10-17 11:46:11,340 - PyFire-Dev - INFO - Nodes processed on step 460: 50
+Wildfire Dev - 2023-10-17 11:46:11,343 - PyFire-Dev - INFO - Nodes processed on step 470: 51
+Wildfire Dev - 2023-10-17 11:46:11,346 - PyFire-Dev - INFO - Nodes processed on step 480: 55
+Wildfire Dev - 2023-10-17 11:46:11,350 - PyFire-Dev - INFO - Nodes processed on step 490: 63
+Wildfire Dev - 2023-10-17 11:46:11,353 - PyFire-Dev - INFO - Nodes processed on step 500: 46
+Wildfire Dev - 2023-10-17 11:46:11,356 - PyFire-Dev - INFO - Nodes processed on step 510: 46
+Wildfire Dev - 2023-10-17 11:46:11,359 - PyFire-Dev - INFO - Nodes processed on step 520: 61
+Wildfire Dev - 2023-10-17 11:46:11,362 - PyFire-Dev - INFO - Nodes processed on step 530: 43
+Wildfire Dev - 2023-10-17 11:46:11,366 - PyFire-Dev - INFO - Nodes processed on step 540: 44
+Wildfire Dev - 2023-10-17 11:46:11,369 - PyFire-Dev - INFO - Nodes processed on step 550: 25
+Wildfire Dev - 2023-10-17 11:46:11,372 - PyFire-Dev - INFO - Nodes processed on step 560: 36
+Wildfire Dev - 2023-10-17 11:46:11,376 - PyFire-Dev - INFO - Nodes processed on step 570: 61
+Wildfire Dev - 2023-10-17 11:46:11,379 - PyFire-Dev - INFO - Nodes processed on step 580: 69
+Wildfire Dev - 2023-10-17 11:46:11,383 - PyFire-Dev - INFO - Nodes processed on step 590: 110
+Wildfire Dev - 2023-10-17 11:46:11,386 - PyFire-Dev - INFO - Nodes processed on step 600: 117
+Wildfire Dev - 2023-10-17 11:46:11,390 - PyFire-Dev - INFO - Nodes processed on step 610: 123
+Wildfire Dev - 2023-10-17 11:46:11,393 - PyFire-Dev - INFO - Nodes processed on step 620: 98
+Wildfire Dev - 2023-10-17 11:46:11,397 - PyFire-Dev - INFO - Nodes processed on step 630: 85
+Wildfire Dev - 2023-10-17 11:46:11,400 - PyFire-Dev - INFO - Nodes processed on step 640: 64
+Wildfire Dev - 2023-10-17 11:46:11,403 - PyFire-Dev - INFO - Nodes processed on step 650: 38
+Wildfire Dev - 2023-10-17 11:46:11,406 - PyFire-Dev - INFO - Nodes processed on step 660: 42
+Wildfire Dev - 2023-10-17 11:46:11,409 - PyFire-Dev - INFO - Nodes processed on step 670: 46
+Wildfire Dev - 2023-10-17 11:46:11,412 - PyFire-Dev - INFO - Nodes processed on step 680: 36
+Wildfire Dev - 2023-10-17 11:46:11,415 - PyFire-Dev - INFO - Nodes processed on step 690: 35
+Wildfire Dev - 2023-10-17 11:46:11,419 - PyFire-Dev - INFO - Nodes processed on step 700: 29
+Wildfire Dev - 2023-10-17 11:46:11,422 - PyFire-Dev - INFO - Nodes processed on step 710: 45
+Wildfire Dev - 2023-10-17 11:46:11,425 - PyFire-Dev - INFO - Nodes processed on step 720: 54
+Wildfire Dev - 2023-10-17 11:46:11,429 - PyFire-Dev - INFO - Nodes processed on step 730: 56
+Wildfire Dev - 2023-10-17 11:46:11,432 - PyFire-Dev - INFO - Nodes processed on step 740: 53
+Wildfire Dev - 2023-10-17 11:46:11,435 - PyFire-Dev - INFO - Nodes processed on step 750: 53
+Wildfire Dev - 2023-10-17 11:46:11,438 - PyFire-Dev - INFO - Nodes processed on step 760: 30
+Wildfire Dev - 2023-10-17 11:46:11,441 - PyFire-Dev - INFO - Nodes processed on step 770: 24
+Wildfire Dev - 2023-10-17 11:46:11,444 - PyFire-Dev - INFO - Nodes processed on step 780: 24
+Wildfire Dev - 2023-10-17 11:46:11,447 - PyFire-Dev - INFO - Nodes processed on step 790: 19
+Wildfire Dev - 2023-10-17 11:46:11,450 - PyFire-Dev - INFO - Nodes processed on step 800: 30
+Wildfire Dev - 2023-10-17 11:46:11,453 - PyFire-Dev - INFO - Nodes processed on step 810: 30
+Wildfire Dev - 2023-10-17 11:46:11,456 - PyFire-Dev - INFO - Nodes processed on step 820: 16
+Wildfire Dev - 2023-10-17 11:46:11,460 - PyFire-Dev - INFO - Nodes processed on step 830: 20
+Wildfire Dev - 2023-10-17 11:46:11,463 - PyFire-Dev - INFO - Nodes processed on step 840: 34
+Wildfire Dev - 2023-10-17 11:46:11,466 - PyFire-Dev - INFO - Nodes processed on step 850: 49
+Wildfire Dev - 2023-10-17 11:46:11,470 - PyFire-Dev - INFO - Nodes processed on step 860: 72
+Wildfire Dev - 2023-10-17 11:46:11,473 - PyFire-Dev - INFO - Nodes processed on step 870: 91
+Wildfire Dev - 2023-10-17 11:46:11,477 - PyFire-Dev - INFO - Nodes processed on step 880: 94
+Wildfire Dev - 2023-10-17 11:46:11,480 - PyFire-Dev - INFO - Nodes processed on step 890: 89
+Wildfire Dev - 2023-10-17 11:46:11,484 - PyFire-Dev - INFO - Nodes processed on step 900: 109
+Wildfire Dev - 2023-10-17 11:46:11,488 - PyFire-Dev - INFO - Nodes processed on step 910: 126
+Wildfire Dev - 2023-10-17 11:46:11,491 - PyFire-Dev - INFO - Nodes processed on step 920: 156
+Wildfire Dev - 2023-10-17 11:46:11,495 - PyFire-Dev - INFO - Nodes processed on step 930: 148
+Wildfire Dev - 2023-10-17 11:46:11,499 - PyFire-Dev - INFO - Nodes processed on step 940: 156
+Wildfire Dev - 2023-10-17 11:46:11,503 - PyFire-Dev - INFO - Nodes processed on step 950: 165
+Wildfire Dev - 2023-10-17 11:46:11,507 - PyFire-Dev - INFO - Nodes processed on step 960: 147
+Wildfire Dev - 2023-10-17 11:46:11,511 - PyFire-Dev - INFO - Nodes processed on step 970: 121
+Wildfire Dev - 2023-10-17 11:46:11,515 - PyFire-Dev - INFO - Nodes processed on step 980: 120
+Wildfire Dev - 2023-10-17 11:46:11,518 - PyFire-Dev - INFO - Nodes processed on step 990: 158
+Wildfire Dev - 2023-10-17 11:46:11,522 - PyFire-Dev - INFO - Nodes processed on step 1000: 148
+Wildfire Dev - 2023-10-17 11:46:11,526 - PyFire-Dev - INFO - Nodes processed on step 1010: 103
+Wildfire Dev - 2023-10-17 11:46:11,529 - PyFire-Dev - INFO - Nodes processed on step 1020: 109
+Wildfire Dev - 2023-10-17 11:46:11,533 - PyFire-Dev - INFO - Nodes processed on step 1030: 96
+Wildfire Dev - 2023-10-17 11:46:11,537 - PyFire-Dev - INFO - Nodes processed on step 1040: 95
+Wildfire Dev - 2023-10-17 11:46:11,540 - PyFire-Dev - INFO - Nodes processed on step 1050: 92
+Wildfire Dev - 2023-10-17 11:46:11,543 - PyFire-Dev - INFO - Nodes processed on step 1060: 59
+Wildfire Dev - 2023-10-17 11:46:11,547 - PyFire-Dev - INFO - Nodes processed on step 1070: 71
+Wildfire Dev - 2023-10-17 11:46:11,550 - PyFire-Dev - INFO - Nodes processed on step 1080: 53
+Wildfire Dev - 2023-10-17 11:46:11,553 - PyFire-Dev - INFO - Nodes processed on step 1090: 57
+Wildfire Dev - 2023-10-17 11:46:11,556 - PyFire-Dev - INFO - Nodes processed on step 1100: 60
+Wildfire Dev - 2023-10-17 11:46:11,560 - PyFire-Dev - INFO - Nodes processed on step 1110: 49
+Wildfire Dev - 2023-10-17 11:46:11,563 - PyFire-Dev - INFO - Nodes processed on step 1120: 43
+Wildfire Dev - 2023-10-17 11:46:11,566 - PyFire-Dev - INFO - Nodes processed on step 1130: 40
+Wildfire Dev - 2023-10-17 11:46:11,569 - PyFire-Dev - INFO - Nodes processed on step 1140: 42
+Wildfire Dev - 2023-10-17 11:46:11,572 - PyFire-Dev - INFO - Nodes processed on step 1150: 31
+Wildfire Dev - 2023-10-17 11:46:11,575 - PyFire-Dev - INFO - Nodes processed on step 1160: 20
+Wildfire Dev - 2023-10-17 11:46:11,579 - PyFire-Dev - INFO - Nodes processed on step 1170: 29
+Wildfire Dev - 2023-10-17 11:46:11,582 - PyFire-Dev - INFO - Nodes processed on step 1180: 40
+Wildfire Dev - 2023-10-17 11:46:11,585 - PyFire-Dev - INFO - Nodes processed on step 1190: 38
+Wildfire Dev - 2023-10-17 11:46:11,588 - PyFire-Dev - INFO - Nodes processed on step 1200: 27
+Wildfire Dev - 2023-10-17 11:46:11,591 - PyFire-Dev - INFO - Nodes processed on step 1210: 10
+Wildfire Dev - 2023-10-17 11:46:11,594 - PyFire-Dev - INFO - Nodes processed on step 1220: 15
+Wildfire Dev - 2023-10-17 11:46:11,597 - PyFire-Dev - INFO - Nodes processed on step 1230: 29
+Wildfire Dev - 2023-10-17 11:46:11,601 - PyFire-Dev - INFO - Nodes processed on step 1240: 20
+Wildfire Dev - 2023-10-17 11:46:11,603 - PyFire-Dev - INFO - Nodes processed on step 1250: 26
+Wildfire Dev - 2023-10-17 11:48:36,197 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-10-17 11:48:36,201 - PyFire-Dev - INFO - Nodes processed on step 10: 29
+Wildfire Dev - 2023-10-17 11:48:36,204 - PyFire-Dev - INFO - Nodes processed on step 20: 63
+Wildfire Dev - 2023-10-17 11:48:36,207 - PyFire-Dev - INFO - Nodes processed on step 30: 90
+Wildfire Dev - 2023-10-17 11:48:36,211 - PyFire-Dev - INFO - Nodes processed on step 40: 129
+Wildfire Dev - 2023-10-17 11:48:36,215 - PyFire-Dev - INFO - Nodes processed on step 50: 160
+Wildfire Dev - 2023-10-17 11:48:36,219 - PyFire-Dev - INFO - Nodes processed on step 60: 214
+Wildfire Dev - 2023-10-17 11:48:36,223 - PyFire-Dev - INFO - Nodes processed on step 70: 233
+Wildfire Dev - 2023-10-17 11:48:36,228 - PyFire-Dev - INFO - Nodes processed on step 80: 265
+Wildfire Dev - 2023-10-17 11:48:36,233 - PyFire-Dev - INFO - Nodes processed on step 90: 313
+Wildfire Dev - 2023-10-17 11:48:36,239 - PyFire-Dev - INFO - Nodes processed on step 100: 340
+Wildfire Dev - 2023-10-17 11:48:36,244 - PyFire-Dev - INFO - Nodes processed on step 110: 379
+Wildfire Dev - 2023-10-17 11:48:36,250 - PyFire-Dev - INFO - Nodes processed on step 120: 407
+Wildfire Dev - 2023-10-17 11:48:36,256 - PyFire-Dev - INFO - Nodes processed on step 130: 457
+Wildfire Dev - 2023-10-17 11:48:36,262 - PyFire-Dev - INFO - Nodes processed on step 140: 506
+Wildfire Dev - 2023-10-17 11:48:36,269 - PyFire-Dev - INFO - Nodes processed on step 150: 535
+Wildfire Dev - 2023-10-17 11:48:36,276 - PyFire-Dev - INFO - Nodes processed on step 160: 586
+Wildfire Dev - 2023-10-17 11:48:36,283 - PyFire-Dev - INFO - Nodes processed on step 170: 617
+Wildfire Dev - 2023-10-17 11:48:36,291 - PyFire-Dev - INFO - Nodes processed on step 180: 643
+Wildfire Dev - 2023-10-17 11:48:36,298 - PyFire-Dev - INFO - Nodes processed on step 190: 665
+Wildfire Dev - 2023-10-17 11:48:36,306 - PyFire-Dev - INFO - Nodes processed on step 200: 713
+Wildfire Dev - 2023-10-17 11:48:36,315 - PyFire-Dev - INFO - Nodes processed on step 210: 791
+Wildfire Dev - 2023-10-17 11:48:36,324 - PyFire-Dev - INFO - Nodes processed on step 220: 801
+Wildfire Dev - 2023-10-17 11:48:36,333 - PyFire-Dev - INFO - Nodes processed on step 230: 858
+Wildfire Dev - 2023-10-17 11:48:36,342 - PyFire-Dev - INFO - Nodes processed on step 240: 884
+Wildfire Dev - 2023-10-17 11:48:36,352 - PyFire-Dev - INFO - Nodes processed on step 250: 899
+Wildfire Dev - 2023-10-17 11:48:36,360 - PyFire-Dev - INFO - Nodes processed on step 260: 820
+Wildfire Dev - 2023-10-17 11:48:36,368 - PyFire-Dev - INFO - Nodes processed on step 270: 692
+Wildfire Dev - 2023-10-17 11:48:36,375 - PyFire-Dev - INFO - Nodes processed on step 280: 567
+Wildfire Dev - 2023-10-17 11:48:36,381 - PyFire-Dev - INFO - Nodes processed on step 290: 467
+Wildfire Dev - 2023-10-17 11:48:36,387 - PyFire-Dev - INFO - Nodes processed on step 300: 404
+Wildfire Dev - 2023-10-17 11:48:36,394 - PyFire-Dev - INFO - Nodes processed on step 310: 313
+Wildfire Dev - 2023-10-17 11:48:36,398 - PyFire-Dev - INFO - Nodes processed on step 320: 207
+Wildfire Dev - 2023-10-17 11:48:36,403 - PyFire-Dev - INFO - Nodes processed on step 330: 190
+Wildfire Dev - 2023-10-17 11:48:36,407 - PyFire-Dev - INFO - Nodes processed on step 340: 142
+Wildfire Dev - 2023-10-17 11:48:36,411 - PyFire-Dev - INFO - Nodes processed on step 350: 95
+Wildfire Dev - 2023-10-17 11:48:36,414 - PyFire-Dev - INFO - Nodes processed on step 360: 65
+Wildfire Dev - 2023-10-17 11:48:36,417 - PyFire-Dev - INFO - Nodes processed on step 370: 25
+Wildfire Dev - 2023-10-17 11:48:48,323 - PyFire-Dev - INFO - Nodes processed on step 0: 16
+Wildfire Dev - 2023-10-17 11:48:48,326 - PyFire-Dev - INFO - Nodes processed on step 10: 28
+Wildfire Dev - 2023-10-17 11:48:48,328 - PyFire-Dev - INFO - Nodes processed on step 20: 45
+Wildfire Dev - 2023-10-17 11:48:48,331 - PyFire-Dev - INFO - Nodes processed on step 30: 58
+Wildfire Dev - 2023-10-17 11:48:48,334 - PyFire-Dev - INFO - Nodes processed on step 40: 79
+Wildfire Dev - 2023-10-17 11:48:48,337 - PyFire-Dev - INFO - Nodes processed on step 50: 82
+Wildfire Dev - 2023-10-17 11:48:48,340 - PyFire-Dev - INFO - Nodes processed on step 60: 89
+Wildfire Dev - 2023-10-17 11:48:48,344 - PyFire-Dev - INFO - Nodes processed on step 70: 95
+Wildfire Dev - 2023-10-17 11:48:48,347 - PyFire-Dev - INFO - Nodes processed on step 80: 109
+Wildfire Dev - 2023-10-17 11:48:48,350 - PyFire-Dev - INFO - Nodes processed on step 90: 130
+Wildfire Dev - 2023-10-17 11:48:48,353 - PyFire-Dev - INFO - Nodes processed on step 100: 141
+Wildfire Dev - 2023-10-17 11:48:48,357 - PyFire-Dev - INFO - Nodes processed on step 110: 132
+Wildfire Dev - 2023-10-17 11:48:48,360 - PyFire-Dev - INFO - Nodes processed on step 120: 144
+Wildfire Dev - 2023-10-17 11:48:48,364 - PyFire-Dev - INFO - Nodes processed on step 130: 162
+Wildfire Dev - 2023-10-17 11:48:48,367 - PyFire-Dev - INFO - Nodes processed on step 140: 162
+Wildfire Dev - 2023-10-17 11:48:48,371 - PyFire-Dev - INFO - Nodes processed on step 150: 180
+Wildfire Dev - 2023-10-17 11:48:48,375 - PyFire-Dev - INFO - Nodes processed on step 160: 204
+Wildfire Dev - 2023-10-17 11:48:48,378 - PyFire-Dev - INFO - Nodes processed on step 170: 226
+Wildfire Dev - 2023-10-17 11:48:48,382 - PyFire-Dev - INFO - Nodes processed on step 180: 257
+Wildfire Dev - 2023-10-17 11:48:48,386 - PyFire-Dev - INFO - Nodes processed on step 190: 262
+Wildfire Dev - 2023-10-17 11:48:48,390 - PyFire-Dev - INFO - Nodes processed on step 200: 261
+Wildfire Dev - 2023-10-17 11:48:48,394 - PyFire-Dev - INFO - Nodes processed on step 210: 263
+Wildfire Dev - 2023-10-17 11:48:48,398 - PyFire-Dev - INFO - Nodes processed on step 220: 242
+Wildfire Dev - 2023-10-17 11:48:48,402 - PyFire-Dev - INFO - Nodes processed on step 230: 250
+Wildfire Dev - 2023-10-17 11:48:48,406 - PyFire-Dev - INFO - Nodes processed on step 240: 267
+Wildfire Dev - 2023-10-17 11:48:48,410 - PyFire-Dev - INFO - Nodes processed on step 250: 278
+Wildfire Dev - 2023-10-17 11:48:48,414 - PyFire-Dev - INFO - Nodes processed on step 260: 233
+Wildfire Dev - 2023-10-17 11:48:48,418 - PyFire-Dev - INFO - Nodes processed on step 270: 200
+Wildfire Dev - 2023-10-17 11:48:48,422 - PyFire-Dev - INFO - Nodes processed on step 280: 147
+Wildfire Dev - 2023-10-17 11:48:48,425 - PyFire-Dev - INFO - Nodes processed on step 290: 122
+Wildfire Dev - 2023-10-17 11:48:48,428 - PyFire-Dev - INFO - Nodes processed on step 300: 88
+Wildfire Dev - 2023-10-17 11:48:48,431 - PyFire-Dev - INFO - Nodes processed on step 310: 51
+Wildfire Dev - 2023-10-17 11:48:48,434 - PyFire-Dev - INFO - Nodes processed on step 320: 32
+Wildfire Dev - 2023-10-17 11:48:48,436 - PyFire-Dev - INFO - Nodes processed on step 330: 22
+Wildfire Dev - 2023-10-17 11:48:48,439 - PyFire-Dev - INFO - Nodes processed on step 340: 5
+Wildfire Dev - 2023-10-19 16:02:33,392 - PyFire-Dev - INFO - Nodes processed on step 0: 16
+Wildfire Dev - 2023-10-19 16:02:33,403 - PyFire-Dev - INFO - Nodes processed on step 10: 21
+Wildfire Dev - 2023-10-19 16:02:33,413 - PyFire-Dev - INFO - Nodes processed on step 20: 30
+Wildfire Dev - 2023-10-19 16:02:33,424 - PyFire-Dev - INFO - Nodes processed on step 30: 36
+Wildfire Dev - 2023-10-19 16:02:33,435 - PyFire-Dev - INFO - Nodes processed on step 40: 41
+Wildfire Dev - 2023-10-19 16:02:33,446 - PyFire-Dev - INFO - Nodes processed on step 50: 56
+Wildfire Dev - 2023-10-19 16:02:33,457 - PyFire-Dev - INFO - Nodes processed on step 60: 68
+Wildfire Dev - 2023-10-19 16:02:33,468 - PyFire-Dev - INFO - Nodes processed on step 70: 85
+Wildfire Dev - 2023-10-19 16:02:33,479 - PyFire-Dev - INFO - Nodes processed on step 80: 98
+Wildfire Dev - 2023-10-19 16:02:33,490 - PyFire-Dev - INFO - Nodes processed on step 90: 103
+Wildfire Dev - 2023-10-19 16:02:33,501 - PyFire-Dev - INFO - Nodes processed on step 100: 105
+Wildfire Dev - 2023-10-19 16:02:33,512 - PyFire-Dev - INFO - Nodes processed on step 110: 133
+Wildfire Dev - 2023-10-19 16:02:33,523 - PyFire-Dev - INFO - Nodes processed on step 120: 132
+Wildfire Dev - 2023-10-19 16:02:33,535 - PyFire-Dev - INFO - Nodes processed on step 130: 137
+Wildfire Dev - 2023-10-19 16:02:33,546 - PyFire-Dev - INFO - Nodes processed on step 140: 153
+Wildfire Dev - 2023-10-19 16:02:33,557 - PyFire-Dev - INFO - Nodes processed on step 150: 171
+Wildfire Dev - 2023-10-19 16:02:33,568 - PyFire-Dev - INFO - Nodes processed on step 160: 170
+Wildfire Dev - 2023-10-19 16:02:33,580 - PyFire-Dev - INFO - Nodes processed on step 170: 179
+Wildfire Dev - 2023-10-19 16:02:33,591 - PyFire-Dev - INFO - Nodes processed on step 180: 205
+Wildfire Dev - 2023-10-19 16:02:33,603 - PyFire-Dev - INFO - Nodes processed on step 190: 212
+Wildfire Dev - 2023-10-19 16:02:33,614 - PyFire-Dev - INFO - Nodes processed on step 200: 228
+Wildfire Dev - 2023-10-19 16:02:33,626 - PyFire-Dev - INFO - Nodes processed on step 210: 222
+Wildfire Dev - 2023-10-19 16:02:33,638 - PyFire-Dev - INFO - Nodes processed on step 220: 247
+Wildfire Dev - 2023-10-19 16:02:33,650 - PyFire-Dev - INFO - Nodes processed on step 230: 281
+Wildfire Dev - 2023-10-19 16:02:33,661 - PyFire-Dev - INFO - Nodes processed on step 240: 292
+Wildfire Dev - 2023-10-19 16:02:33,673 - PyFire-Dev - INFO - Nodes processed on step 250: 249
+Wildfire Dev - 2023-10-19 16:02:33,685 - PyFire-Dev - INFO - Nodes processed on step 260: 261
+Wildfire Dev - 2023-10-19 16:02:33,696 - PyFire-Dev - INFO - Nodes processed on step 270: 280
+Wildfire Dev - 2023-10-19 16:02:33,708 - PyFire-Dev - INFO - Nodes processed on step 280: 283
+Wildfire Dev - 2023-10-19 16:02:33,720 - PyFire-Dev - INFO - Nodes processed on step 290: 307
+Wildfire Dev - 2023-10-19 16:02:33,732 - PyFire-Dev - INFO - Nodes processed on step 300: 337
+Wildfire Dev - 2023-10-19 16:02:33,744 - PyFire-Dev - INFO - Nodes processed on step 310: 326
+Wildfire Dev - 2023-10-19 16:02:33,756 - PyFire-Dev - INFO - Nodes processed on step 320: 330
+Wildfire Dev - 2023-10-19 16:02:33,768 - PyFire-Dev - INFO - Nodes processed on step 330: 354
+Wildfire Dev - 2023-10-19 16:02:33,781 - PyFire-Dev - INFO - Nodes processed on step 340: 369
+Wildfire Dev - 2023-10-19 16:02:33,793 - PyFire-Dev - INFO - Nodes processed on step 350: 382
+Wildfire Dev - 2023-10-19 16:02:33,805 - PyFire-Dev - INFO - Nodes processed on step 360: 381
+Wildfire Dev - 2023-10-19 16:02:33,818 - PyFire-Dev - INFO - Nodes processed on step 370: 430
+Wildfire Dev - 2023-10-19 16:02:33,830 - PyFire-Dev - INFO - Nodes processed on step 380: 432
+Wildfire Dev - 2023-10-19 16:02:33,842 - PyFire-Dev - INFO - Nodes processed on step 390: 432
+Wildfire Dev - 2023-10-19 16:02:33,855 - PyFire-Dev - INFO - Nodes processed on step 400: 468
+Wildfire Dev - 2023-10-19 16:02:33,867 - PyFire-Dev - INFO - Nodes processed on step 410: 486
+Wildfire Dev - 2023-10-19 16:02:33,880 - PyFire-Dev - INFO - Nodes processed on step 420: 459
+Wildfire Dev - 2023-10-19 16:02:33,893 - PyFire-Dev - INFO - Nodes processed on step 430: 438
+Wildfire Dev - 2023-10-19 16:02:33,905 - PyFire-Dev - INFO - Nodes processed on step 440: 475
+Wildfire Dev - 2023-10-19 16:02:33,918 - PyFire-Dev - INFO - Nodes processed on step 450: 484
+Wildfire Dev - 2023-10-19 16:02:33,931 - PyFire-Dev - INFO - Nodes processed on step 460: 491
+Wildfire Dev - 2023-10-19 16:02:33,944 - PyFire-Dev - INFO - Nodes processed on step 470: 519
+Wildfire Dev - 2023-10-19 16:02:33,956 - PyFire-Dev - INFO - Nodes processed on step 480: 519
+Wildfire Dev - 2023-10-19 16:02:33,969 - PyFire-Dev - INFO - Nodes processed on step 490: 539
+Wildfire Dev - 2023-10-19 16:02:33,983 - PyFire-Dev - INFO - Nodes processed on step 500: 576
+Wildfire Dev - 2023-10-19 16:02:33,996 - PyFire-Dev - INFO - Nodes processed on step 510: 529
+Wildfire Dev - 2023-10-19 16:02:34,008 - PyFire-Dev - INFO - Nodes processed on step 520: 475
+Wildfire Dev - 2023-10-19 16:02:34,020 - PyFire-Dev - INFO - Nodes processed on step 530: 376
+Wildfire Dev - 2023-10-19 16:02:34,032 - PyFire-Dev - INFO - Nodes processed on step 540: 344
+Wildfire Dev - 2023-10-19 16:02:34,044 - PyFire-Dev - INFO - Nodes processed on step 550: 266
+Wildfire Dev - 2023-10-19 16:02:34,055 - PyFire-Dev - INFO - Nodes processed on step 560: 224
+Wildfire Dev - 2023-10-19 16:02:34,066 - PyFire-Dev - INFO - Nodes processed on step 570: 190
+Wildfire Dev - 2023-10-19 16:02:34,077 - PyFire-Dev - INFO - Nodes processed on step 580: 144
+Wildfire Dev - 2023-10-19 16:02:34,088 - PyFire-Dev - INFO - Nodes processed on step 590: 147
+Wildfire Dev - 2023-10-19 16:02:34,100 - PyFire-Dev - INFO - Nodes processed on step 600: 134
+Wildfire Dev - 2023-10-19 16:02:34,110 - PyFire-Dev - INFO - Nodes processed on step 610: 100
+Wildfire Dev - 2023-10-19 16:02:34,121 - PyFire-Dev - INFO - Nodes processed on step 620: 73
+Wildfire Dev - 2023-10-19 16:02:34,131 - PyFire-Dev - INFO - Nodes processed on step 630: 61
+Wildfire Dev - 2023-10-19 16:02:34,142 - PyFire-Dev - INFO - Nodes processed on step 640: 44
+Wildfire Dev - 2023-10-19 16:02:34,153 - PyFire-Dev - INFO - Nodes processed on step 650: 30
+Wildfire Dev - 2023-10-19 16:02:34,163 - PyFire-Dev - INFO - Nodes processed on step 660: 22
+Wildfire Dev - 2023-10-19 16:02:34,173 - PyFire-Dev - INFO - Nodes processed on step 670: 8
+Wildfire Dev - 2023-10-19 16:02:41,935 - PyFire-Dev - INFO - ---------- Environment Reset Complete ----------
+Wildfire Dev - 2023-10-19 16:02:41,935 - PyFire-Dev - INFO - Airport Locations: [[150, 197], [50, 29]]
+Wildfire Dev - 2023-10-19 16:02:41,935 - PyFire-Dev - INFO - Starting Agent Locations: [50, 29]
+Wildfire Dev - 2023-10-19 16:02:41,948 - PyFire-Dev - INFO - Nodes processed on step 10: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:41,959 - PyFire-Dev - INFO - Nodes processed on step 20: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:41,971 - PyFire-Dev - INFO - Nodes processed on step 30: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:41,984 - PyFire-Dev - INFO - Nodes processed on step 40: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:41,996 - PyFire-Dev - INFO - Nodes processed on step 50: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,007 - PyFire-Dev - INFO - Nodes processed on step 60: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,019 - PyFire-Dev - INFO - Nodes processed on step 70: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,033 - PyFire-Dev - INFO - Nodes processed on step 80: 26, Phoschek Level: 0.82
+Wildfire Dev - 2023-10-19 16:02:42,045 - PyFire-Dev - INFO - Nodes processed on step 90: 26, Phoschek Level: 0.62
+Wildfire Dev - 2023-10-19 16:02:42,057 - PyFire-Dev - INFO - Nodes processed on step 100: 26, Phoschek Level: 0.42
+Wildfire Dev - 2023-10-19 16:02:42,069 - PyFire-Dev - INFO - Nodes processed on step 110: 26, Phoschek Level: 0.22
+Wildfire Dev - 2023-10-19 16:02:42,081 - PyFire-Dev - INFO - Nodes processed on step 120: 26, Phoschek Level: 0.02
+Wildfire Dev - 2023-10-19 16:02:42,094 - PyFire-Dev - INFO - Nodes processed on step 130: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,106 - PyFire-Dev - INFO - Nodes processed on step 140: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,118 - PyFire-Dev - INFO - Nodes processed on step 150: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,129 - PyFire-Dev - INFO - Nodes processed on step 160: 24, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,142 - PyFire-Dev - INFO - Nodes processed on step 170: 24, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,154 - PyFire-Dev - INFO - Nodes processed on step 180: 22, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,166 - PyFire-Dev - INFO - Nodes processed on step 190: 20, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,178 - PyFire-Dev - INFO - Nodes processed on step 200: 18, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,190 - PyFire-Dev - INFO - Nodes processed on step 210: 14, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,202 - PyFire-Dev - INFO - Nodes processed on step 220: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,213 - PyFire-Dev - INFO - Nodes processed on step 230: 10, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,225 - PyFire-Dev - INFO - Nodes processed on step 240: 10, Phoschek Level: 0.98
+Wildfire Dev - 2023-10-19 16:02:42,237 - PyFire-Dev - INFO - Nodes processed on step 250: 8, Phoschek Level: 0.78
+Wildfire Dev - 2023-10-19 16:02:42,249 - PyFire-Dev - INFO - Nodes processed on step 260: 8, Phoschek Level: 0.58
+Wildfire Dev - 2023-10-19 16:02:42,261 - PyFire-Dev - INFO - Nodes processed on step 270: 8, Phoschek Level: 0.38
+Wildfire Dev - 2023-10-19 16:02:42,273 - PyFire-Dev - INFO - Nodes processed on step 280: 8, Phoschek Level: 0.18
+Wildfire Dev - 2023-10-19 16:02:42,285 - PyFire-Dev - INFO - Nodes processed on step 290: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,297 - PyFire-Dev - INFO - Nodes processed on step 300: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,309 - PyFire-Dev - INFO - Nodes processed on step 310: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,321 - PyFire-Dev - INFO - Nodes processed on step 320: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,333 - PyFire-Dev - INFO - Nodes processed on step 330: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-19 16:02:42,345 - PyFire-Dev - INFO - Nodes processed on step 340: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,357 - PyFire-Dev - INFO - Nodes processed on step 350: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,369 - PyFire-Dev - INFO - Nodes processed on step 360: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,380 - PyFire-Dev - INFO - Nodes processed on step 370: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,392 - PyFire-Dev - INFO - Nodes processed on step 380: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-19 16:02:42,607 - PyFire-Dev - INFO - Currently writing frame 0 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:42,609 - PyFire-Dev - INFO - Currently writing frame 0 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:43,563 - PyFire-Dev - INFO - Currently writing frame 10 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:44,488 - PyFire-Dev - INFO - Currently writing frame 20 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:45,407 - PyFire-Dev - INFO - Currently writing frame 30 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:46,330 - PyFire-Dev - INFO - Currently writing frame 40 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:47,254 - PyFire-Dev - INFO - Currently writing frame 50 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:48,173 - PyFire-Dev - INFO - Currently writing frame 60 of 78 to animation.
+Wildfire Dev - 2023-10-19 16:02:49,095 - PyFire-Dev - INFO - Currently writing frame 70 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:07:53,269 - PyFire-Dev - INFO - Nodes processed on step 0: 16
+Wildfire Dev - 2023-10-20 10:07:53,280 - PyFire-Dev - INFO - Nodes processed on step 10: 21
+Wildfire Dev - 2023-10-20 10:07:53,291 - PyFire-Dev - INFO - Nodes processed on step 20: 30
+Wildfire Dev - 2023-10-20 10:07:53,302 - PyFire-Dev - INFO - Nodes processed on step 30: 36
+Wildfire Dev - 2023-10-20 10:07:53,314 - PyFire-Dev - INFO - Nodes processed on step 40: 41
+Wildfire Dev - 2023-10-20 10:07:53,325 - PyFire-Dev - INFO - Nodes processed on step 50: 56
+Wildfire Dev - 2023-10-20 10:07:53,336 - PyFire-Dev - INFO - Nodes processed on step 60: 68
+Wildfire Dev - 2023-10-20 10:07:53,348 - PyFire-Dev - INFO - Nodes processed on step 70: 85
+Wildfire Dev - 2023-10-20 10:07:53,359 - PyFire-Dev - INFO - Nodes processed on step 80: 98
+Wildfire Dev - 2023-10-20 10:07:53,371 - PyFire-Dev - INFO - Nodes processed on step 90: 103
+Wildfire Dev - 2023-10-20 10:07:53,382 - PyFire-Dev - INFO - Nodes processed on step 100: 105
+Wildfire Dev - 2023-10-20 10:07:53,394 - PyFire-Dev - INFO - Nodes processed on step 110: 133
+Wildfire Dev - 2023-10-20 10:07:53,406 - PyFire-Dev - INFO - Nodes processed on step 120: 132
+Wildfire Dev - 2023-10-20 10:07:53,417 - PyFire-Dev - INFO - Nodes processed on step 130: 137
+Wildfire Dev - 2023-10-20 10:07:53,429 - PyFire-Dev - INFO - Nodes processed on step 140: 153
+Wildfire Dev - 2023-10-20 10:07:53,441 - PyFire-Dev - INFO - Nodes processed on step 150: 171
+Wildfire Dev - 2023-10-20 10:07:53,453 - PyFire-Dev - INFO - Nodes processed on step 160: 170
+Wildfire Dev - 2023-10-20 10:07:53,465 - PyFire-Dev - INFO - Nodes processed on step 170: 179
+Wildfire Dev - 2023-10-20 10:07:53,478 - PyFire-Dev - INFO - Nodes processed on step 180: 205
+Wildfire Dev - 2023-10-20 10:07:53,490 - PyFire-Dev - INFO - Nodes processed on step 190: 212
+Wildfire Dev - 2023-10-20 10:07:53,502 - PyFire-Dev - INFO - Nodes processed on step 200: 228
+Wildfire Dev - 2023-10-20 10:07:53,514 - PyFire-Dev - INFO - Nodes processed on step 210: 222
+Wildfire Dev - 2023-10-20 10:07:53,526 - PyFire-Dev - INFO - Nodes processed on step 220: 247
+Wildfire Dev - 2023-10-20 10:07:53,538 - PyFire-Dev - INFO - Nodes processed on step 230: 281
+Wildfire Dev - 2023-10-20 10:07:53,551 - PyFire-Dev - INFO - Nodes processed on step 240: 292
+Wildfire Dev - 2023-10-20 10:07:53,563 - PyFire-Dev - INFO - Nodes processed on step 250: 249
+Wildfire Dev - 2023-10-20 10:07:53,575 - PyFire-Dev - INFO - Nodes processed on step 260: 261
+Wildfire Dev - 2023-10-20 10:07:53,587 - PyFire-Dev - INFO - Nodes processed on step 270: 280
+Wildfire Dev - 2023-10-20 10:07:53,600 - PyFire-Dev - INFO - Nodes processed on step 280: 283
+Wildfire Dev - 2023-10-20 10:07:53,612 - PyFire-Dev - INFO - Nodes processed on step 290: 307
+Wildfire Dev - 2023-10-20 10:07:53,625 - PyFire-Dev - INFO - Nodes processed on step 300: 337
+Wildfire Dev - 2023-10-20 10:07:53,638 - PyFire-Dev - INFO - Nodes processed on step 310: 326
+Wildfire Dev - 2023-10-20 10:07:53,650 - PyFire-Dev - INFO - Nodes processed on step 320: 330
+Wildfire Dev - 2023-10-20 10:07:53,663 - PyFire-Dev - INFO - Nodes processed on step 330: 354
+Wildfire Dev - 2023-10-20 10:07:53,676 - PyFire-Dev - INFO - Nodes processed on step 340: 369
+Wildfire Dev - 2023-10-20 10:07:53,688 - PyFire-Dev - INFO - Nodes processed on step 350: 382
+Wildfire Dev - 2023-10-20 10:07:53,701 - PyFire-Dev - INFO - Nodes processed on step 360: 381
+Wildfire Dev - 2023-10-20 10:07:53,714 - PyFire-Dev - INFO - Nodes processed on step 370: 430
+Wildfire Dev - 2023-10-20 10:07:53,727 - PyFire-Dev - INFO - Nodes processed on step 380: 432
+Wildfire Dev - 2023-10-20 10:07:53,739 - PyFire-Dev - INFO - Nodes processed on step 390: 432
+Wildfire Dev - 2023-10-20 10:07:53,752 - PyFire-Dev - INFO - Nodes processed on step 400: 468
+Wildfire Dev - 2023-10-20 10:07:53,765 - PyFire-Dev - INFO - Nodes processed on step 410: 486
+Wildfire Dev - 2023-10-20 10:07:53,778 - PyFire-Dev - INFO - Nodes processed on step 420: 459
+Wildfire Dev - 2023-10-20 10:07:53,791 - PyFire-Dev - INFO - Nodes processed on step 430: 438
+Wildfire Dev - 2023-10-20 10:07:53,804 - PyFire-Dev - INFO - Nodes processed on step 440: 475
+Wildfire Dev - 2023-10-20 10:07:53,817 - PyFire-Dev - INFO - Nodes processed on step 450: 484
+Wildfire Dev - 2023-10-20 10:07:53,830 - PyFire-Dev - INFO - Nodes processed on step 460: 491
+Wildfire Dev - 2023-10-20 10:07:53,843 - PyFire-Dev - INFO - Nodes processed on step 470: 519
+Wildfire Dev - 2023-10-20 10:07:53,857 - PyFire-Dev - INFO - Nodes processed on step 480: 519
+Wildfire Dev - 2023-10-20 10:07:53,870 - PyFire-Dev - INFO - Nodes processed on step 490: 539
+Wildfire Dev - 2023-10-20 10:07:53,883 - PyFire-Dev - INFO - Nodes processed on step 500: 576
+Wildfire Dev - 2023-10-20 10:07:53,897 - PyFire-Dev - INFO - Nodes processed on step 510: 529
+Wildfire Dev - 2023-10-20 10:07:53,910 - PyFire-Dev - INFO - Nodes processed on step 520: 475
+Wildfire Dev - 2023-10-20 10:07:53,922 - PyFire-Dev - INFO - Nodes processed on step 530: 376
+Wildfire Dev - 2023-10-20 10:07:53,935 - PyFire-Dev - INFO - Nodes processed on step 540: 344
+Wildfire Dev - 2023-10-20 10:07:53,947 - PyFire-Dev - INFO - Nodes processed on step 550: 266
+Wildfire Dev - 2023-10-20 10:07:53,958 - PyFire-Dev - INFO - Nodes processed on step 560: 224
+Wildfire Dev - 2023-10-20 10:07:53,970 - PyFire-Dev - INFO - Nodes processed on step 570: 190
+Wildfire Dev - 2023-10-20 10:07:53,981 - PyFire-Dev - INFO - Nodes processed on step 580: 144
+Wildfire Dev - 2023-10-20 10:07:53,993 - PyFire-Dev - INFO - Nodes processed on step 590: 147
+Wildfire Dev - 2023-10-20 10:07:54,004 - PyFire-Dev - INFO - Nodes processed on step 600: 134
+Wildfire Dev - 2023-10-20 10:07:54,015 - PyFire-Dev - INFO - Nodes processed on step 610: 100
+Wildfire Dev - 2023-10-20 10:07:54,027 - PyFire-Dev - INFO - Nodes processed on step 620: 73
+Wildfire Dev - 2023-10-20 10:07:54,038 - PyFire-Dev - INFO - Nodes processed on step 630: 61
+Wildfire Dev - 2023-10-20 10:07:54,049 - PyFire-Dev - INFO - Nodes processed on step 640: 44
+Wildfire Dev - 2023-10-20 10:07:54,060 - PyFire-Dev - INFO - Nodes processed on step 650: 30
+Wildfire Dev - 2023-10-20 10:07:54,071 - PyFire-Dev - INFO - Nodes processed on step 660: 22
+Wildfire Dev - 2023-10-20 10:07:54,082 - PyFire-Dev - INFO - Nodes processed on step 670: 8
+Wildfire Dev - 2023-10-20 10:08:46,969 - PyFire-Dev - INFO - Nodes processed on step 0: 26
+Wildfire Dev - 2023-10-20 10:08:46,980 - PyFire-Dev - INFO - Nodes processed on step 10: 26
+Wildfire Dev - 2023-10-20 10:08:46,990 - PyFire-Dev - INFO - Nodes processed on step 20: 26
+Wildfire Dev - 2023-10-20 10:08:47,001 - PyFire-Dev - INFO - Nodes processed on step 30: 26
+Wildfire Dev - 2023-10-20 10:08:47,012 - PyFire-Dev - INFO - Nodes processed on step 40: 26
+Wildfire Dev - 2023-10-20 10:08:47,023 - PyFire-Dev - INFO - Nodes processed on step 50: 26
+Wildfire Dev - 2023-10-20 10:08:47,033 - PyFire-Dev - INFO - Nodes processed on step 60: 26
+Wildfire Dev - 2023-10-20 10:08:47,044 - PyFire-Dev - INFO - Nodes processed on step 70: 26
+Wildfire Dev - 2023-10-20 10:08:47,055 - PyFire-Dev - INFO - Nodes processed on step 80: 26
+Wildfire Dev - 2023-10-20 10:08:47,065 - PyFire-Dev - INFO - Nodes processed on step 90: 26
+Wildfire Dev - 2023-10-20 10:08:47,076 - PyFire-Dev - INFO - Nodes processed on step 100: 26
+Wildfire Dev - 2023-10-20 10:08:47,086 - PyFire-Dev - INFO - Nodes processed on step 110: 26
+Wildfire Dev - 2023-10-20 10:08:47,097 - PyFire-Dev - INFO - Nodes processed on step 120: 26
+Wildfire Dev - 2023-10-20 10:08:47,108 - PyFire-Dev - INFO - Nodes processed on step 130: 26
+Wildfire Dev - 2023-10-20 10:08:47,118 - PyFire-Dev - INFO - Nodes processed on step 140: 26
+Wildfire Dev - 2023-10-20 10:08:47,129 - PyFire-Dev - INFO - Nodes processed on step 150: 26
+Wildfire Dev - 2023-10-20 10:08:47,139 - PyFire-Dev - INFO - Nodes processed on step 160: 26
+Wildfire Dev - 2023-10-20 10:08:47,150 - PyFire-Dev - INFO - Nodes processed on step 170: 26
+Wildfire Dev - 2023-10-20 10:08:47,160 - PyFire-Dev - INFO - Nodes processed on step 180: 26
+Wildfire Dev - 2023-10-20 10:08:47,171 - PyFire-Dev - INFO - Nodes processed on step 190: 26
+Wildfire Dev - 2023-10-20 10:08:47,182 - PyFire-Dev - INFO - Nodes processed on step 200: 26
+Wildfire Dev - 2023-10-20 10:08:47,192 - PyFire-Dev - INFO - Nodes processed on step 210: 26
+Wildfire Dev - 2023-10-20 10:08:47,203 - PyFire-Dev - INFO - Nodes processed on step 220: 26
+Wildfire Dev - 2023-10-20 10:08:47,213 - PyFire-Dev - INFO - Nodes processed on step 230: 26
+Wildfire Dev - 2023-10-20 10:08:47,224 - PyFire-Dev - INFO - Nodes processed on step 240: 26
+Wildfire Dev - 2023-10-20 10:08:47,235 - PyFire-Dev - INFO - Nodes processed on step 250: 26
+Wildfire Dev - 2023-10-20 10:08:47,245 - PyFire-Dev - INFO - Nodes processed on step 260: 26
+Wildfire Dev - 2023-10-20 10:08:47,256 - PyFire-Dev - INFO - Nodes processed on step 270: 26
+Wildfire Dev - 2023-10-20 10:08:47,267 - PyFire-Dev - INFO - Nodes processed on step 280: 26
+Wildfire Dev - 2023-10-20 10:08:47,277 - PyFire-Dev - INFO - Nodes processed on step 290: 26
+Wildfire Dev - 2023-10-20 10:08:47,288 - PyFire-Dev - INFO - Nodes processed on step 300: 26
+Wildfire Dev - 2023-10-20 10:08:47,316 - PyFire-Dev - INFO - Nodes processed on step 310: 26
+Wildfire Dev - 2023-10-20 10:08:47,326 - PyFire-Dev - INFO - Nodes processed on step 320: 26
+Wildfire Dev - 2023-10-20 10:08:47,337 - PyFire-Dev - INFO - Nodes processed on step 330: 26
+Wildfire Dev - 2023-10-20 10:08:47,348 - PyFire-Dev - INFO - Nodes processed on step 340: 26
+Wildfire Dev - 2023-10-20 10:08:47,358 - PyFire-Dev - INFO - Nodes processed on step 350: 26
+Wildfire Dev - 2023-10-20 10:08:47,368 - PyFire-Dev - INFO - Nodes processed on step 360: 26
+Wildfire Dev - 2023-10-20 10:08:47,379 - PyFire-Dev - INFO - Nodes processed on step 370: 26
+Wildfire Dev - 2023-10-20 10:08:47,390 - PyFire-Dev - INFO - Nodes processed on step 380: 26
+Wildfire Dev - 2023-10-20 10:08:47,401 - PyFire-Dev - INFO - Nodes processed on step 390: 26
+Wildfire Dev - 2023-10-20 10:08:47,411 - PyFire-Dev - INFO - Nodes processed on step 400: 26
+Wildfire Dev - 2023-10-20 10:08:47,422 - PyFire-Dev - INFO - Nodes processed on step 410: 26
+Wildfire Dev - 2023-10-20 10:08:47,432 - PyFire-Dev - INFO - Nodes processed on step 420: 26
+Wildfire Dev - 2023-10-20 10:08:47,443 - PyFire-Dev - INFO - Nodes processed on step 430: 26
+Wildfire Dev - 2023-10-20 10:08:47,453 - PyFire-Dev - INFO - Nodes processed on step 440: 26
+Wildfire Dev - 2023-10-20 10:08:47,464 - PyFire-Dev - INFO - Nodes processed on step 450: 26
+Wildfire Dev - 2023-10-20 10:08:47,474 - PyFire-Dev - INFO - Nodes processed on step 460: 26
+Wildfire Dev - 2023-10-20 10:08:47,485 - PyFire-Dev - INFO - Nodes processed on step 470: 26
+Wildfire Dev - 2023-10-20 10:08:47,495 - PyFire-Dev - INFO - Nodes processed on step 480: 26
+Wildfire Dev - 2023-10-20 10:08:47,505 - PyFire-Dev - INFO - Nodes processed on step 490: 26
+Wildfire Dev - 2023-10-20 10:09:18,919 - PyFire-Dev - INFO - ---------- Environment Reset Complete ----------
+Wildfire Dev - 2023-10-20 10:09:18,919 - PyFire-Dev - INFO - Airport Locations: [[150, 197], [50, 29]]
+Wildfire Dev - 2023-10-20 10:09:18,919 - PyFire-Dev - INFO - Starting Agent Locations: [50, 29]
+Wildfire Dev - 2023-10-20 10:09:18,933 - PyFire-Dev - INFO - Nodes processed on step 10: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:18,945 - PyFire-Dev - INFO - Nodes processed on step 20: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:18,956 - PyFire-Dev - INFO - Nodes processed on step 30: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:18,969 - PyFire-Dev - INFO - Nodes processed on step 40: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:18,981 - PyFire-Dev - INFO - Nodes processed on step 50: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:18,992 - PyFire-Dev - INFO - Nodes processed on step 60: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,004 - PyFire-Dev - INFO - Nodes processed on step 70: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,018 - PyFire-Dev - INFO - Nodes processed on step 80: 26, Phoschek Level: 0.82
+Wildfire Dev - 2023-10-20 10:09:19,030 - PyFire-Dev - INFO - Nodes processed on step 90: 26, Phoschek Level: 0.62
+Wildfire Dev - 2023-10-20 10:09:19,042 - PyFire-Dev - INFO - Nodes processed on step 100: 26, Phoschek Level: 0.42
+Wildfire Dev - 2023-10-20 10:09:19,054 - PyFire-Dev - INFO - Nodes processed on step 110: 26, Phoschek Level: 0.22
+Wildfire Dev - 2023-10-20 10:09:19,066 - PyFire-Dev - INFO - Nodes processed on step 120: 26, Phoschek Level: 0.02
+Wildfire Dev - 2023-10-20 10:09:19,080 - PyFire-Dev - INFO - Nodes processed on step 130: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,092 - PyFire-Dev - INFO - Nodes processed on step 140: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,103 - PyFire-Dev - INFO - Nodes processed on step 150: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,115 - PyFire-Dev - INFO - Nodes processed on step 160: 24, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,127 - PyFire-Dev - INFO - Nodes processed on step 170: 24, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,139 - PyFire-Dev - INFO - Nodes processed on step 180: 22, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,151 - PyFire-Dev - INFO - Nodes processed on step 190: 20, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,163 - PyFire-Dev - INFO - Nodes processed on step 200: 18, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,175 - PyFire-Dev - INFO - Nodes processed on step 210: 14, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,187 - PyFire-Dev - INFO - Nodes processed on step 220: 12, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,198 - PyFire-Dev - INFO - Nodes processed on step 230: 10, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,210 - PyFire-Dev - INFO - Nodes processed on step 240: 10, Phoschek Level: 0.98
+Wildfire Dev - 2023-10-20 10:09:19,222 - PyFire-Dev - INFO - Nodes processed on step 250: 8, Phoschek Level: 0.78
+Wildfire Dev - 2023-10-20 10:09:19,235 - PyFire-Dev - INFO - Nodes processed on step 260: 8, Phoschek Level: 0.58
+Wildfire Dev - 2023-10-20 10:09:19,246 - PyFire-Dev - INFO - Nodes processed on step 270: 8, Phoschek Level: 0.38
+Wildfire Dev - 2023-10-20 10:09:19,259 - PyFire-Dev - INFO - Nodes processed on step 280: 8, Phoschek Level: 0.18
+Wildfire Dev - 2023-10-20 10:09:19,271 - PyFire-Dev - INFO - Nodes processed on step 290: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,283 - PyFire-Dev - INFO - Nodes processed on step 300: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,294 - PyFire-Dev - INFO - Nodes processed on step 310: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,306 - PyFire-Dev - INFO - Nodes processed on step 320: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,318 - PyFire-Dev - INFO - Nodes processed on step 330: 8, Phoschek Level: -0.0
+Wildfire Dev - 2023-10-20 10:09:19,330 - PyFire-Dev - INFO - Nodes processed on step 340: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,342 - PyFire-Dev - INFO - Nodes processed on step 350: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,354 - PyFire-Dev - INFO - Nodes processed on step 360: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,365 - PyFire-Dev - INFO - Nodes processed on step 370: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,377 - PyFire-Dev - INFO - Nodes processed on step 380: 8, Phoschek Level: 1.0
+Wildfire Dev - 2023-10-20 10:09:19,597 - PyFire-Dev - INFO - Currently writing frame 0 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:19,598 - PyFire-Dev - INFO - Currently writing frame 0 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:20,607 - PyFire-Dev - INFO - Currently writing frame 10 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:21,558 - PyFire-Dev - INFO - Currently writing frame 20 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:22,520 - PyFire-Dev - INFO - Currently writing frame 30 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:23,539 - PyFire-Dev - INFO - Currently writing frame 40 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:24,504 - PyFire-Dev - INFO - Currently writing frame 50 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:25,460 - PyFire-Dev - INFO - Currently writing frame 60 of 78 to animation.
+Wildfire Dev - 2023-10-20 10:09:26,400 - PyFire-Dev - INFO - Currently writing frame 70 of 78 to animation.
+Wildfire Dev - 2023-11-06 10:40:37,498 - PyFire-Dev - INFO - ---------- Environment Reset Complete ----------
+Wildfire Dev - 2023-11-06 10:40:37,499 - PyFire-Dev - INFO - Airport Locations: [[100, 147], [38, 21]]
+Wildfire Dev - 2023-11-06 10:40:37,499 - PyFire-Dev - INFO - Starting Agent Locations: [38, 21]
+Wildfire Dev - 2023-11-06 10:40:37,508 - PyFire-Dev - INFO - Nodes processed on step 10: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,515 - PyFire-Dev - INFO - Nodes processed on step 20: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,522 - PyFire-Dev - INFO - Nodes processed on step 30: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,530 - PyFire-Dev - INFO - Nodes processed on step 40: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,537 - PyFire-Dev - INFO - Nodes processed on step 50: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,545 - PyFire-Dev - INFO - Nodes processed on step 60: 26, Phoschek Level: 0.88
+Wildfire Dev - 2023-11-06 10:40:37,552 - PyFire-Dev - INFO - Nodes processed on step 70: 26, Phoschek Level: 0.68
+Wildfire Dev - 2023-11-06 10:40:37,559 - PyFire-Dev - INFO - Nodes processed on step 80: 26, Phoschek Level: 0.48
+Wildfire Dev - 2023-11-06 10:40:37,566 - PyFire-Dev - INFO - Nodes processed on step 90: 26, Phoschek Level: 0.28
+Wildfire Dev - 2023-11-06 10:40:37,573 - PyFire-Dev - INFO - Nodes processed on step 100: 26, Phoschek Level: 0.08
+Wildfire Dev - 2023-11-06 10:40:37,580 - PyFire-Dev - INFO - Nodes processed on step 110: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-11-06 10:40:37,586 - PyFire-Dev - INFO - Nodes processed on step 120: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-11-06 10:40:37,593 - PyFire-Dev - INFO - Nodes processed on step 130: 26, Phoschek Level: -0.0
+Wildfire Dev - 2023-11-06 10:40:37,600 - PyFire-Dev - INFO - Nodes processed on step 140: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,606 - PyFire-Dev - INFO - Nodes processed on step 150: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,613 - PyFire-Dev - INFO - Nodes processed on step 160: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,619 - PyFire-Dev - INFO - Nodes processed on step 170: 26, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,626 - PyFire-Dev - INFO - Nodes processed on step 180: 26, Phoschek Level: 0.96
+Wildfire Dev - 2023-11-06 10:40:37,632 - PyFire-Dev - INFO - Nodes processed on step 190: 26, Phoschek Level: 0.76
+Wildfire Dev - 2023-11-06 10:40:37,639 - PyFire-Dev - INFO - Nodes processed on step 200: 26, Phoschek Level: 0.56
+Wildfire Dev - 2023-11-06 10:40:37,646 - PyFire-Dev - INFO - Nodes processed on step 210: 26, Phoschek Level: 0.36
+Wildfire Dev - 2023-11-06 10:40:37,653 - PyFire-Dev - INFO - Nodes processed on step 220: 24, Phoschek Level: 0.16
+Wildfire Dev - 2023-11-06 10:40:37,660 - PyFire-Dev - INFO - Nodes processed on step 230: 22, Phoschek Level: -0.0
+Wildfire Dev - 2023-11-06 10:40:37,667 - PyFire-Dev - INFO - Nodes processed on step 240: 22, Phoschek Level: -0.0
+Wildfire Dev - 2023-11-06 10:40:37,674 - PyFire-Dev - INFO - Nodes processed on step 250: 20, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,681 - PyFire-Dev - INFO - Nodes processed on step 260: 20, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,688 - PyFire-Dev - INFO - Nodes processed on step 270: 20, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,695 - PyFire-Dev - INFO - Nodes processed on step 280: 20, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,702 - PyFire-Dev - INFO - Nodes processed on step 290: 20, Phoschek Level: 1.0
+Wildfire Dev - 2023-11-06 10:40:37,709 - PyFire-Dev - INFO - Nodes processed on step 300: 20, Phoschek Level: 0.84
+Wildfire Dev - 2023-11-06 10:40:37,717 - PyFire-Dev - INFO - Nodes processed on step 310: 20, Phoschek Level: 0.64
+Wildfire Dev - 2023-11-06 10:40:37,724 - PyFire-Dev - INFO - Nodes processed on step 320: 20, Phoschek Level: 0.44
+Wildfire Dev - 2023-11-06 10:40:37,731 - PyFire-Dev - INFO - Nodes processed on step 330: 16, Phoschek Level: 0.24
+Wildfire Dev - 2023-11-06 10:40:37,738 - PyFire-Dev - INFO - Nodes processed on step 340: 14, Phoschek Level: 0.04
+Wildfire Dev - 2023-11-06 10:40:37,745 - PyFire-Dev - INFO - Nodes processed on step 350: 12, Phoschek Level: -0.0
+Wildfire Dev - 2023-11-06 10:40:37,751 - PyFire-Dev - INFO - Nodes processed on step 360: 10, Phoschek Level: -0.0
+Wildfire Dev - 2023-11-06 10:40:38,176 - PyFire-Dev - INFO - Currently writing frame 0 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:38,178 - PyFire-Dev - INFO - Currently writing frame 0 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:39,127 - PyFire-Dev - INFO - Currently writing frame 10 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:39,917 - PyFire-Dev - INFO - Currently writing frame 20 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:40,705 - PyFire-Dev - INFO - Currently writing frame 30 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:41,514 - PyFire-Dev - INFO - Currently writing frame 40 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:42,301 - PyFire-Dev - INFO - Currently writing frame 50 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:43,090 - PyFire-Dev - INFO - Currently writing frame 60 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:40:43,885 - PyFire-Dev - INFO - Currently writing frame 70 of 74 to animation.
+Wildfire Dev - 2023-11-06 10:41:50,495 - PyFire-Dev - INFO - Nodes processed on step 0: 8
+Wildfire Dev - 2023-11-06 10:41:50,501 - PyFire-Dev - INFO - Nodes processed on step 10: 8
+Wildfire Dev - 2023-11-06 10:41:50,506 - PyFire-Dev - INFO - Nodes processed on step 20: 8
+Wildfire Dev - 2023-11-06 10:41:50,514 - PyFire-Dev - INFO - Nodes processed on step 30: 8
+Wildfire Dev - 2023-11-06 10:41:50,535 - PyFire-Dev - INFO - Nodes processed on step 40: 8
+Wildfire Dev - 2023-11-06 10:41:50,541 - PyFire-Dev - INFO - Nodes processed on step 50: 8
+Wildfire Dev - 2023-11-06 10:41:50,547 - PyFire-Dev - INFO - Nodes processed on step 60: 8
+Wildfire Dev - 2023-11-06 10:41:50,553 - PyFire-Dev - INFO - Nodes processed on step 70: 8
+Wildfire Dev - 2023-11-06 10:41:50,559 - PyFire-Dev - INFO - Nodes processed on step 80: 8
+Wildfire Dev - 2023-11-06 10:41:50,564 - PyFire-Dev - INFO - Nodes processed on step 90: 8
+Wildfire Dev - 2023-11-06 10:41:50,570 - PyFire-Dev - INFO - Nodes processed on step 100: 8
+Wildfire Dev - 2023-11-06 10:41:50,576 - PyFire-Dev - INFO - Nodes processed on step 110: 8
+Wildfire Dev - 2023-11-06 10:41:50,582 - PyFire-Dev - INFO - Nodes processed on step 120: 8
+Wildfire Dev - 2023-11-06 10:41:50,588 - PyFire-Dev - INFO - Nodes processed on step 130: 8
+Wildfire Dev - 2023-11-06 10:41:50,594 - PyFire-Dev - INFO - Nodes processed on step 140: 8
+Wildfire Dev - 2023-11-06 10:41:50,599 - PyFire-Dev - INFO - Nodes processed on step 150: 8
+Wildfire Dev - 2023-11-06 10:41:50,605 - PyFire-Dev - INFO - Nodes processed on step 160: 8
+Wildfire Dev - 2023-11-06 10:41:50,611 - PyFire-Dev - INFO - Nodes processed on step 170: 8
+Wildfire Dev - 2023-11-06 10:41:50,617 - PyFire-Dev - INFO - Nodes processed on step 180: 8
+Wildfire Dev - 2023-11-06 10:41:50,622 - PyFire-Dev - INFO - Nodes processed on step 190: 8
+Wildfire Dev - 2023-11-06 10:41:50,628 - PyFire-Dev - INFO - Nodes processed on step 200: 8
+Wildfire Dev - 2023-11-06 10:41:50,667 - PyFire-Dev - INFO - Nodes processed on step 210: 8
+Wildfire Dev - 2023-11-06 10:41:50,706 - PyFire-Dev - INFO - Nodes processed on step 220: 8
+Wildfire Dev - 2023-11-06 10:41:50,712 - PyFire-Dev - INFO - Nodes processed on step 230: 8
+Wildfire Dev - 2023-11-06 10:41:50,718 - PyFire-Dev - INFO - Nodes processed on step 240: 8
+Wildfire Dev - 2023-11-06 10:41:50,724 - PyFire-Dev - INFO - Nodes processed on step 250: 8
+Wildfire Dev - 2023-11-06 10:41:50,730 - PyFire-Dev - INFO - Nodes processed on step 260: 8
+Wildfire Dev - 2023-11-06 10:41:50,736 - PyFire-Dev - INFO - Nodes processed on step 270: 8
+Wildfire Dev - 2023-11-06 10:41:50,742 - PyFire-Dev - INFO - Nodes processed on step 280: 8
+Wildfire Dev - 2023-11-06 10:41:50,748 - PyFire-Dev - INFO - Nodes processed on step 290: 8
+Wildfire Dev - 2023-11-06 10:41:50,754 - PyFire-Dev - INFO - Nodes processed on step 300: 8
+Wildfire Dev - 2023-11-06 10:41:50,760 - PyFire-Dev - INFO - Nodes processed on step 310: 8
+Wildfire Dev - 2023-11-06 10:41:50,766 - PyFire-Dev - INFO - Nodes processed on step 320: 8
+Wildfire Dev - 2023-11-06 10:41:50,771 - PyFire-Dev - INFO - Nodes processed on step 330: 8
+Wildfire Dev - 2023-11-06 10:41:50,777 - PyFire-Dev - INFO - Nodes processed on step 340: 8
+Wildfire Dev - 2023-11-06 10:41:50,783 - PyFire-Dev - INFO - Nodes processed on step 350: 8
+Wildfire Dev - 2023-11-06 10:41:50,789 - PyFire-Dev - INFO - Nodes processed on step 360: 8
+Wildfire Dev - 2023-11-06 10:41:50,795 - PyFire-Dev - INFO - Nodes processed on step 370: 5
