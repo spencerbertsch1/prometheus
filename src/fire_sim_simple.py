@@ -463,7 +463,7 @@ def initialize_env() -> np.array:
     X[:ny, :nx] = np.random.random(size=(ny, nx)) < FOREST_FRACTION
 
     # draw a line of burning nodes down the middle of the environment 
-    n_start_points = 10
+    n_start_points = 1
     ignition_index = int(GRID_SIZE/2)
     for i in range(n_start_points):
         X[round(ignition_index+i - (n_start_points/2)), ignition_index] = FIRE
